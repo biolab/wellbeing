@@ -1,11 +1,35 @@
 import numpy as np
 from sklearn.metrics import r2_score
-from Orange.data import Table, Domain, DiscreteVariable
+from Orange.data import Table, Domain
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
-from Orange.regression import RandomForestRegressionLearner
+from Orange.regression.random_forest import RandomForestRegressionLearner
+from Orange.regression import LassoRegressionLearner
 from Orange.preprocess import Preprocess
 from Orange.evaluation import CrossValidation
 from Orange.data.filter import HasClass
+
+
+"""
+CROSS w/ preprocessing 
+
+RF: A008.W = 0.27
+    A170.W = 0.62
+    SWB.LS = 0.58
+
+LR: A008.W = 0.11 (alpha = 3)
+    A170.W = 0.56 (alpha = 0.5)
+    SWB.LS = 0.50 (alpha = 0.5)
+
+CROSS w/o preprocessing
+
+RF: A008.W = 0.28
+    A170.W = 0.52
+    SWB.LS = 0.54
+    
+LR: A008.W = **negative values** for alpha in range 0:25
+    A170.W = **negative values** for alpha in range 0:25
+    SWB.LS = 0.33 (alpha = 0) >>> by using higher alpha values we obtain negative result
+"""
 
 
 def get_top_attributes(method, data):
@@ -23,7 +47,7 @@ def get_top_attributes(method, data):
 
 
 def rf_top_attributes(data):
-    rf_learner = RandomForestRegressionLearner(random_state=0)
+    rf_learner = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
     scores, variables = rf_learner.score(data)
     ls_scores = []
     for i, j in zip(scores, variables):
@@ -36,55 +60,99 @@ def rf_top_attributes(data):
     top_factors = ls_scores[:10]
     return top_factors
 
-class FeatureSubsetSelection(Preprocess):
+def get_all_top_attributes(table):
+    relief_top_factors = get_top_attributes(RReliefF(random_state=0), table)
+    linear_top_factors = get_top_attributes(UnivariateLinearRegression(), table)
+    random_top_factors = rf_top_attributes(table)
+    names_relief = [i[1] for i in relief_top_factors]   # extracting names of top factors
+    names_linear = [i[1] for i in linear_top_factors]
+    names_random = [i[1] for i in random_top_factors]
 
+    print(relief_top_factors)
+    print(linear_top_factors)
+    print(random_top_factors)
+
+    all_names = set(names_relief+names_linear+names_random)
+    return list(all_names)
+
+
+def accuracy_of_preprocessed_factors(data):
+    preprocessor = FeatureSubsetSelection()
+    table_only_top_factors = preprocessor(data)
+    lasso = LassoRegressionLearner(alpha=16, fit_intercept=True)
+    forest = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
+    learners = [lasso, forest]
+
+    filter = HasClass()
+    clean_table_only_top_factors = filter(table_only_top_factors)
+
+    """
+    r2_scores = []
+    for learner in learners:
+        model = learner[0]
+        y_true = clean_table_only_top_factors.Y
+        y_pred = model(clean_table_only_top_factors)
+        score = r2_score(y_true, y_pred)
+        r2_scores.append(score)
+    print(r2_scores)
+    """
+
+    model1 = lasso(clean_table_only_top_factors)
+    y_true1 = clean_table_only_top_factors.Y
+    y_pred1 = model1(clean_table_only_top_factors)
+    score1 = r2_score(y_true1, y_pred1)
+
+    model2 = forest(clean_table_only_top_factors)
+    y_true2 = clean_table_only_top_factors.Y
+    y_pred2 = model2(clean_table_only_top_factors)
+    score2 = r2_score(y_true2, y_pred2)
+    print(score1, score2)
+    return score1, score2
+
+
+class FeatureSubsetSelection(Preprocess):
     def __call__(self, table: Table) -> Table:
-        relief_top_factors = get_top_attributes(RReliefF(), table)
-        linear_top_factors = get_top_attributes(UnivariateLinearRegression(), table)
-        random_top_factors = rf_top_attributes(table)
-        names_relief = [i[1] for i in relief_top_factors]  # extracting names of top factors
-        names_linear = [i[1] for i in linear_top_factors]
-        names_random = [i[1] for i in random_top_factors]
+        factor_names = get_all_top_attributes(table)
         attrs = table.domain.attributes                    # extracting names from domain
         l_attr = []
         for attr in attrs:
-            if attr.name in names_relief:
-                l_attr.append(attr)
-            elif attr.name in names_linear:
-                l_attr.append(attr)
-            elif attr.name in names_random:
+            if attr.name in factor_names:
                 l_attr.append(attr)
 
-        #l_attr = [attr for attr in attrs if attr.name in names_relief+names_linear+names_random]
-
+        #l_attr = [attr for attr in attrs if attr.name in factor_names]
 
         domain = Domain(l_attr, table.domain.class_vars, table.domain.metas)
         return table.transform(domain)
 
 def cross_validation(data):
-    """Accepts orange Table"""
-    forest = RandomForestRegressionLearner()
-    learners = [forest]
-    cross = CrossValidation(k=10)
+    # regression = LinearRegressionLearner()
+    lasso = [LassoRegressionLearner(alpha=16, fit_intercept=True)]
+    forest = [RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)]
+    learners = [forest, lasso]
+    learners_scores = []
 
-    filter = HasClass()
-    with_class = filter(data)           # remove values without a class (target variable)
+    for learner in learners:
+        filter = HasClass()
+        with_class = filter(data)                   # remove values without a class (target variable)
+        cross = CrossValidation(k=len(with_class))
 
-    result = cross(with_class, learners, preprocessor=FeatureSubsetSelection())
+        result = cross(with_class, learner)         # preprocessor=FeatureSubsetSelection()
+        y_true = result.actual
+        y_pred = result.predicted[0]
 
-    y_true = result.actual
-    y_pred = result.predicted[0]
-
-    r2 = r2_score(y_true, y_pred)
-    print(f"R2: {round(r2, 3)}")
-    return r2
+        r2 = r2_score(y_true, y_pred)
+        learners_scores.append(r2)
+        # print(f"R2: {round(r2, 3)}")
+    print(learners_scores)
+    return
 
 
 if __name__ == "__main__":
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_target_selected.pkl")
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
+
     # preprocess_table(data)
     # print(preprocess_table.domain)
-    preprocessor = FeatureSubsetSelection()  # narediš instanco
-    preprocessed_data = preprocessor(data)
+    preprocess = FeatureSubsetSelection()
+    pre_data = preprocess(data)         # putting this in cross validation, we obtain workfow in orange
     cross = cross_validation(data)
-    print(len(preprocessed_data.domain.attributes))
+    acc = accuracy_of_preprocessed_factors(data)
