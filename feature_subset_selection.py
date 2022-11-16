@@ -4,7 +4,7 @@ from Orange.data import Table, Domain
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
 from Orange.regression.random_forest import RandomForestRegressionLearner
 from Orange.regression import LassoRegressionLearner
-from Orange.preprocess import Preprocess
+from Orange.preprocess import Preprocess, Normalize
 from Orange.evaluation import CrossValidation
 from Orange.data.filter import HasClass
 
@@ -29,7 +29,40 @@ RF: A008.W = 0.28
 LR: A008.W = **negative values** for alpha in range 0:25
     A170.W = **negative values** for alpha in range 0:25
     SWB.LS = 0.33 (alpha = 0) >>> by using higher alpha values we obtain negative result
+
+normalization / cross-validation
+
+
+    
+normalization / preprocessing / cross-validation
+
+SWB.LS
+   alpha: 0.07    result: [0.5676902067182332, 0.6135536431883339]
+   alpha: 0.1    result: [0.5676902067182332, 0.5758854346201447]
+   alpha: 0.13    result: [0.5676902067182332, 0.5321999520909746]
+   alpha: 0.16    result: [0.5676902067182332, 0.49780347585300744]
+   alpha: 0.19    result: [0.5676902067182332, 0.4651894014137452]
+   alpha: 0.22    result: [0.5676902067182332, 0.4341891510694884]
+
+preprocessing / normalization / cross-validation
+
+SWB.LS 
+    alpha: 0.09    result: [0.578937205124497, 0.7107627354388759]
+    alpha: 0.1    result: [0.578937205124497, 0.706505618131291]
+    alpha: 0.15    result: [0.578937205124497, 0.666166045034656]
+    alpha: 0.2    result: [0.578937205124497, 0.6047269432248306]
+
 """
+
+ALPHA = 0.5    # CAPS LOCK KONSTANTE
+
+
+def normalization(data):
+    normalizer = Normalize(norm_type=Normalize.NormalizeBySD)
+    normalized_data = normalizer(data)
+    # print(normalized_data)
+    return normalized_data
+
 
 
 def get_top_attributes(method, data):
@@ -68,9 +101,9 @@ def get_all_top_attributes(table):
     names_linear = [i[1] for i in linear_top_factors]
     names_random = [i[1] for i in random_top_factors]
 
-    print(relief_top_factors)
-    print(linear_top_factors)
-    print(random_top_factors)
+    #print(relief_top_factors)
+    #print(linear_top_factors)
+    #print(random_top_factors)
 
     all_names = set(names_relief+names_linear+names_random)
     return list(all_names)
@@ -79,7 +112,7 @@ def get_all_top_attributes(table):
 def accuracy_of_preprocessed_factors(data):
     preprocessor = FeatureSubsetSelection()
     table_only_top_factors = preprocessor(data)
-    lasso = LassoRegressionLearner(alpha=16, fit_intercept=True)
+    lasso = LassoRegressionLearner(alpha=ALPHA, fit_intercept=True)
     forest = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
     learners = [lasso, forest]
 
@@ -121,12 +154,18 @@ class FeatureSubsetSelection(Preprocess):
 
         #l_attr = [attr for attr in attrs if attr.name in factor_names]
 
-        domain = Domain(l_attr, table.domain.class_vars, table.domain.metas)
-        return table.transform(domain)
+        domain = Domain(l_attr, table.domain.class_vars, table.domain.metas)    # domain only with l_attr
+        table_only_top_factors = table.transform(domain)              # return a table which contains only l_attr columns
+        return table_only_top_factors
+
+    """preprocessor / normalization / cross-validation"""
+        # normi = normalization(table_only_top_factors)
+        # return normi
+
 
 def cross_validation(data):
     # regression = LinearRegressionLearner()
-    lasso = [LassoRegressionLearner(alpha=16, fit_intercept=True)]
+    lasso = [LassoRegressionLearner(alpha=ALPHA, fit_intercept=True)]
     forest = [RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)]
     learners = [forest, lasso]
     learners_scores = []
@@ -136,7 +175,7 @@ def cross_validation(data):
         with_class = filter(data)                   # remove values without a class (target variable)
         cross = CrossValidation(k=len(with_class))
 
-        result = cross(with_class, learner)         # preprocessor=FeatureSubsetSelection()
+        result = cross(with_class, learner, preprocessor=FeatureSubsetSelection())  # preprocessor=FeatureSubsetSelection()
         y_true = result.actual
         y_pred = result.predicted[0]
 
@@ -144,15 +183,28 @@ def cross_validation(data):
         learners_scores.append(r2)
         # print(f"R2: {round(r2, 3)}")
     print(learners_scores)
-    return
+    return learners_scores
 
 
 if __name__ == "__main__":
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl")
 
     # preprocess_table(data)
     # print(preprocess_table.domain)
-    preprocess = FeatureSubsetSelection()
-    pre_data = preprocess(data)         # putting this in cross validation, we obtain workfow in orange
-    cross = cross_validation(data)
-    acc = accuracy_of_preprocessed_factors(data)
+    # preprocess = FeatureSubsetSelection()
+    # pre_data = preprocess(data)         # putting this in cross validation, we obtain workfow in orange
+    # cross = cross_validation(data)
+    # acc = accuracy_of_preprocessed_factors(data)
+
+    """normalization / cross-validation"""  # remove preprocessor from cross and normalization from preprocessor
+    # normi = normalization(data)
+    # cross = cross_validation(normi)
+
+    results = []
+    for alpha in range(7, 23, 3):
+        ALPHA = alpha/100
+        cross = cross_validation(data)
+        results.append((ALPHA, cross))
+
+    for alpha, result in results:
+        print(f"alpha: {alpha}    result: {result}")
