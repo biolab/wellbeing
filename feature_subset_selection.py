@@ -4,57 +4,123 @@ from Orange.data import Table, Domain
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
 from Orange.regression.random_forest import RandomForestRegressionLearner
 from Orange.regression import LassoRegressionLearner
-from Orange.preprocess import Preprocess, Normalize
+from Orange.preprocess import Preprocess, Normalize, PreprocessorList
 from Orange.evaluation import CrossValidation
 from Orange.data.filter import HasClass
 
 
 """
-CROSS w/ preprocessing 
+ALL: cross-validation
 
-RF: A008.W = 0.27
-    A170.W = 0.62
-    SWB.LS = 0.58
+A008.W 
+    alpha: 0.5    result: [0.2746688840615755, -266.01053568610115] 
+    alpha: 1      result: [0.2746688840615755, -30.60461446063249]
+    alpha: 1.5    result: [0.2746688840615755, -3.057001471266874]
 
-LR: A008.W = 0.11 (alpha = 3)
-    A170.W = 0.56 (alpha = 0.5)
-    SWB.LS = 0.50 (alpha = 0.5)
-
-CROSS w/o preprocessing
-
-RF: A008.W = 0.28
-    A170.W = 0.52
-    SWB.LS = 0.54
+A170.W
+    alpha: 0.1    result: [0.5151058286358667, -752.6556680441837]
+    alpha: 0.5    result: [0.5151058286358667, -2539.8145648342825]
+    alpha: 1    result: [0.5151058286358667, -2176.649175605183]
     
-LR: A008.W = **negative values** for alpha in range 0:25
-    A170.W = **negative values** for alpha in range 0:25
-    SWB.LS = 0.33 (alpha = 0) >>> by using higher alpha values we obtain negative result
-
-normalization / cross-validation
-
-
+SWB.LS    
+    **alpha: 0    result: [0.542922061779767, 0.33223494884996607]
+    alpha: 0.02    result: [0.542922061779767, -1.5106110931623928]
+    alpha: 0.04    result: [0.542922061779767, -4.160150398263308]
     
-normalization / preprocessing / cross-validation
+    
+FSS: cross-validation w/ feature selection
+
+A008.W
+    alpha: 0.05    result: [0.2745338786986795, 0.3447987850441635]
+    **alpha: 0.06    result: [0.2745338786986795, 0.37402929446981015]**
+    alpha: 0.1    result: [0.2745338786986795, 0.32009137208384486]
+
+A170.W
+    alpha: 0.2    result: [0.6234367513732202, 0.5588054630860201]
+    **alpha: 0.4    result: [0.6234367513732202, 0.5709059009289654]**
+    alpha: 0.6    result: [0.6234367513732202, 0.5315705374565577] 
 
 SWB.LS
-   alpha: 0.07    result: [0.5676902067182332, 0.6135536431883339]
-   alpha: 0.1    result: [0.5676902067182332, 0.5758854346201447]
-   alpha: 0.13    result: [0.5676902067182332, 0.5321999520909746]
-   alpha: 0.16    result: [0.5676902067182332, 0.49780347585300744]
-   alpha: 0.19    result: [0.5676902067182332, 0.4651894014137452]
-   alpha: 0.22    result: [0.5676902067182332, 0.4341891510694884]
+    alpha: 0.2    result: [0.578937205124497, 0.48960884351948386]
+    alpha: 0.3    result: [0.578937205124497, 0.49023461206717256]
+    **alpha: 0.5    result: [0.578937205124497, 0.4982400941730326]**
 
-preprocessing / normalization / cross-validation
 
+NORM: normalize data - cross-validation
+
+A008.W
+    alpha: 0.02    result: [0.27414200658144317, 0.1719769046759434]
+    **alpha: 0.04    result: [0.27414200658144317, 0.26117096682090146]**
+    alpha: 0.06    result: [0.27414200658144317, 0.23307052396973404]
+
+A170.W 
+    alpha: 0.04    result: [0.5225549875749862, 0.44957412998575186]
+    **alpha: 0.06    result: [0.5225549875749862, 0.5229903312967453]**
+    alpha: 0.08    result: [0.5225549875749862, 0.4810275889211615]   
+
+SWB.LS
+    alpha: 0.02    result: [0.535172601752893, 0.6262890012130881]
+    **alpha: 0.04    result: [0.535172601752893, 0.6387198800953162]**
+    alpha: 0.06    result: [0.535172601752893, 0.6001022875617558]
+
+
+NFSS: normaliz data - cv w/ feature selection
+
+A008.W
+    alpha: 0.01    result: [0.2745338786986795, 0.28314783814886135]
+    **alpha: 0.02    result: [0.2745338786986795, 0.3466984099730276]**
+    alpha: 0.04    result: [0.2745338786986795, 0.324476460317514]
+    alpha: 0.06    result: [0.2745338786986795, 0.23769961233662762]
+
+A170.W
+    alpha: 0.02    result: [0.6229451343114472, 0.4713305550131984]
+    **alpha: 0.04    result: [0.6229451343114472, 0.4914933272401233]**
+    alpha: 0.06    result: [0.6229451343114472, 0.4635202691562629]
+
+SWB.LS
+    alpha: 0.02    result: [0.5676902067182332, 0.606967907171617]
+    alpha: 0.04    result: [0.5676902067182332, 0.6251625134692995]
+    **alpha: 0.06    result: [0.5676902067182332, 0.625220461605805]**
+    alpha: 0.08    result: [0.5676902067182332, 0.6002252042919891]
+
+XNFSS: feature selection - normalize data - cv >>> PREVERI!!
+
+A008.W
+    alpha: 0.02    result: [0.2745338786986795, 0.3190194616453528]
+    **alpha: 0.04    result: [0.2745338786986795, 0.32050079072966553]**
+    alpha: 0.06    result: [0.2745338786986795, 0.2376603344126128]
+    
+A170.W
+    alpha: 0.03    result: [0.6231218613727252, 0.47735573831608025]
+    **alpha: 0.05    result: [0.6231218613727252, 0.49567509095237927]**
+    alpha: 0.1    result: [0.6231218613727252, 0.44550222867618605]  
+    
 SWB.LS 
-    alpha: 0.09    result: [0.578937205124497, 0.7107627354388759]
+    alpha: 0.08    result: [0.578937205124497, 0.6987946053062986]
+    **alpha: 0.09    result: [0.578937205124497, 0.7107627354388759]**
     alpha: 0.1    result: [0.578937205124497, 0.706505618131291]
-    alpha: 0.15    result: [0.578937205124497, 0.666166045034656]
-    alpha: 0.2    result: [0.578937205124497, 0.6047269432248306]
+    alpha: 0.11    result: [0.578937205124497, 0.6992242145519687]
+    
+FSSN: cv with normalization and feature selection
 
+A008.W
+    alpha: 0.02    result: [0.2745338786986795, 0.3190194616453528]
+    alpha: 0.04    result: [0.2745338786986795, 0.32050079072966553]
+    alpha: 0.06    result: [0.2745338786986795, 0.2376603344126128]
+
+A170.W
+    alpha: 0.02    result: [0.6231218613727252, 0.44504615549634796]
+    alpha: 0.04    result: [0.6231218613727252, 0.49060008501903407]
+    alpha: 0.06    result: [0.6231218613727252, 0.4937621684794109]
+    alpha: 0.08    result: [0.6231218613727252, 0.475241079998746]
+
+SWB.LS
+    alpha: 0.08    result: [0.5682499001732606, 0.6987946306665085]
+    alpha: 0.1     result: [0.5682499001732606, 0.7065056358036739]
+    alpha: 0.12    result: [0.5682499001732606, 0.690980252169229]
 """
 
-ALPHA = 0.5    # CAPS LOCK KONSTANTE
+ALPHA = 0.5                 # CAPS LOCK KONSTANTE
 
 
 def normalization(data):
@@ -62,8 +128,6 @@ def normalization(data):
     normalized_data = normalizer(data)
     # print(normalized_data)
     return normalized_data
-
-
 
 def get_top_attributes(method, data):
     scores = method(data)
@@ -101,9 +165,9 @@ def get_all_top_attributes(table):
     names_linear = [i[1] for i in linear_top_factors]
     names_random = [i[1] for i in random_top_factors]
 
-    #print(relief_top_factors)
-    #print(linear_top_factors)
-    #print(random_top_factors)
+    # print(relief_top_factors)
+    # print(linear_top_factors)
+    # print(random_top_factors)
 
     all_names = set(names_relief+names_linear+names_random)
     return list(all_names)
@@ -175,7 +239,9 @@ def cross_validation(data):
         with_class = filter(data)                   # remove values without a class (target variable)
         cross = CrossValidation(k=len(with_class))
 
-        result = cross(with_class, learner, preprocessor=FeatureSubsetSelection())  # preprocessor=FeatureSubsetSelection()
+        preprocessor_types = [Normalize(norm_type=Normalize.NormalizeBySD), FeatureSubsetSelection()]
+        preprocess = PreprocessorList(preprocessor_types)
+        result = cross(with_class, learner, preprocessor=preprocess)  # preprocessor=FeatureSubsetSelection()
         y_true = result.actual
         y_pred = result.predicted[0]
 
@@ -201,8 +267,8 @@ if __name__ == "__main__":
     # cross = cross_validation(normi)
 
     results = []
-    for alpha in range(7, 23, 3):
-        ALPHA = alpha/100
+    for alpha in [0.12, 0.14, 0.16]:
+        ALPHA = alpha
         cross = cross_validation(data)
         results.append((ALPHA, cross))
 
