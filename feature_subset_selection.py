@@ -63,8 +63,12 @@ SWB.LS
     **alpha: 0.04    result: [0.535172601752893, 0.6387198800953162]**
     alpha: 0.06    result: [0.535172601752893, 0.6001022875617558]
 
+ranking
+    alpha: 1    result: [0.6025372113236223, 0.5551816524250228]
+    **alpha: 1.2    result: [0.6025372113236223, 0.56280250438162]**
+    alpha: 1.4    result: [0.6025372113236223, 0.5594251413200317]
 
-NFSS: normaliz data - cv w/ feature selection
+NFSS: normalize data - cv w/ feature selection
 
 A008.W
     alpha: 0.01    result: [0.2745338786986795, 0.28314783814886135]
@@ -105,19 +109,26 @@ FSSN: cv with normalization and feature selection
 
 A008.W
     alpha: 0.02    result: [0.2745338786986795, 0.3190194616453528]
-    alpha: 0.04    result: [0.2745338786986795, 0.32050079072966553]
+    **alpha: 0.04    result: [0.2745338786986795, 0.32050079072966553]**
     alpha: 0.06    result: [0.2745338786986795, 0.2376603344126128]
 
 A170.W
     alpha: 0.02    result: [0.6231218613727252, 0.44504615549634796]
     alpha: 0.04    result: [0.6231218613727252, 0.49060008501903407]
-    alpha: 0.06    result: [0.6231218613727252, 0.4937621684794109]
+    **alpha: 0.06    result: [0.6231218613727252, 0.4937621684794109]**
     alpha: 0.08    result: [0.6231218613727252, 0.475241079998746]
 
 SWB.LS
     alpha: 0.08    result: [0.5682499001732606, 0.6987946306665085]
-    alpha: 0.1     result: [0.5682499001732606, 0.7065056358036739]
+    **alpha: 0.1     result: [0.5682499001732606, 0.7065056358036739]**
     alpha: 0.12    result: [0.5682499001732606, 0.690980252169229]
+    
+ranking
+    alpha: 2.0    result: [0.6069545852300877, 0.6683099167781903]
+    **alpha: 2.2    result: [0.6069545852300877, 0.6694888113113995]**
+    alpha: 2.5    result: [0.6069545852300877, 0.6611874967684047]
+    alpha: 2.8    result: [0.6069545852300877, 0.655769069241162]
+
 """
 
 ALPHA = 0.5                 # CAPS LOCK KONSTANTE
@@ -126,7 +137,6 @@ ALPHA = 0.5                 # CAPS LOCK KONSTANTE
 def normalization(data):
     normalizer = Normalize(norm_type=Normalize.NormalizeBySD)
     normalized_data = normalizer(data)
-    # print(normalized_data)
     return normalized_data
 
 def get_top_attributes(method, data):
@@ -165,9 +175,11 @@ def get_all_top_attributes(table):
     names_linear = [i[1] for i in linear_top_factors]
     names_random = [i[1] for i in random_top_factors]
 
-    # print(relief_top_factors)
-    # print(linear_top_factors)
-    # print(random_top_factors)
+
+    print(relief_top_factors)
+    print(linear_top_factors)
+    print(random_top_factors)
+
 
     all_names = set(names_relief+names_linear+names_random)
     return list(all_names)
@@ -219,7 +231,7 @@ class FeatureSubsetSelection(Preprocess):
         #l_attr = [attr for attr in attrs if attr.name in factor_names]
 
         domain = Domain(l_attr, table.domain.class_vars, table.domain.metas)    # domain only with l_attr
-        table_only_top_factors = table.transform(domain)              # return a table which contains only l_attr columns
+        table_only_top_factors = table.transform(domain)                        # return a table which contains only l_attr columns
         return table_only_top_factors
 
     """preprocessor / normalization / cross-validation"""
@@ -240,8 +252,8 @@ def cross_validation(data):
         cross = CrossValidation(k=len(with_class))
 
         preprocessor_types = [Normalize(norm_type=Normalize.NormalizeBySD), FeatureSubsetSelection()]
-        preprocess = PreprocessorList(preprocessor_types)
-        result = cross(with_class, learner, preprocessor=preprocess)  # preprocessor=FeatureSubsetSelection()
+        list_of_preprocessors = PreprocessorList(preprocessor_types)             # cross-validation with both preprocessors
+        result = cross(with_class, learner, preprocessor=list_of_preprocessors)  # preprocessor=FeatureSubsetSelection()
         y_true = result.actual
         y_pred = result.predicted[0]
 
@@ -253,24 +265,24 @@ def cross_validation(data):
 
 
 if __name__ == "__main__":
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl")
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
 
     # preprocess_table(data)
     # print(preprocess_table.domain)
-    # preprocess = FeatureSubsetSelection()
-    # pre_data = preprocess(data)         # putting this in cross validation, we obtain workfow in orange
-    # cross = cross_validation(data)
-    # acc = accuracy_of_preprocessed_factors(data)
+    preprocess = FeatureSubsetSelection()   # only FFS
+    pre_data = preprocess(data)             # putting this in cross validation, we obtain workflow in orange
+    print(pre_data)
+    # acc = accuracy_of_preprocessed_factors(data)  # R2 on FSS only
 
     """normalization / cross-validation"""  # remove preprocessor from cross and normalization from preprocessor
     # normi = normalization(data)
     # cross = cross_validation(normi)
 
     results = []
-    for alpha in [0.12, 0.14, 0.16]:
+    for alpha in [1.8, 2.0, 2.2, 2.5]:
         ALPHA = alpha
-        cross = cross_validation(data)
-        results.append((ALPHA, cross))
+        # cross = cross_validation(data)
+        # results.append((ALPHA, cross))
 
     for alpha, result in results:
         print(f"alpha: {alpha}    result: {result}")
