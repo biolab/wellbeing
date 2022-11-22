@@ -279,7 +279,7 @@ if __name__ == "__main__":
     # cross = cross_validation(normi)
 
     results = []
-    for alpha in [1.8, 2.0, 2.2, 2.5]:
+    for alpha in [1]:
         ALPHA = alpha
         # cross = cross_validation(data)
         # results.append((ALPHA, cross))
