@@ -1,4 +1,6 @@
 import numpy as np
+import pandas as pd
+import json
 from sklearn.metrics import r2_score
 from Orange.data import Table, Domain
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
@@ -171,15 +173,12 @@ def get_all_top_attributes(table):
     relief_top_factors = get_top_attributes(RReliefF(random_state=0), table)
     linear_top_factors = get_top_attributes(UnivariateLinearRegression(), table)
     random_top_factors = rf_top_attributes(table)
+
+    shranilnik(relief_top_factors, linear_top_factors, random_top_factors)
+
     names_relief = [i[1] for i in relief_top_factors]   # extracting names of top factors
     names_linear = [i[1] for i in linear_top_factors]
     names_random = [i[1] for i in random_top_factors]
-
-
-    print(relief_top_factors)
-    print(linear_top_factors)
-    print(random_top_factors)
-
 
     all_names = set(names_relief+names_linear+names_random)
     return list(all_names)
@@ -263,6 +262,28 @@ def cross_validation(data):
     print(learners_scores)
     return learners_scores
 
+def shranilnik(list1, list2, list3):
+    df = pd.DataFrame(columns=['ranker', 'att', 'score'])
+    rank_method_names = ['relief', 'univariate', 'forest']
+    for name, list in zip(rank_method_names, [list1, list2, list3]):
+        for element in list:
+            score, att = element
+            dict = {'ranker': name, 'att': att, 'score': score}
+            df = df.append(dict, ignore_index=True)
+
+    df.to_csv('hren.csv', index=False)
+
+    # df = pd.read_csv('hren.csv')
+    
+    """
+    with open('shren.json', 'w') as fp:
+        json.dump(dict, fp)       # dump it on the disk
+
+    
+    with open('shren.json', 'r') as fp:
+        dict = json.load(fp)    
+    """
+
 
 if __name__ == "__main__":
     data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
@@ -271,7 +292,7 @@ if __name__ == "__main__":
     # print(preprocess_table.domain)
     preprocess = FeatureSubsetSelection()   # only FFS
     pre_data = preprocess(data)             # putting this in cross validation, we obtain workflow in orange
-    print(pre_data)
+    # print(pre_data)
     # acc = accuracy_of_preprocessed_factors(data)  # R2 on FSS only
 
     """normalization / cross-validation"""  # remove preprocessor from cross and normalization from preprocessor
