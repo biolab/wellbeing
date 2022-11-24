@@ -24,7 +24,7 @@ iv. draw the distribution of rrelieff scores using histogram and get threshold
 
 """
 
-data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
+data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_selected.pkl")
 
 
 def get_forest_scores(data):
@@ -80,14 +80,24 @@ def racunalnik(data):
     return result
 
 def sparovcek(list_listov):
-    df = pd.DataFrame(columns=['ranker', 'p-value'])
+    df = pd.DataFrame(columns=['P95', 'P99', 'P999'])
     rank_method_names = ['relief', 'univariate', 'forest']
     for name, list in zip(rank_method_names, list_listov):
-        for value in list:
-            dict = {'ranker': name, 'p-value': value}
-            df = df.append(dict, ignore_index=True)
+        dict = {'P95': list[0], 'P99': list[1], 'P999': list[2]}
+        df = df.append(pd.Series(dict, name=name))
 
-    df.to_csv('p-val_A008W.csv', index=False)
+    ime_datoteke = 'p-val_ranking'
+    df.to_csv(f'{ime_datoteke}.csv')
+
+    google = True
+    if google:
+        with open(f'{ime_datoteke}.csv') as f:
+            tabela_str = f.read()
+        tabela_str = tabela_str.replace(',', ':').replace('.', ',')
+        with open(f'{ime_datoteke}.txt', 'w') as f:
+            f.write(tabela_str)
+        print(f"za google zapisano v {ime_datoteke}.txt")
+
 
 
 pozeni = racunalnik(data)
