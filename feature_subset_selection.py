@@ -174,8 +174,9 @@ def get_all_top_attributes(table):
     linear_top_factors = get_top_attributes(UnivariateLinearRegression(), table)
     random_top_factors = rf_top_attributes(table)
 
-    shranilnik(relief_top_factors, linear_top_factors, random_top_factors)
+    # shranilnik(relief_top_factors, linear_top_factors, random_top_factors)
 
+    print(relief_top_factors)
     names_relief = [i[1] for i in relief_top_factors]   # extracting names of top factors
     names_linear = [i[1] for i in linear_top_factors]
     names_random = [i[1] for i in random_top_factors]
@@ -277,7 +278,7 @@ def shranilnik(list1, list2, list3):
     
     """
     with open('shren.json', 'w') as fp:
-        json.dump(dict, fp)       # dump it on the disk
+        json.dump(dict, fp)       
 
     
     with open('shren.json', 'r') as fp:

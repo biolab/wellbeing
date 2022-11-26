@@ -6,25 +6,9 @@ from Orange.data import Table
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
 from Orange.regression.random_forest import RandomForestRegressionLearner
 
+from feature_subset_selection import get_top_attributes, rf_top_attributes
 
-"""
-i. extract class_var from orange table
-    class_values = data.Y
-
-ii. shuffle the values of class_var inside the list
-     np.random.shuffle(data.Y)
-
-iii. on shuffled class_var calculate rrelief scores and  save new ranking scores in list
-    rank_scores = []
-    scores = RReliefF(data)
-    for score in scores:
-        rank_scores.append(score)
-
-iv. draw the distribution of rrelieff scores using histogram and get threshold
-
-"""
-
-data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_selected.pkl")
+data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
 
 
 def get_forest_scores(data):
@@ -58,37 +42,52 @@ def plot_dist(scores):
     sns.histplot(data=scores).set(title="regresijski srečkovič")
     plt.show()
 
-def get_p_value(scores, percentile):
-    vector = np.array(scores)
-    threshold = np.percentile(vector, percentile)
-    print(threshold)
-    return threshold
 
-def racunalnik(data):
+def calculate_p_value(distribution, top_score):
+    """
+    cnt = count the number of values in the distribution that are bigger than sample
+    p_val = cnt / len(distribution)
+    """
+    cnt = 0
+    for score in distribution:
+        if score >= top_score:
+            cnt += 1
+    p_val = cnt / len(distribution)
+    return p_val
+
+
+def get_ranker_p_values(random_scores, top_factors):
+    p_values = {}
+    for score, att_name in top_factors:
+        p_val = calculate_p_value(random_scores, score)
+        #scores_p_val.append(p_val)
+        p_values[att_name] = p_val
+    print(p_values)
+    return p_values
+
+
+def get_p_values_for_top_factors(data):
+    relief_top_factors = get_top_attributes(RReliefF(random_state=0), data)
+    linear_top_factors = get_top_attributes(UnivariateLinearRegression(), data)
+    random_top_factors = rf_top_attributes(data)
+
+    seznam = [relief_top_factors, linear_top_factors, random_top_factors]
+
     ranker_scores = []
-    for ranker in [RReliefF(), UnivariateLinearRegression()]:
+    for ranker in [RReliefF(random_state=0), UnivariateLinearRegression()]:
         ranker_scores.append(get_ranker_scores(ranker, data))
     ranker_scores.append(get_forest_scores(data))
 
-    result = []
-    for scores in ranker_scores:
-        p_vals = []
-        for percentile in [95, 99, 99.9]:
-            p_vals.append(get_p_value(scores, percentile))
-        result.append(p_vals)
-    print(result)
-    return result
 
-def sparovcek(list_listov):
-    df = pd.DataFrame(columns=['P95', 'P99', 'P999'])
-    rank_method_names = ['relief', 'univariate', 'forest']
-    for name, list in zip(rank_method_names, list_listov):
-        dict = {'P95': list[0], 'P99': list[1], 'P999': list[2]}
-        df = df.append(pd.Series(dict, name=name))
+    slovarcki = []
+    for random_scores, top_factors in zip(ranker_scores, seznam):
+        p_values = get_ranker_p_values(random_scores, top_factors)
+        print(p_values)
+        slovarcki.append(p_values)
+    return slovarcki
 
-    ime_datoteke = 'p-val_ranking'
-    df.to_csv(f'{ime_datoteke}.csv')
 
+def google(ime_datoteke):
     google = True
     if google:
         with open(f'{ime_datoteke}.csv') as f:
@@ -99,9 +98,8 @@ def sparovcek(list_listov):
         print(f"za google zapisano v {ime_datoteke}.txt")
 
 
+get_p_values_for_top_factors(data)
 
-pozeni = racunalnik(data)
-konec = sparovcek(pozeni)
 
 """
 rez = get_p_value(ranker_scores)
