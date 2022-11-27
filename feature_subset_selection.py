@@ -151,7 +151,7 @@ def get_top_attributes(method, data):
             t = (score, attr.name)
             score_attr_pairs.append(t)
     score_attr_pairs.sort(key=lambda x: x[0], reverse=True)
-    top_factors = score_attr_pairs[:10]
+    top_factors = score_attr_pairs[:11]
     return top_factors
 
 
@@ -166,7 +166,7 @@ def rf_top_attributes(data):
             t = (i, j.name)
             ls_scores.append(t)
     ls_scores.sort(key=lambda x: x[0], reverse=True)
-    top_factors = ls_scores[:10]
+    top_factors = ls_scores[:11]
     return top_factors
 
 def get_all_top_attributes(table):
@@ -176,10 +176,11 @@ def get_all_top_attributes(table):
 
     # shranilnik(relief_top_factors, linear_top_factors, random_top_factors)
 
-    print(relief_top_factors)
     names_relief = [i[1] for i in relief_top_factors]   # extracting names of top factors
     names_linear = [i[1] for i in linear_top_factors]
     names_random = [i[1] for i in random_top_factors]
+
+    print(relief_top_factors, linear_top_factors, random_top_factors)
 
     all_names = set(names_relief+names_linear+names_random)
     return list(all_names)
@@ -267,8 +268,7 @@ def shranilnik(list1, list2, list3):
     df = pd.DataFrame(columns=['ranker', 'att', 'score'])
     rank_method_names = ['relief', 'univariate', 'forest']
     for name, list in zip(rank_method_names, [list1, list2, list3]):
-        for element in list:
-            score, att = element
+        for score, att in list:
             dict = {'ranker': name, 'att': att, 'score': score}
             df = df.append(dict, ignore_index=True)
 

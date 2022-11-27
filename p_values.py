@@ -60,9 +60,8 @@ def get_ranker_p_values(random_scores, top_factors):
     p_values = {}
     for score, att_name in top_factors:
         p_val = calculate_p_value(random_scores, score)
-        #scores_p_val.append(p_val)
+        # p_values.append(p_val)
         p_values[att_name] = p_val
-    print(p_values)
     return p_values
 
 
@@ -71,7 +70,7 @@ def get_p_values_for_top_factors(data):
     linear_top_factors = get_top_attributes(UnivariateLinearRegression(), data)
     random_top_factors = rf_top_attributes(data)
 
-    seznam = [relief_top_factors, linear_top_factors, random_top_factors]
+    all_top_factors = [relief_top_factors, linear_top_factors, random_top_factors]
 
     ranker_scores = []
     for ranker in [RReliefF(random_state=0), UnivariateLinearRegression()]:
@@ -79,12 +78,16 @@ def get_p_values_for_top_factors(data):
     ranker_scores.append(get_forest_scores(data))
 
 
-    slovarcki = []
-    for random_scores, top_factors in zip(ranker_scores, seznam):
-        p_values = get_ranker_p_values(random_scores, top_factors)
-        print(p_values)
-        slovarcki.append(p_values)
-    return slovarcki
+    rank_method_names = ['R', 'L', 'F']             # ustvarim seznam kratic za metode rangiranja
+    slovarcek = {}
+    # zdruzim skupaj seznam nakljucnih vrednosti, seznam top faktorjev in ime ranker metode
+    for random_scores, top_factors, method_name in zip(ranker_scores, all_top_factors, rank_method_names):
+        p_values = get_ranker_p_values(random_scores, top_factors)  # dobim slovar [att_name] --> att p-value
+        for att_name, p_val in p_values.items():
+            slovarcek[att_name] = (p_val, method_name)              # dobim slovar [att_name] --> method_name
+    print(slovarcek)
+    return slovarcek
+
 
 
 def google(ime_datoteke):
