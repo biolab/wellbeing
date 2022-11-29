@@ -9,6 +9,44 @@ from Orange.regression.random_forest import RandomForestRegressionLearner
 from feature_subset_selection import relief_top_attributes, linear_top_attributes, rf_top_attributes
 
 data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
+"""
+def get_relief_scores(data):
+    rank_scores = []
+    for x in range(100):
+        np.random.shuffle(data.Y)
+        method = RReliefF(random_state=0)
+        scores = method(data)
+        for score in scores:
+            rank_scores.append(score)
+    rank_scores_clean = [x for x in rank_scores if x != 0.0]
+    print(len(rank_scores_clean))
+    return rank_scores_clean
+
+def get_linear_scores(data):
+    rank_scores = []
+    for x in range(100):
+        np.random.shuffle(data.Y)
+        method = UnivariateLinearRegression()
+        scores = method(data)
+        for score in scores:
+            rank_scores.append(score)
+    rank_scores_clean = [x for x in rank_scores if not np.isnan(x)]
+    print(len(rank_scores_clean))
+    return rank_scores_clean
+"""
+
+
+def get_ranker_scores(ranker, data):
+    rank_scores = []
+    for x in range(100):
+        np.random.shuffle(data.Y)
+        scores = ranker(data)
+        for score in scores:
+            rank_scores.append(score)
+    rank_scores_clean = [x for x in rank_scores if not np.isnan(x)]         # x != 0.0
+
+    print(len(rank_scores_clean))
+    return rank_scores_clean
 
 
 def get_forest_scores(data):
@@ -20,19 +58,6 @@ def get_forest_scores(data):
         for score in scores:
             rank_scores.append(score)
     rank_scores_clean = [x for x in rank_scores if not np.isnan(x)]  # x != 0.0
-
-    print(len(rank_scores_clean))
-    return rank_scores_clean
-
-
-def get_ranker_scores(ranker, data):
-    rank_scores = []
-    for x in range(100):
-        np.random.shuffle(data.Y)
-        scores = ranker(data)
-        for score in scores:
-            rank_scores.append(score)
-    rank_scores_clean = [x for x in rank_scores if not np.isnan(x)]         # x != 0.0
 
     print(len(rank_scores_clean))
     return rank_scores_clean
@@ -75,7 +100,22 @@ def get_p_values_for_top_factors(data):
     ranker_scores = []
     for ranker in [RReliefF(random_state=0), UnivariateLinearRegression()]:
         ranker_scores.append(get_ranker_scores(ranker, data))
+    # ranker_scores.append(get_relief_scores(data))
+    # ranker_scores.append(get_linear_scores(data))
     ranker_scores.append(get_forest_scores(data))
+
+
+    """
+    rank_method_names = ['R', 'L', 'F']  # ustvarim seznam kratic za metode rangiranja
+    seznamcek = []
+    # zdruzim skupaj seznam nakljucnih vrednosti, seznam top faktorjev in ime ranker metode
+    for random_scores, top_factors, method_name in zip(ranker_scores, all_top_factors, rank_method_names):
+        p_values = get_ranker_p_values(random_scores, top_factors)  # dobim slovar [att_name] --> att p-value
+        for att_name, p_val in p_values.items():
+            seznamcek.append(p_val)
+    print(seznamcek)
+    return seznamcek
+    """
 
 
     rank_method_names = ['R', 'L', 'F']             # ustvarim seznam kratic za metode rangiranja

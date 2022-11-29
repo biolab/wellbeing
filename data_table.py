@@ -22,13 +22,13 @@ def create_df():
     df = df[top_factors]                                    # vzamem samo tiste stolpce, ki se nanasajo na top faktorje
     df = df.loc[['SVN', 'AUT', 'DEU']].transpose()          # vzamem samo navedene vrstice in transponiram
 
-    p_values = get_p_values_for_top_factors(data)
-    """
+    #p_values = get_p_values_for_top_factors(data)
+
     import json
     with open('p_values.json') as f:
         #json.dump(p_values, f)
         p_values = json.load(f)
-     """
+
 
     df = df.dropna()  # remove NaN values
     att_names = df.index.to_list()                                      # dobim seznam imen vseh atributov
@@ -58,6 +58,9 @@ def create_df():
     delta_stolpec1 = []
     for att_name in att_names:
         delta = (df.loc[att_name, 'SVN'] - df.loc[att_name, 'AUT']) / max(df.loc[att_name, ['SVN', 'AUT', 'DEU']])
+        x = df.loc[att_name, 'Higher = Better']
+        if x == 0:
+            delta = delta*(-1)
         delta_stolpec1.append(delta)
     df.insert(3, 'Δ AUT', delta_stolpec1)
 
@@ -65,6 +68,9 @@ def create_df():
     delta_stolpec2 = []
     for att_name in att_names:
         delta = (df.loc[att_name, 'SVN'] - df.loc[att_name, 'DEU']) / max(df.loc[att_name, ['SVN', 'AUT', 'DEU']])
+        x = df.loc[att_name, 'Higher = Better']
+        if x == 0:
+            delta = delta*(-1)
         delta_stolpec2.append(delta)
     df.insert(6, 'Δ DEU', delta_stolpec2)
 
@@ -74,7 +80,7 @@ def create_df():
     df = df[cols]
     df = df.sort_values('P-value', False)
 
-    df.to_csv('A008W_data_table.csv')
+    df.to_csv('A170W_data_table.csv')
 
     print(df)
     return data, df

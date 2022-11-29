@@ -195,7 +195,7 @@ def rf_top_attributes(data):        # A008W: 11
             t = (i, j.name)
             ls_scores.append(t)
     ls_scores.sort(key=lambda x: x[0], reverse=True)
-    top_factors = ls_scores[:11]
+    top_factors = ls_scores[:10]
     return top_factors
 
 def get_all_top_attributes(table):
