@@ -141,6 +141,7 @@ def normalization(data):
     normalized_data = normalizer(data)
     return normalized_data
 
+"""
 def get_top_attributes(method, data):
     scores = method(data)
     score_attr_pairs = []
@@ -153,9 +154,37 @@ def get_top_attributes(method, data):
     score_attr_pairs.sort(key=lambda x: x[0], reverse=True)
     top_factors = score_attr_pairs[:11]
     return top_factors
+"""
 
 
-def rf_top_attributes(data):
+def relief_top_attributes(data):    # A008W: 12
+    scores = RReliefF(random_state=0)(data)
+    ls_scores = []
+    for attr, score in zip(data.domain.attributes, scores):
+        if np.isnan(score):
+            continue
+        else:
+            t = (score, attr.name)
+            ls_scores.append(t)
+    ls_scores.sort(key=lambda x: x[0], reverse=True)
+    top_factors = ls_scores[:12]
+    return top_factors
+
+def linear_top_attributes(data):    # A008W: 10
+    scores = UnivariateLinearRegression()(data)
+    ls_scores = []
+    for attr, score in zip(data.domain.attributes, scores):
+        if np.isnan(score):
+            continue
+        else:
+            t = (score, attr.name)
+            ls_scores.append(t)
+    ls_scores.sort(key=lambda x: x[0], reverse=True)
+    top_factors = ls_scores[:10]
+    return top_factors
+
+
+def rf_top_attributes(data):        # A008W: 11
     rf_learner = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
     scores, variables = rf_learner.score(data)
     ls_scores = []
@@ -170,8 +199,8 @@ def rf_top_attributes(data):
     return top_factors
 
 def get_all_top_attributes(table):
-    relief_top_factors = get_top_attributes(RReliefF(random_state=0), table)
-    linear_top_factors = get_top_attributes(UnivariateLinearRegression(), table)
+    relief_top_factors = relief_top_attributes(table)
+    linear_top_factors = linear_top_attributes(table)
     random_top_factors = rf_top_attributes(table)
 
     # shranilnik(relief_top_factors, linear_top_factors, random_top_factors)

@@ -6,7 +6,7 @@ from Orange.data import Table
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
 from Orange.regression.random_forest import RandomForestRegressionLearner
 
-from feature_subset_selection import get_top_attributes, rf_top_attributes
+from feature_subset_selection import relief_top_attributes, linear_top_attributes, rf_top_attributes
 
 data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
 
@@ -66,8 +66,8 @@ def get_ranker_p_values(random_scores, top_factors):
 
 
 def get_p_values_for_top_factors(data):
-    relief_top_factors = get_top_attributes(RReliefF(random_state=0), data)
-    linear_top_factors = get_top_attributes(UnivariateLinearRegression(), data)
+    relief_top_factors = relief_top_attributes(data)
+    linear_top_factors = linear_top_attributes(data)
     random_top_factors = rf_top_attributes(data)
 
     all_top_factors = [relief_top_factors, linear_top_factors, random_top_factors]
