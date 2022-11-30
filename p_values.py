@@ -8,7 +8,7 @@ from Orange.regression.random_forest import RandomForestRegressionLearner
 
 from feature_subset_selection import relief_top_attributes, linear_top_attributes, rf_top_attributes
 
-data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
+data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl")
 """
 def get_relief_scores(data):
     rank_scores = []
@@ -104,29 +104,22 @@ def get_p_values_for_top_factors(data):
     # ranker_scores.append(get_linear_scores(data))
     ranker_scores.append(get_forest_scores(data))
 
-
-    """
-    rank_method_names = ['R', 'L', 'F']  # ustvarim seznam kratic za metode rangiranja
-    seznamcek = []
-    # zdruzim skupaj seznam nakljucnih vrednosti, seznam top faktorjev in ime ranker metode
-    for random_scores, top_factors, method_name in zip(ranker_scores, all_top_factors, rank_method_names):
-        p_values = get_ranker_p_values(random_scores, top_factors)  # dobim slovar [att_name] --> att p-value
-        for att_name, p_val in p_values.items():
-            seznamcek.append(p_val)
-    print(seznamcek)
-    return seznamcek
-    """
-
-
     rank_method_names = ['R', 'L', 'F']             # ustvarim seznam kratic za metode rangiranja
-    slovarcek = {}
+    slovarek = {}
     # zdruzim skupaj seznam nakljucnih vrednosti, seznam top faktorjev in ime ranker metode
     for random_scores, top_factors, method_name in zip(ranker_scores, all_top_factors, rank_method_names):
         p_values = get_ranker_p_values(random_scores, top_factors)  # dobim slovar [att_name] --> att p-value
         for att_name, p_val in p_values.items():
-            slovarcek[att_name] = (p_val, method_name)              # dobim slovar [att_name] --> method_name
-    print(slovarcek)
-    return slovarcek
+            if att_name in slovarek.keys():
+                obstojeci_p_val, obstojeca_metoda = slovarek[att_name]
+                if p_val < obstojeci_p_val:
+                    print(f'Pri {att_name} prepisujem {obstojeci_p_val} od {obstojeca_metoda} z {p_val} od {method_name}')
+                    slovarek[att_name] = (p_val, method_name)  # dobim slovar [att_name] --> method_name
+            else:
+                slovarek[att_name] = (p_val, method_name)  # dobim slovar [att_name] --> method_name
+
+    print(slovarek)
+    return slovarek
 
 
 

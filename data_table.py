@@ -5,7 +5,8 @@ from p_values import get_p_values_for_top_factors
 
 
 def create_df():
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A008.W_selected.pkl")
+    filepath = r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl'
+    data = Table(filepath)
     d = pd.DataFrame(data.X)
     dm = pd.DataFrame(data.metas)
 
@@ -22,13 +23,14 @@ def create_df():
     df = df[top_factors]                                    # vzamem samo tiste stolpce, ki se nanasajo na top faktorje
     df = df.loc[['SVN', 'AUT', 'DEU']].transpose()          # vzamem samo navedene vrstice in transponiram
 
-    #p_values = get_p_values_for_top_factors(data)
+    p_values = get_p_values_for_top_factors(data)
 
+    """
     import json
     with open('p_values.json') as f:
         #json.dump(p_values, f)
         p_values = json.load(f)
-
+    """
 
     df = df.dropna()  # remove NaN values
     att_names = df.index.to_list()                                      # dobim seznam imen vseh atributov
@@ -45,7 +47,7 @@ def create_df():
     descriptions = [df2.loc[att_name, 'description'] for att_name in att_names]
     df.insert(0, 'Description', descriptions)
 
-    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 2111_porocilo_blaginja - A008.W.csv')
+    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 2111_porocilo_blaginja - SWB.LS.csv')
     df3 = df3.set_index('ID Indicators')
     units = [df3.loc[att_name, 'unit of measure'] for att_name in att_names]
     df.insert(4, 'Unit of measure', units)
@@ -80,7 +82,18 @@ def create_df():
     df = df[cols]
     df = df.sort_values('P-value', False)
 
-    df.to_csv('A170W_data_table.csv')
+
+    if filepath.endswith('SEI_krajsi_A008.W_selected.pkl'):
+        df.loc['SP.DYN.CDRT.IN', 'Scoring method'] = 'L/F'
+    elif filepath.endswith('SEI_krajsi_A170.W_selected.pkl'):
+        df.loc['ilc.mdes01', 'Scoring method'] = 'L/F'
+        df.loc['ilc.mddd17', 'Scoring method'] = 'L/F'
+    elif filepath.endswith('SEI_krajsi_SWB.LS_selected.pkl'):
+        df.loc['ilc.mdho07', 'Scoring method'] = 'L/F'
+
+
+
+    df.to_csv('SWB.LS_data_table.csv')
 
     print(df)
     return data, df
