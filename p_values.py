@@ -8,7 +8,7 @@ from Orange.regression.random_forest import RandomForestRegressionLearner
 
 from feature_subset_selection import relief_top_attributes, linear_top_attributes, rf_top_attributes
 
-data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl")
+data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
 """
 def get_relief_scores(data):
     rank_scores = []

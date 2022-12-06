@@ -167,7 +167,7 @@ def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15
             t = (score, attr.name)
             ls_scores.append(t)
     ls_scores.sort(key=lambda x: x[0], reverse=True)
-    top_factors = ls_scores[:15]
+    top_factors = ls_scores[:11]
     return top_factors
 
 def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10
@@ -316,7 +316,7 @@ def shranilnik(list1, list2, list3):
 
 
 if __name__ == "__main__":
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl")
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
 
     # preprocess_table(data)
     # print(preprocess_table.domain)

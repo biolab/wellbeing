@@ -5,7 +5,7 @@ from p_values import get_p_values_for_top_factors
 
 
 def create_df():
-    filepath = r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl'
+    filepath = r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl'
     data = Table(filepath)
     d = pd.DataFrame(data.X)
     dm = pd.DataFrame(data.metas)
@@ -47,7 +47,7 @@ def create_df():
     descriptions = [df2.loc[att_name, 'description'] for att_name in att_names]
     df.insert(0, 'Description', descriptions)
 
-    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 2111_porocilo_blaginja - SWB.LS.csv')
+    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 2111_porocilo_blaginja - A170.W.csv')
     df3 = df3.set_index('ID Indicators')
     units = [df3.loc[att_name, 'unit of measure'] for att_name in att_names]
     df.insert(4, 'Unit of measure', units)
@@ -93,10 +93,21 @@ def create_df():
 
 
 
-    df.to_csv('SWB.LS_data_table.csv')
+    df.to_csv('A170W_data_table.csv')
 
     print(df)
     return data, df
 
+def google(ime_datoteke):
+    google = True
+    if google:
+        with open(f'{ime_datoteke}.csv') as f:
+            tabela_str = f.read()
+        tabela_str = tabela_str.replace(',', ':').replace('.', ',')
+        with open(f'{ime_datoteke}.txt', 'w') as f:
+            f.write(tabela_str)
+        print(f"za google zapisano v {ime_datoteke}.txt")
+
 
 create_df()
+google('A170W_data_table.csv')
