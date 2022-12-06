@@ -1,0 +1,30 @@
+,Description,Category,Unit of measure,P-value,Scoring method,Higher = Better,SVN,AUT,DEU,Δ AUT,Δ DEU
+isoc.ci.cm.h,Households - availability of computers,Socioeconomics,%,0.0,L,1,77.5,82.25,90.0,-0.05277777777777778,-0.1388888888888889
+isoc.r.iacc.h,Households with access to the internet at home,Socioeconomics,% of households,0.0,L,1,81.22222222222223,85.11111111111111,91.33333333333333,-0.04257907542579072,-0.11070559610705584
+ilc.mddd17,Severe material deprivation rate by tenure status,Socioeconomics,%,0.0,L,0,5.000000000000001,3.4000000000000004,4.2333333333333325,-0.32000000000000006,-0.15333333333333365
+ilc.mdho07,Persons who cannot afford to replace worn-out furniture by income group and type of household,Socioeconomics,%,0.0,L/F,0,17.37142857142857,8.257142857142856,13.071428571428571,-0.524671052631579,-0.24753289473684206
+WJQ.E,"Work and Job Quality, Earnings",Socioeconomics,$,0.0,L,1,19011.77452171377,26462.89260567215,25838.81480393483,-0.2815685418441853,-0.2579854131576579
+isoc.ci.in.h,Households -  level of internet access,Socioeconomics,% of households,0.0,L,1,81.22222222222223,85.11111111111111,91.33333333333333,-0.04257907542579072,-0.11070559610705584
+ilc.mdes02,Inability to afford paying for one week annual holiday away from home - EU-SILC survey,Socioeconomics,%,0.0,L,0,25.53333333333333,16.18888888888889,18.61111111111111,-0.3659704090513489,-0.2711053089643168
+ilc.mddd13,Severe material deprivation rate by income quintile and household type,Socioeconomics,%,0.0,L,0,5.000000000000001,3.4000000000000004,4.2333333333333325,-0.32000000000000006,-0.15333333333333365
+SCO.SS,"Social connections, Social support",Socioeconomics,"share of people who answered ""yes"" to the question:  “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?”",0.0,L,1,92.48509882191473,91.79564735419726,90.4832738083328,0.007454730291687887,0.021644838347813875
+ilc.mddd11,Severe material deprivation rate by age and sex. Unit is Percentage %,Socioeconomics,%,0.0,L,0,5.000000000000001,3.4000000000000004,4.2333333333333325,-0.32000000000000006,-0.15333333333333365
+SH.PRG.ANEM,Prevalence of anemia among pregnant women (%),Health,,0.000696629213483146,F,0,22.562500000000004,17.35,15.712499999999999,-0.2310249307479225,-0.3036011080332412
+ilc.mded03,Total housing costs in pps - EU-SILC survey,Socioeconomics,Purchasing Power Standard (PPS),0.0031685393258426967,F,0,332.6666666666667,515.3777777777779,714.3333333333333,0.25577850365531196,0.5342977134857675
+NY.GNP.PCAP.PP.KD,"GNI per capita, PPP (constant 2017 international $)",Socioeconomics,,0.00701123595505618,F,1,34383.381112897725,53649.77707071936,53087.26457913467,-0.359114184806869,-0.3486292858511249
+hlth.silc.01,"Self-perceived health by sex, age and labour status. Only wstatus = POP. Only age = Y_GE16. Only levels = VGOOD",Health,%,0.012044943820224719,F,1,21.38888888888889,32.56666666666666,18.07777777777778,-0.3432275673831456,0.10167178437393379
+NE.CON.PRVT.PC.KD,Households and NPISHs Final consumption expenditure per capita (constant 2015 US$),Socioeconomics,,0.01662921348314607,F,0,5850.929139852391,11792.027298622957,11002.969130717913,0.5038233043663622,0.4369087571114395
+SL.EMP.1524.SP.FE.ZS,"Employment to population ratio, ages 15-24, female (%) (modeled ILO estimate)",Jobs,,0.017550561797752808,F,1,27.026249999999997,49.13,44.71125,-0.4499033177284755,-0.35996336250763283
+SI.POV.LMIC.GP,Poverty gap at $3.20 a day (2011 PPP) (%),Socioeconomics,,0.021101123595505616,F,0,0.0,0.42857142857142855,0.02,1.0,0.04666666666666667
+env.ww.con,Population connected to wastewater treatment plants. Unit is Percentage %,Environment,%,0.02696629213483146,F,1,93.15222222222222,100.0,99.99600000000001,-0.06847777777777779,-0.06843777777777788
+SI.POV.LMIC,Poverty headcount ratio at $3.20 a day (2011 PPP) (% of population),Socioeconomics,,0.027258426966292135,F,0,0.0071428571428571435,0.507142857142857,0.05,0.9859154929577465,0.08450704225352115
+IW.HW,"Income and Wealth, Household wealth",Socioeconomics,$,0.03047191011235955,R,1,137323.0,105381.0,85860.0,0.23260488046430677,0.3747587803936704
+SAF.RD,"Safety, Road deaths",Safety,average per 100k population,0.04638202247191011,R,0,5.322951953269699,5.023716869951489,3.9687036022434885,-0.05621600306469064,-0.25441679032897235
+env.ac.cur,Circular material use rate,Environment,%,0.058044943820224716,R,1,9.766666666666667,10.411111111111111,12.055555555555555,-0.05345622119815664,-0.18986175115207365
+educ.uoe.enra29,"Out-of-school rate in population of upper secondary school age, by sex",Socioeconomics,%,0.06292134831460675,R,0,3.5866666666666664,7.375,10.57,0.358404288867865,0.6606748659728793
+cens.01ndquart.oc,Occupants by type of housing,Socioeconomics,number,0.06759550561797753,R,1,1969459.0,8032926.0,76888100.0,-0.0788609290644456,-0.9743853860350301
+educ.uoe.enra28,"Out-of-school rate in population of lower secondary school age, by sex",Socioeconomics,%,0.08629213483146067,R,0,1.7633333333333334,1.34,1.4349999999999998,-0.24007561436672967,-0.1862003780718338
+icw.sr.11,Aggregate propensity to consume by educational attainment level of the reference person - experimental statistics,Socioeconomics,% of disposable income,0.08674157303370786,R,0,82.5,80.1,81.6,-0.02909090909090916,-0.010909090909090978
+icw.sr.10,Aggregate propensity to consume by income quintile - experimental statistics,Socioeconomics,% of disposable income,0.08674157303370786,R,0,82.5,80.1,81.6,-0.02909090909090916,-0.010909090909090978
+icw.sr.03,Median saving rate by income quintile - experimental statistics,Socioeconomics,% of disposable income,0.08802247191011237,R,1,22.8,21.1,14.5,0.0745614035087719,0.36403508771929827
+icw.sr.01,Median saving rate by age of the reference person - experimental statistics,Socioeconomics,% of disposable income,0.08802247191011237,R,1,22.8,21.1,14.5,0.0745614035087719,0.36403508771929827
