@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-import pandas as pd
 from Orange.data import Table
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
 from Orange.regression.random_forest import RandomForestRegressionLearner

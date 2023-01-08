@@ -135,7 +135,6 @@ ranking
 
 ALPHA = 0.5                 # CAPS LOCK KONSTANTE
 
-
 def normalization(data):
     normalizer = Normalize(norm_type=Normalize.NormalizeBySD)
     normalized_data = normalizer(data)
