@@ -12,7 +12,7 @@ from Orange.data.filter import HasClass
 
 
 """
-ALL: cross-validation
+ALL: cross-validation (nobenega preprocessorja)
 
 A008.W 
     alpha: 0.5    result: [0.2746688840615755, -266.01053568610115] 
@@ -140,23 +140,9 @@ def normalization(data):
     normalized_data = normalizer(data)
     return normalized_data
 
-"""
-def get_top_attributes(method, data):
-    scores = method(data)
-    score_attr_pairs = []
-    for attr, score in zip(data.domain.attributes, scores):
-        if np.isnan(score):
-            continue
-        else:
-            t = (score, attr.name)
-            score_attr_pairs.append(t)
-    score_attr_pairs.sort(key=lambda x: x[0], reverse=True)
-    top_factors = score_attr_pairs[:11]
-    return top_factors
-"""
-
 
 def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15
+    """return 10 top attributes according to RreliefF."""
     scores = RReliefF(random_state=0)(data)
     ls_scores = []
     for attr, score in zip(data.domain.attributes, scores):
@@ -170,6 +156,7 @@ def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15
     return top_factors
 
 def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10
+    """return 10 top attributes according to UnivariateLinearRegression."""
     scores = UnivariateLinearRegression()(data)
     ls_scores = []
     for attr, score in zip(data.domain.attributes, scores):
@@ -184,6 +171,7 @@ def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10
 
 
 def rf_top_attributes(data):        # A008W: 11     A170.W: 10      SWB.LS: 10
+    """return 10 top attributes according to RandomForestRegressionLearner."""
     rf_learner = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
     scores, variables = rf_learner.score(data)
     ls_scores = []
@@ -198,66 +186,70 @@ def rf_top_attributes(data):        # A008W: 11     A170.W: 10      SWB.LS: 10
     return top_factors
 
 def get_all_top_attributes(table):              # A008.W: 29    A170.W: 28  SWB.LS: 29
+    """
+    for each of the 3 methods get top 10 attributes.
+    return the list of top attributes, from which duplicates are removed.
+    """
     relief_top_factors = relief_top_attributes(table)
     linear_top_factors = linear_top_attributes(table)
     random_top_factors = rf_top_attributes(table)
 
-    # shranilnik(relief_top_factors, linear_top_factors, random_top_factors)
-
-    names_relief = [i[1] for i in relief_top_factors]   # extracting names of top factors
-    names_linear = [i[1] for i in linear_top_factors]
-    names_random = [i[1] for i in random_top_factors]
+    # save_as_csv(relief_top_factors, linear_top_factors, random_top_factors)
 
     print(relief_top_factors, linear_top_factors, random_top_factors)
 
-    all_names = set(names_relief+names_linear+names_random)
+    # extracting names of top factors
+    all_names = set()
+    for factor_list in [relief_top_factors, linear_top_factors, random_top_factors]: # For each factor list
+        for factor in factor_list: # For each factor in the list
+            all_names.add(factor[1]) # Add the name to the set
+
     return list(all_names)
 
 
 def accuracy_of_preprocessed_factors(data):
+    """
+    get top factors, calculate the accuracy of two learners: LassoRegression and RandomForestRegression.
+    """
+    # Get table only containing top attributes
     preprocessor = FeatureSubsetSelection()
     table_only_top_factors = preprocessor(data)
+
+    # remove values without a class (target variable)
+    filter = HasClass()
+    clean_table_only_top_factors = filter(table_only_top_factors)
+
+    # create two learners
     lasso = LassoRegressionLearner(alpha=ALPHA, fit_intercept=True)
     forest = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
     learners = [lasso, forest]
 
-    filter = HasClass()
-    clean_table_only_top_factors = filter(table_only_top_factors)
+    y_true = clean_table_only_top_factors.Y
 
-    """
-    r2_scores = []
+    # for each of the two learners, create a model, get a prediction,
+    # evaluate the prediction to get an accuracy score, return both scores
+    scores = []
     for learner in learners:
-        model = learner[0]
-        y_true = clean_table_only_top_factors.Y
+        model = learner(clean_table_only_top_factors)
         y_pred = model(clean_table_only_top_factors)
         score = r2_score(y_true, y_pred)
-        r2_scores.append(score)
-    print(r2_scores)
-    """
+        scores.append(score)
 
-    model1 = lasso(clean_table_only_top_factors)
-    y_true1 = clean_table_only_top_factors.Y
-    y_pred1 = model1(clean_table_only_top_factors)
-    score1 = r2_score(y_true1, y_pred1)
-
-    model2 = forest(clean_table_only_top_factors)
-    y_true2 = clean_table_only_top_factors.Y
-    y_pred2 = model2(clean_table_only_top_factors)
-    score2 = r2_score(y_true2, y_pred2)
-    print(score1, score2)
-    return score1, score2
+    print(scores)
+    return scores
 
 
 class FeatureSubsetSelection(Preprocess):
     def __call__(self, table: Table) -> Table:
-        factor_names = get_all_top_attributes(table)
-        attrs = table.domain.attributes                    # extracting names from domain
-        l_attr = []
-        for attr in attrs:
-            if attr.name in factor_names:
-                l_attr.append(attr)
-
-        #l_attr = [attr for attr in attrs if attr.name in factor_names]
+        """
+        input original Orange Table
+        calculate top attributes (factors)
+        return a smaller Orange Table which contains only the top attributes (columns)
+        """
+        top_factor_names = get_all_top_attributes(table)
+        # Get a list of attributes from the Orange Table whose name is in the top_factor_names
+        attrs = table.domain.attributes
+        l_attr = [attr for attr in attrs if attr.name in top_factor_names]
 
         domain = Domain(l_attr, table.domain.class_vars, table.domain.metas)    # domain only with l_attr
         table_only_top_factors = table.transform(domain)                        # return a table which contains only l_attr columns
@@ -268,31 +260,56 @@ class FeatureSubsetSelection(Preprocess):
         # return normi
 
 
-def cross_validation(data):
+def cross_validation(data, preprocessor):
+    """
+    for the dataset, run cross validation for two types of learners,
+    return their R2 scores.
+    """
+
+    # define what type of preprocessing will be used in cross-validation.
+    if preprocessor == 'ALL':
+        preprocessor = None
+    elif preprocessor == "FSS":
+        preprocessor = FeatureSubsetSelection()
+    elif preprocessor == 'FSSN':
+        preprocessor_types = [Normalize(norm_type=Normalize.NormalizeBySD), FeatureSubsetSelection()]
+        preprocessor = PreprocessorList(preprocessor_types)  # cross-validation with both preprocessors
+    else:
+        raise ValueError('ni taprav preprocessor')
+
     # regression = LinearRegressionLearner()
     lasso = [LassoRegressionLearner(alpha=ALPHA, fit_intercept=True)]
     forest = [RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)]
     learners = [forest, lasso]
     learners_scores = []
 
-    for learner in learners:
-        filter = HasClass()
-        with_class = filter(data)                   # remove values without a class (target variable)
-        cross = CrossValidation(k=len(with_class))
+    # remove values without a class (target variable)
+    filter = HasClass()
+    with_class = filter(data)
 
-        preprocessor_types = [Normalize(norm_type=Normalize.NormalizeBySD), FeatureSubsetSelection()]
-        list_of_preprocessors = PreprocessorList(preprocessor_types)             # cross-validation with both preprocessors
-        result = cross(with_class, learner, preprocessor=list_of_preprocessors)  # preprocessor=FeatureSubsetSelection()
+    # define cross-validation parameters
+    cross = CrossValidation(k=len(with_class))
+
+    for learner in learners:
+        # run cross validation on the data for these processors
+        result = cross(with_class, learner, preprocessor=preprocessor)  # preprocessor=FeatureSubsetSelection()
         y_true = result.actual
         y_pred = result.predicted[0]
 
+        # calculate r2 score
         r2 = r2_score(y_true, y_pred)
         learners_scores.append(r2)
         # print(f"R2: {round(r2, 3)}")
+
     print(learners_scores)
     return learners_scores
 
-def shranilnik(list1, list2, list3):
+def save_as_csv(list1, list2, list3):
+    """
+    input: 3 lists of top attributes and their scores.
+    create a df with columns ['ranker', 'att', 'score'], fill up this df.
+    save this df to csv.
+    """
     df = pd.DataFrame(columns=['ranker', 'att', 'score'])
     rank_method_names = ['relief', 'univariate', 'forest']
     for name, list in zip(rank_method_names, [list1, list2, list3]):
@@ -302,21 +319,10 @@ def shranilnik(list1, list2, list3):
 
     df.to_csv('hren.csv', index=False)
 
-    # df = pd.read_csv('hren.csv')
-    
-    """
-    with open('shren.json', 'w') as fp:
-        json.dump(dict, fp)       
-
-    
-    with open('shren.json', 'r') as fp:
-        dict = json.load(fp)    
-    """
-
 
 if __name__ == "__main__":
-    #data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
+    #data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
 
 
     # preprocess_table(data)
@@ -330,11 +336,12 @@ if __name__ == "__main__":
     # normi = normalization(data)
     # cross = cross_validation(normi)
 
+    # **alpha: 0.06    result: [0.6231218613727252, 0.4937621684794109]**
     results = []
-    for alpha in [1]:
+    for alpha in [0.06]:
         ALPHA = alpha
-        # cross = cross_validation(data)
-        # results.append((ALPHA, cross))
+        cross = cross_validation(data, 'FSSN')
+        results.append((ALPHA, cross))
 
     for alpha, result in results:
         print(f"alpha: {alpha}    result: {result}")
