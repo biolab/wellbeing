@@ -315,7 +315,9 @@ def shranilnik(list1, list2, list3):
 
 
 if __name__ == "__main__":
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
+    #data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
+
 
     # preprocess_table(data)
     # print(preprocess_table.domain)
