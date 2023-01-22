@@ -12,6 +12,23 @@ from Orange.data.filter import HasClass
 
 
 """
+# 
+# POZORCEK: 
+#   DA JE POMEMBNIH FAKTORJEV TOCNO 30, SPREMINJAJ DESETKICE V ENAJSTKICE KOT NAREKUJEJO KOMENTARCKI
+#   SICER (NPR PRI CROSS-VALIDATION), OHRANJAJ DESETKICE
+
+POSEBNA SEKCIJA:
+
+FSSN:
+    alpha: 0.01    result: [0.7813298763149761, 0.7627236280980851]
+    **alpha: 0.02    result: [0.7813298763149761, 0.7645338050294848]**
+    alpha: 0.03    result: [0.7813298763149761, 0.7552298195480004]
+
+NORM:
+    alpha: 0.001    result: [0.794373026251077, 0.8706389240437682]
+    **alpha: 0.005    result: [0.794373026251077, 0.8781621888492757]**
+    alpha: 0.01    result: [0.794373026251077, 0.8587433057269631]
+
 ALL: cross-validation (nobenega preprocessorja)
 
 A008.W 
@@ -89,7 +106,7 @@ SWB.LS
     **alpha: 0.06    result: [0.5676902067182332, 0.625220461605805]**
     alpha: 0.08    result: [0.5676902067182332, 0.6002252042919891]
 
-XNFSS: feature selection - normalize data - cv >>> PREVERI!!
+XNFSS: feature selection - normalize data - cv >>> A170.W je popravljeno PREVERI ZA OSTALA 2!!
 
 A008.W
     alpha: 0.02    result: [0.2745338786986795, 0.3190194616453528]
@@ -97,9 +114,10 @@ A008.W
     alpha: 0.06    result: [0.2745338786986795, 0.2376603344126128]
     
 A170.W
-    alpha: 0.03    result: [0.6231218613727252, 0.47735573831608025]
-    **alpha: 0.05    result: [0.6231218613727252, 0.49567509095237927]**
-    alpha: 0.1    result: [0.6231218613727252, 0.44550222867618605]  
+    alpha: 0.02    result: [0.7460388162027576, 0.6085352163424037]
+    **alpha: 0.03    result: [0.7460388162027576, 0.6233107996669481]**
+    alpha: 0.04    result: [0.7460388162027576, 0.615028782874133]
+    alpha: 0.05    result: [0.7460388162027576, 0.6096072881518135]
     
 SWB.LS 
     alpha: 0.08    result: [0.578937205124497, 0.6987946053062986]
@@ -133,9 +151,12 @@ ranking
 
 """
 
+# this is used in accuracy calculation and cross_validation
+# we change it below to run the code for different values of alpha.
 ALPHA = 0.5                 # CAPS LOCK KONSTANTE
 
 def normalization(data):
+    """ normalize the data. """
     normalizer = Normalize(norm_type=Normalize.NormalizeBySD)
     normalized_data = normalizer(data)
     return normalized_data
@@ -152,7 +173,7 @@ def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15
             t = (score, attr.name)
             ls_scores.append(t)
     ls_scores.sort(key=lambda x: x[0], reverse=True)
-    top_factors = ls_scores[:11]
+    top_factors = ls_scores[:10]
     return top_factors
 
 def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10
@@ -262,6 +283,7 @@ class FeatureSubsetSelection(Preprocess):
 
 def cross_validation(data, preprocessor):
     """
+    preprocessor: string for which type of preprocessing to run (ALL / FSS / FSSN)
     for the dataset, run cross validation for two types of learners,
     return their R2 scores.
     """
@@ -321,26 +343,24 @@ def save_as_csv(list1, list2, list3):
 
 
 if __name__ == "__main__":
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
-    #data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
+    #data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
 
 
-    # preprocess_table(data)
-    # print(preprocess_table.domain)
-    preprocess = FeatureSubsetSelection()   # only FFS
-    pre_data = preprocess(data)             # putting this in cross validation, we obtain workflow in orange
-    # print(pre_data)
-    # acc = accuracy_of_preprocessed_factors(data)  # R2 on FSS only
+    # run this for XNFSS (run cross_validation with ALL)
+    # preprocess = FeatureSubsetSelection()   # only FFS
+    # pre_data = preprocess(data)             # putting this in cross validation, we obtain workflow in orange
+    # normi = normalization(pre_data)
 
-    """normalization / cross-validation"""  # remove preprocessor from cross and normalization from preprocessor
+    """normalize data w/ cross-validation"""  # remove preprocessors from crossvalidation (run with ALL)
+    # run this for (NORM or NFSS)
     # normi = normalization(data)
-    # cross = cross_validation(normi)
 
-    # **alpha: 0.06    result: [0.6231218613727252, 0.4937621684794109]**
     results = []
-    for alpha in [0.06]:
+    for alpha in [0.05]:
         ALPHA = alpha
-        cross = cross_validation(data, 'FSSN')
+        cross = cross_validation(data, 'FSSN')    # to run on un-normalised data
+        # cross = cross_validation(normi, 'ALL')      # to run on normalised data
         results.append((ALPHA, cross))
 
     for alpha, result in results:
