@@ -162,7 +162,7 @@ def normalization(data):
     return normalized_data
 
 
-def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15
+def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15       rank: 10
     """return 10 top attributes according to RreliefF."""
     scores = RReliefF(random_state=0)(data)
     ls_scores = []
@@ -176,7 +176,7 @@ def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15
     top_factors = ls_scores[:10]
     return top_factors
 
-def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10
+def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10      rank: 10
     """return 10 top attributes according to UnivariateLinearRegression."""
     scores = UnivariateLinearRegression()(data)
     ls_scores = []
@@ -191,7 +191,7 @@ def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10
     return top_factors
 
 
-def rf_top_attributes(data):        # A008W: 11     A170.W: 10      SWB.LS: 10
+def rf_top_attributes(data):        # A008W: 11     A170.W: 10      SWB.LS: 10        rank: 10
     """return 10 top attributes according to RandomForestRegressionLearner."""
     rf_learner = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
     scores, variables = rf_learner.score(data)
@@ -222,8 +222,8 @@ def get_all_top_attributes(table):              # A008.W: 29    A170.W: 28  SWB.
     # extracting names of top factors
     all_names = set()
     for factor_list in [relief_top_factors, linear_top_factors, random_top_factors]: # For each factor list
-        for factor in factor_list: # For each factor in the list
-            all_names.add(factor[1]) # Add the name to the set
+        for factor in factor_list:      # for each factor in the list
+            all_names.add(factor[1])    # add the name to the set
 
     return list(all_names)
 
@@ -232,7 +232,7 @@ def accuracy_of_preprocessed_factors(data):
     """
     get top factors, calculate the accuracy of two learners: LassoRegression and RandomForestRegression.
     """
-    # Get table only containing top attributes
+    # get table only containing top attributes
     preprocessor = FeatureSubsetSelection()
     table_only_top_factors = preprocessor(data)
 
@@ -268,7 +268,7 @@ class FeatureSubsetSelection(Preprocess):
         return a smaller Orange Table which contains only the top attributes (columns)
         """
         top_factor_names = get_all_top_attributes(table)
-        # Get a list of attributes from the Orange Table whose name is in the top_factor_names
+        # get a list of attributes from the Orange Table whose name is in the top_factor_names.
         attrs = table.domain.attributes
         l_attr = [attr for attr in attrs if attr.name in top_factor_names]
 

@@ -47,6 +47,7 @@ def create_df():
     descriptions = [df2.loc[att_name, 'description'] for att_name in att_names]
     df.insert(0, 'Description', descriptions)
 
+    # import additional file, which contains information about the units of measure
     df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 2111_porocilo_blaginja - A170.W.csv')
     df3 = df3.set_index('ID Indicators')
     units = [df3.loc[att_name, 'unit of measure'] for att_name in att_names]
@@ -90,10 +91,12 @@ def create_df():
         df.loc['ilc.mddd17', 'Scoring method'] = 'L/F'
     elif filepath.endswith('SEI_krajsi_SWB.LS_selected.pkl'):
         df.loc['ilc.mdho07', 'Scoring method'] = 'L/F'
+    else:
+        raise ValueError('napacno ime frendek')
 
 
-
-    df.to_csv('A170W_data_table.csv')
+    ime_fajla = filepath.split('.')[-3]
+    df.to_csv(f'{ime_fajla}_data_table.csv')
 
     print(df)
     return data, df
