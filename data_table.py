@@ -5,7 +5,7 @@ from p_values import get_p_values_for_top_factors
 
 
 def create_df():
-    filepath = r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl'
+    filepath = r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl'
     data = Table(filepath)
     d = pd.DataFrame(data.X)
     dm = pd.DataFrame(data.metas)
@@ -48,14 +48,17 @@ def create_df():
     df.insert(0, 'Description', descriptions)
 
     # import additional file, which contains information about the units of measure
-    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 2111_porocilo_blaginja - A170.W.csv')
+    # df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 211_.csv')
+    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\survey\ranking_measure_units.csv', delimiter=';')
     df3 = df3.set_index('ID Indicators')
     units = [df3.loc[att_name, 'unit of measure'] for att_name in att_names]
     df.insert(4, 'Unit of measure', units)
 
+
     corr = [df3.loc[att_name, 'higher = better'] for att_name in att_names]
     df.insert(8, 'Higher = Better', corr)
     df = df.astype({'Higher = Better': int})
+
 
     # get delta SVN - AUT
     delta_stolpec1 = []
@@ -91,14 +94,21 @@ def create_df():
         df.loc['ilc.mddd17', 'Scoring method'] = 'L/F'
     elif filepath.endswith('SEI_krajsi_SWB.LS_selected.pkl'):
         df.loc['ilc.mdho07', 'Scoring method'] = 'L/F'
+    elif filepath.endswith('SEI_krajsi_ranking_survey.pkl'):
+        df.loc['SP.DYN.LE00.IN', 'Scoring method'] = 'L/F'
+        df.loc['SP.DYN.LE00.FE.IN', 'Scoring method'] = 'L/F'
+        df.loc['SH.DYN.NCOM.ZS', 'Scoring method'] = 'L/F'
+        df.loc['SH.DYN.NCOM.MA.ZS', 'Scoring method'] = 'L/F'
     else:
         raise ValueError('napacno ime frendek')
 
-
-    ime_fajla = filepath.split('.')[-3]
-    df.to_csv(f'{ime_fajla}_data_table.csv')
-
     print(df)
+
+    ime_fajla = filepath.split('\\')[-1][:-4] # extract name of input file from filepath, remove '.pkl' from the end.
+    output_name = f'{ime_fajla}_data_table.csv'
+    print(f'saving file to (fuki se) |{output_name}|')
+    df.to_csv(output_name)
+
     return data, df
 
 def google(ime_datoteke):
@@ -113,4 +123,3 @@ def google(ime_datoteke):
 
 
 create_df()
-google('A170W_data_table.csv')

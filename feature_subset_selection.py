@@ -215,6 +215,11 @@ def get_all_top_attributes(table):              # A008.W: 29    A170.W: 28  SWB.
     linear_top_factors = linear_top_attributes(table)
     random_top_factors = rf_top_attributes(table)
 
+    print(f'relief: {[name for (val, name) in relief_top_factors]}')
+    print(f'linear: {[name for (val, name) in linear_top_factors]}')
+    print(f'random forest: {[name for (val, name) in random_top_factors]}')
+
+
     # save_as_csv(relief_top_factors, linear_top_factors, random_top_factors)
 
     print(relief_top_factors, linear_top_factors, random_top_factors)
@@ -323,7 +328,6 @@ def cross_validation(data, preprocessor):
         learners_scores.append(r2)
         # print(f"R2: {round(r2, 3)}")
 
-    print(learners_scores)
     return learners_scores
 
 def save_as_csv(list1, list2, list3):
@@ -350,16 +354,22 @@ if __name__ == "__main__":
     # run this for XNFSS (run cross_validation with ALL)
     # preprocess = FeatureSubsetSelection()   # only FFS
     # pre_data = preprocess(data)             # putting this in cross validation, we obtain workflow in orange
+
+    top_names = get_all_top_attributes(data)
+    print(top_names)
     # normi = normalization(pre_data)
+    import sys
+    sys.exit(0)
 
     """normalize data w/ cross-validation"""  # remove preprocessors from crossvalidation (run with ALL)
     # run this for (NORM or NFSS)
     # normi = normalization(data)
 
+
     results = []
     for alpha in [0.05]:
         ALPHA = alpha
-        cross = cross_validation(data, 'FSSN')    # to run on un-normalised data
+        # cross = cross_validation(data, 'FSSN')    # to run on un-normalised data
         # cross = cross_validation(normi, 'ALL')      # to run on normalised data
         results.append((ALPHA, cross))
 

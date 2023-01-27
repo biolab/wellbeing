@@ -125,9 +125,9 @@ def google(ime_datoteke):
             f.write(tabela_str)
         print(f"za google zapisano v {ime_datoteke}.txt")
 
-
-data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
-slovarcek_p_values = get_p_values_for_top_factors(data)
+if __name__ == "__main__":
+    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
+    slovarcek_p_values = get_p_values_for_top_factors(data)
 
 
 """
