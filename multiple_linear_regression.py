@@ -20,6 +20,13 @@ FILEMAP = {
     r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_SWB.LS_selected.pkl': [
     'isoc.ci.in.h', 'ilc.mddd13', 'WJQ.E', 'ilc.mdes02', 'ilc.mdho07', 'isoc.ci.cm.h',
     'SH.PRG.ANEM', 'ilc.mded03', 'NY.GNP.PCAP.PP.KD', 'educ.uoe.enra29', 'icw.sr.03'
+    ],
+    r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl': [
+    'SP.DYN.LE00.IN', 'ilc.lvho05a', 'WJQ.LHI', 'HH.HA', 'WJQ.ER', 'WJQ.E'
+    ],
+    r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey - Copy.pkl': [
+    'ilc.lvho06', 'SH.DYN.NCOM.ZS', 'lfso.16elvncom', 'SCO.SS', 'SAF.RD', 'SAF.H', 'NY.ADJ.DCO2.GN.ZS',
+    'lfso.04avpoisco', 'lfso.04avpona11', 'SP.DYN.AMRT.MA', 'SP.DYN.AMRT.FE'
     ]
 }
 
@@ -37,11 +44,11 @@ def create_df(filepath):
 
     # remove rows where y is NaN
     nan_index = pd.isnull(y).any(1).to_numpy().nonzero()[0]
-    y = y.drop(index = nan_index).to_numpy()
+    y = y.drop(index = nan_index).to_numpy()        # convert to np array, as standardization function requires it
     x = x.drop(index = nan_index)
 
-    names = [attr.name for attr in data.domain.attributes]
-    x.columns = names
+    names = [attr.name for attr in data.domain.attributes]  # obtain the list of attribute names
+    x.columns = names                                       # set the names of columns as attributes names
     return x, y
 
 def standardization(data):
@@ -58,17 +65,35 @@ def multiple_regression(df, y, var_names):
     model = LinearRegression().fit(x, y)
     r_sq = model.score(x, y)
     intercept = model.intercept_[0]
-    coef = model.coef_[0]
+    coef = model.coef_[0].tolist()
+    coef = [round(co, 3) for co in coef]
 
     print(f'coefficient of determination: {round(r_sq, 3)}')
     print(f'intercept: {round(intercept, 3)}')
-    print(f'coefficients: {np.round_(coef, 3)}')
+    print(f'coefficients: {coef}')
 
     for column_name, coef_val in zip(var_selection.columns, coef):
-        print(f"{column_name}: {round(coef_val, 3)}")
+        print(f"{column_name}: {coef_val}")
+
+    return coef
+
+
+def create_csv(var_names, coefs, filepath):
+    df = pd.DataFrame()
+    df = df.assign(ID = var_names)
+    df2 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\indikatorji-krajsi - Sheet1.csv')
+    df2 = df2.set_index('index')
+    descriptions = [df2.loc[var_name, 'description'] for var_name in var_names]
+    df = df.assign(DESCRIPT = descriptions)
+    df = df.assign(COEF = coefs)
+    potica = filepath.split('\\')[-1]
+    potica = potica + '_regression_coeffs.csv'
+    df.to_csv(potica)
 
 for filepath, var_names in FILEMAP.items():
     data, y = create_df(filepath)
     data = standardization(data)
     print(f'\n\nresults for filepath: {filepath}: \n\n')
-    multiple_regression(data, y, var_names)
+    coefs = multiple_regression(data, y, var_names)
+    create_csv(var_names, coefs, filepath)
+
