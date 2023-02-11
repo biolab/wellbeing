@@ -6,7 +6,7 @@ from Orange.data import Table
 from Orange.preprocess.score import UnivariateLinearRegression, RReliefF
 from Orange.regression.random_forest import RandomForestRegressionLearner
 
-from feature_subset_selection import relief_top_attributes, linear_top_attributes, rf_top_attributes
+from fss import relief_top_attributes, linear_top_attributes, rf_top_attributes
 
 
 
@@ -126,7 +126,7 @@ def google(ime_datoteke):
         print(f"za google zapisano v {ime_datoteke}.txt")
 
 if __name__ == "__main__":
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
+    data = Table("C:\\Users\\irisc\\Documents\\FRI\\blaginja\\FRI-blaginja\\input data\\ranking_survey.pkl")
     slovarcek_p_values = get_p_values_for_top_factors(data)
 
 

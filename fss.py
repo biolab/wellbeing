@@ -13,7 +13,7 @@ from Orange.data.filter import HasClass
 
 """
 
-POSEBNA SEKCIJA:
+COUNTRY'S RANKING:
 
 FSSN:
     alpha: 0.01    result: [0.7813298763149761, 0.7627236280980851]
@@ -24,6 +24,8 @@ NORM:
     alpha: 0.001    result: [0.794373026251077, 0.8706389240437682]
     **alpha: 0.005    result: [0.794373026251077, 0.8781621888492757]**
     alpha: 0.01    result: [0.794373026251077, 0.8587433057269631]
+    
+
 
 ALL: cross-validation (nobenega preprocessorja)
 
@@ -353,8 +355,7 @@ def model_accuracy(data, type):
 
 
 if __name__ == "__main__":
-    #data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
-    data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
+    data = Table("C:\\Users\\irisc\\Documents\\FRI\\blaginja\\FRI-blaginja\\input data\\ranking_survey.pkl")
 
     type = "FSSN"           # change this to run in a different mode.
 

@@ -1,11 +1,11 @@
 import pandas as pd
 from Orange.data import Table
-from feature_subset_selection import get_all_top_attributes
+from fss import get_all_top_attributes
 from p_values import get_p_values_for_top_factors
 
 
 def create_df():
-    filepath = r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl'
+    filepath = r'C:\\Users\\irisc\\Documents\\FRI\\blaginja\\FRI-blaginja\\input data\\ranking_survey.pkl'
     data = Table(filepath)
     d = pd.DataFrame(data.X)
     dm = pd.DataFrame(data.metas)
@@ -25,12 +25,6 @@ def create_df():
 
     p_values = get_p_values_for_top_factors(data)
 
-    """
-    import json
-    with open('p_values.json') as f:
-        #json.dump(p_values, f)
-        p_values = json.load(f)
-    """
 
     df = df.dropna()                                                    # remove NaN values
     att_names = df.index.to_list()                                      # dobim seznam imen vseh atributov
@@ -40,7 +34,7 @@ def create_df():
     df.insert(3, 'Scoring method', list_method_names)                   # imena metod vstavim na df na mesto 1
     print(df)
 
-    df2 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\indikatorji-krajsi - Sheet1.csv')
+    df2 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\input data\indicators_shorter.csv')
     df2 = df2.set_index('index')
     types = [df2.loc[att_name, 'type'] for att_name in att_names]
     df.insert(1, 'Category', types)
@@ -48,8 +42,9 @@ def create_df():
     df.insert(0, 'Description', descriptions)
 
     # import additional file, which contains information about the units of measure
-    # df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\Kopija od 211_.csv')
-    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\survey\ranking_measure_units.csv', delimiter=';')
+    # CAREFUL! delimiter for file with measures units of rankings must be set to ';'
+    # df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\input data\_measure_units.csv')
+    df3 = pd.read_csv(r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\input data\ranking_measure_units.csv', delimiter=';')
     df3 = df3.set_index('ID Indicators')
     units = [df3.loc[att_name, 'unit of measure'] for att_name in att_names]
     df.insert(4, 'Unit of measure', units)
@@ -87,14 +82,14 @@ def create_df():
     df = df.sort_values('P-value', False)
 
 
-    if filepath.endswith('SEI_krajsi_A008.W_selected.pkl'):
+    if filepath.endswith('A008.W.pkl'):
         df.loc['SP.DYN.CDRT.IN', 'Scoring method'] = 'L/F'
-    elif filepath.endswith('SEI_krajsi_A170.W_selected.pkl'):
+    elif filepath.endswith('A170.W.pkl'):
         df.loc['ilc.mdes01', 'Scoring method'] = 'L/F'
         df.loc['ilc.mddd17', 'Scoring method'] = 'L/F'
-    elif filepath.endswith('SEI_krajsi_SWB.LS_selected.pkl'):
+    elif filepath.endswith('SWB.LS.pkl'):
         df.loc['ilc.mdho07', 'Scoring method'] = 'L/F'
-    elif filepath.endswith('SEI_krajsi_ranking_survey.pkl'):
+    elif filepath.endswith('ranking_survey.pkl'):
         df.loc['SP.DYN.LE00.IN', 'Scoring method'] = 'L/F'
         df.loc['SP.DYN.LE00.FE.IN', 'Scoring method'] = 'L/F'
         df.loc['SH.DYN.NCOM.ZS', 'Scoring method'] = 'L/F'
@@ -105,8 +100,7 @@ def create_df():
     print(df)
 
     ime_fajla = filepath.split('\\')[-1][:-4] # extract name of input file from filepath, remove '.pkl' from the end.
-    output_name = f'{ime_fajla}_data_table.csv'
-    print(f'saving file to (ne se hecat) |{output_name}|')
+    output_name = f'export data\{ime_fajla}_data_table.csv'
     df.to_csv(output_name)
 
     return data, df

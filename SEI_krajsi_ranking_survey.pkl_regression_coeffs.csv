@@ -1,7 +1,0 @@
-,ID,DESCRIPT,COEF
-0,SP.DYN.LE00.IN,"Life expectancy at birth, total (years)",0.193
-1,ilc.lvho05a,"Overcrowding rate by age, sex and poverty status - total population - EU-SILC survey",-0.005
-2,WJQ.LHI,"Work and Job Quality, Long hours in paid work",-0.048
-3,HH.HA,"Housing, Housing affordability",0.021
-4,WJQ.ER,"Work and Job Quality, Employment rate",0.015
-5,WJQ.E,"Work and Job Quality, Earnings",-0.02
