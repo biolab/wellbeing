@@ -12,10 +12,6 @@ from Orange.data.filter import HasClass
 
 
 """
-# 
-# POZORCEK: 
-#   DA JE POMEMBNIH FAKTORJEV TOCNO 30, SPREMINJAJ DESETKICE V ENAJSTKICE KOT NAREKUJEJO KOMENTARCKI
-#   SICER (NPR PRI CROSS-VALIDATION), OHRANJAJ DESETKICE
 
 POSEBNA SEKCIJA:
 
@@ -162,6 +158,11 @@ def normalization(data):
     return normalized_data
 
 
+# ATTENTION:
+#   IN ORDER TO GET EXACTLY 30 FACTORS, NECESSARY FOR CREATING DATA TABLE,
+#   CHANGE THE RANGE OF SCORES IN EACH RANKING METHOD SEPERATELY AS WRITTEN IN COMMENTS BESIDES FUNCTION
+
+
 def relief_top_attributes(data):    # A008W: 12     A170.W: 11      SWB.LS: 15       rank: 10
     """return 10 top attributes according to RreliefF."""
     scores = RReliefF(random_state=0)(data)
@@ -191,7 +192,7 @@ def linear_top_attributes(data):    # A008W: 10     A170.W: 10      SWB.LS: 10  
     return top_factors
 
 
-def rf_top_attributes(data):        # A008W: 11     A170.W: 10      SWB.LS: 10        rank: 10
+def rf_top_attributes(data):        # A008W: 11     A170.W: 10      SWB.LS: 10       RANK: 10
     """return 10 top attributes according to RandomForestRegressionLearner."""
     rf_learner = RandomForestRegressionLearner(n_estimators=100, min_samples_split=5, random_state=0)
     scores, variables = rf_learner.score(data)
@@ -206,7 +207,7 @@ def rf_top_attributes(data):        # A008W: 11     A170.W: 10      SWB.LS: 10  
     top_factors = ls_scores[:10]
     return top_factors
 
-def get_all_top_attributes(table):              # A008.W: 29    A170.W: 28  SWB.LS: 29
+def get_all_top_attributes(table):              # A008.W: 29    A170.W: 28  SWB.LS: 29  RANK: 30
     """
     for each of the 3 methods get top 10 attributes.
     return the list of top attributes, from which duplicates are removed.
@@ -219,8 +220,6 @@ def get_all_top_attributes(table):              # A008.W: 29    A170.W: 28  SWB.
     print(f'linear: {[name for (val, name) in linear_top_factors]}')
     print(f'random forest: {[name for (val, name) in random_top_factors]}')
 
-
-    # save_as_csv(relief_top_factors, linear_top_factors, random_top_factors)
 
     print(relief_top_factors, linear_top_factors, random_top_factors)
 
@@ -261,7 +260,6 @@ def accuracy_of_preprocessed_factors(data):
         score = r2_score(y_true, y_pred)
         scores.append(score)
 
-    print(scores)
     return scores
 
 
@@ -280,10 +278,6 @@ class FeatureSubsetSelection(Preprocess):
         domain = Domain(l_attr, table.domain.class_vars, table.domain.metas)    # domain only with l_attr
         table_only_top_factors = table.transform(domain)                        # return a table which contains only l_attr columns
         return table_only_top_factors
-
-    """preprocessor / normalization / cross-validation"""
-        # normi = normalization(table_only_top_factors)
-        # return normi
 
 
 def cross_validation(data, preprocessor):
@@ -330,48 +324,46 @@ def cross_validation(data, preprocessor):
 
     return learners_scores
 
-def save_as_csv(list1, list2, list3):
-    """
-    input: 3 lists of top attributes and their scores.
-    create a df with columns ['ranker', 'att', 'score'], fill up this df.
-    save this df to csv.
-    """
-    df = pd.DataFrame(columns=['ranker', 'att', 'score'])
-    rank_method_names = ['relief', 'univariate', 'forest']
-    for name, list in zip(rank_method_names, [list1, list2, list3]):
-        for score, att in list:
-            dict = {'ranker': name, 'att': att, 'score': score}
-            df = df.append(dict, ignore_index=True)
 
-    df.to_csv('hren.csv', index=False)
+def model_accuracy(data, type):
+    # cross validation with no normalisation nor fss
+    if type == "ALL":
+        return cross_validation(data, "ALL")
+    # cross-validation which performs fss
+    elif type == "FSS":
+        return cross_validation(data, "FSS")
+    # cross-validation within which normalisation and fss is performed
+    elif type == "FSSN":
+        return cross_validation(data, 'FSSN')
+    # normalise data first, then run cross-validation with fss.
+    elif type == "NFSS":
+        normi = normalization(data)
+        return cross_validation(normi, "FSS")
+    # normalize data first, then run cross-validation which performs no normalisation nor FSS
+    elif type == "NORM":
+        normi = normalization(data)
+        return cross_validation(normi, 'ALL')
+    # fss first, then normalise, then run cross-validation
+    elif type == "XNFSS":
+        preprocessed_data = FeatureSubsetSelection()(data)
+        normi = normalization(preprocessed_data)
+        return cross_validation(normi, "ALL")
+    else:
+        raise ValueError(f'Wrong type: {type}')
 
 
 if __name__ == "__main__":
     #data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_A170.W_selected.pkl")
     data = Table("C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\SEI_krajsi_ranking_survey.pkl")
 
-
-    # run this for XNFSS (run cross_validation with ALL)
-    # preprocess = FeatureSubsetSelection()   # only FFS
-    # pre_data = preprocess(data)             # putting this in cross validation, we obtain workflow in orange
-
-    top_names = get_all_top_attributes(data)
-    print(top_names)
-    # normi = normalization(pre_data)
-    import sys
-    sys.exit(0)
-
-    """normalize data w/ cross-validation"""  # remove preprocessors from crossvalidation (run with ALL)
-    # run this for (NORM or NFSS)
-    # normi = normalization(data)
-
+    type = "FSSN"           # change this to run in a different mode.
 
     results = []
-    for alpha in [0.05]:
+    for alpha in [0.1, 0.5]:
         ALPHA = alpha
-        # cross = cross_validation(data, 'FSSN')    # to run on un-normalised data
-        # cross = cross_validation(normi, 'ALL')      # to run on normalised data
-        results.append((ALPHA, cross))
+        result = model_accuracy(data, type)
+        results.append((alpha, result))
 
     for alpha, result in results:
         print(f"alpha: {alpha}    result: {result}")
+

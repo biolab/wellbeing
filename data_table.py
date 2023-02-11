@@ -32,7 +32,7 @@ def create_df():
         p_values = json.load(f)
     """
 
-    df = df.dropna()  # remove NaN values
+    df = df.dropna()                                                    # remove NaN values
     att_names = df.index.to_list()                                      # dobim seznam imen vseh atributov
     list_p_values = [p_values[att_name][0] for att_name in att_names]   # dobim seznam vseh p-values
     df.insert(2, 'P-value', list_p_values)                              # p-valuese vstavim v df na mesto 0
@@ -100,13 +100,13 @@ def create_df():
         df.loc['SH.DYN.NCOM.ZS', 'Scoring method'] = 'L/F'
         df.loc['SH.DYN.NCOM.MA.ZS', 'Scoring method'] = 'L/F'
     else:
-        raise ValueError('napacno ime frendek')
+        raise ValueError('napacno ime kolega')
 
     print(df)
 
     ime_fajla = filepath.split('\\')[-1][:-4] # extract name of input file from filepath, remove '.pkl' from the end.
     output_name = f'{ime_fajla}_data_table.csv'
-    print(f'saving file to (fuki se) |{output_name}|')
+    print(f'saving file to (ne se hecat) |{output_name}|')
     df.to_csv(output_name)
 
     return data, df
