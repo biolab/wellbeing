@@ -1,0 +1,36 @@
+Ranking method,ID Indicators,,Description,Category,Ranking  Scores,Slovenia*,Austria*,Germany*,Slo - Aut,Slo - Ger,∆Aut,∆Ger,higher = better,unit of measure,meaning,comments
+Relief,lfso.16elvncom,1,Early leavers from secondary education,Socioeconomics,"0,79","3,6","19,5","53,20","−15,9","−49,6",30%,93%,0,number in thousands,,measured only in 2016
+,HH.HA,2,Housing affordability,Socioeconomics,"0,70","81,05","79,09","79,30","2,0","1,8",2%,3%,1,%,,
+,WJQ.LHI,3,Long hours in paid work,Jobs,"0,69","4,85","6,90","4,56","−2,1","0,3",30%,1%,0,%,share of employees (aged 15+) whose usual working hours are 50 hours or more per week.,
+,SAF.H,4,"Safety, Homicides",Safety,"0,66","0,75","0,49","0,44","0,3","0,3",35%,1%,0,average per 100k population,,
+,SCO.SS,5,Social support,Socioeconomics,"0,65","92,49","91,80","90,48","0,7","2,0",1%,4%,1,"share of people who answered ""yes"" to the question:  “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?”",,
+,IW.HW,6,Household wealth,Socioeconomics,"0,65",137,105,86,"31,9","51,5",23%,97%,1,$,,
+,env.ac.cur,7,Circular material use,Environment,"0,64","9,77","10,41","12,06","−0,6","−2,3",6%,4%,1,%,environment/material flows and resource productivity,
+,educ.uoe.enra29,8,Out-of-school rate in secondary education,Socioeconomics,"0,64","3,59","7,38","10,57","−3,8","−7,0",36%,13%,0,%,,
+,SH.H20.SMDW.RU.ZS,9,"Usage of safe drinking water services, rural (% of rural population)",,"0,63",NA,NA,NA,NA,NA,NA,NA,,,,
+,WJQ.LMI,10,Labour market insecurity,Jobs,"0,63","7,62","1,98","1,80","5,6","5,8",74%,11%,0,%,"average expected monetary loss that an employed person would incur upon becoming and staying unemployed, expressed as a share of previous earnings.",not measured 2017-2020
+,SH.H2O.SMDW.UR.ZS,11,"Usage of safe drinking water services, urban (% of urban population)",,"0,62",,,,,,,,,,,
+,WJQ.ER,12,Employment rate,Jobs,"0,60",,,,,,,,1,%,,
+Univariate Regression,ilc.hcmp03,1,Population living in unfavourable housing conditions,Socioeconomics,"40,63","17,3","15,00","13,6","2,3","3,7",13%,7%,0,%,,
+,ilc.hcmp05,2,Population moved from unfavourable housing conditions in the last 5 years,Socioeconomics,"35,03","10,9","20,2","21,9","−9,3","−11,0",42%,21%,0,%,,measured only in 2012
+,SP.DYN.CDRT.IN,3,"Death rate, crude (per 1,000 people)",Health,"26,20","9,6","9,4","11,14","0,2","−1,5",2%,3%,0,,,
+,isoc.ci.in.h,4,Level of internet access,Socioeconomics,"24,49","81,22","85,11","91,33","−3,9","−10,1",4%,19%,1,% of households,,
+,isoc.r.iacc.h,5,Households with access to the internet at home,Socioeconomics,"24,49","81,22","85,11","91,33","−3,9","−10,1",4%,19%,1,% of households,,
+,ilc.chmd04,5,Deprivation items among deprived children (1-15 years),Socioeconomics,"21,59","5,00","4,5","4,7","0,5","0,3",10%,1%,0,%,,measured only in 2014
+,ilc.ats10,7,People involved in training related to their profession,Socioeconomics,"19,08","27,4","26,8","23,9","0,6","3,5",2%,7%,1,%,,measured only in 2016
+,SH.PRG.ANEM,8,Prevalence of anemia among pregnant women,Health,"18,95","22,56","17,35","15,71","5,2","6,9",23%,13%,0,,,
+,ilc.mded03,9,Total housing costs,Socioeconomics,"18,86","332,67","515,38","714,33","−182,7","−381,7",26%,717%,0,Purchasing Power Standard (PPS),,
+,SP.DYN.TO65.MA.ZS,10,"Survival to age 65, male (% of cohort)",Health,"17,24","84,51","85,97","85,06","−1,5","−0,5",2%,1%,1,,,
+Random Forest,hlth.silc.01,1,Self-perceived health,Health,"0,12","21,39","32,57","18,08","−11,2","3,3",34%,6%,0,%,,
+,ilc.pnp10,3,Gender differences income ratio,Socioeconomics,"0,05","0,87","0,95","0,95","−0,1","−0,1",8%,%,1,,,
+,SE.SEC.TCHR.FE.ZS,4,"Secondary education, teachers (% females)",Socioeconomics,"0,05","73,31","64,84","62,29","8,5","11,0",12%,21%,1,%,"values obtained only for ""very good""",values only for each category (very good - bad)
+,EG.ELC.RNEW.ZS,5,Renewable electricity output (% of total electricity output),Environment,"0,03","32,02","77,53","25,61","−45,5","6,4",59%,12%,0,,,
+,SH.DYN.1519,6,"Death probability among adolescents (per 1,000)",Health,"0,02","1,44","1,43","1,18","0,0","0,3",1%,%,1,,,
+,NY.ADJ.AEDU.GN.ZS,7,"Savings, education expenditure (% of GNI)",Socioeconomics,"0,02","4,68","5,14","4,48","−0,5","0,2",9%,%,1,,,
+,SP.DYN.CBRT.IN,8,"Birth rate (per 1,000 people)",Health,"0,02","9,95","9,69","9,09","0,3","0,9",3%,2%,0,,,
+,SE.PRM.ENRL.TC.ZS,9,"Pupil-teacher ratio, primary",Socioeconomics,"0,02","16,22","10,53","12,04","5,7","4,2",35%,8%,1,,,
+,SH.IMM.HEPB,10,"Immunization, HepB3 (% of one-year-old child)",Health,"0,02",NA,"90,63","87,00",NA,NA,NA,NA,1,,,
+,SE.PRM.TCHR.FE.ZS,11,"Primary education, teachers (% female)",,,,,,,,,,1,,,
+,,,,,,,,,,,,,1,,,
+,,,,,,,,,,,,,1,,,
+,,,,,,,,,,,,,0,,,

@@ -1,0 +1,30 @@
+,Description,Category,Unit of measure,P-value,Scoring method,Higher = Better,SVN,AUT,DEU,Δ AUT,Δ DEU
+ilc.hcmp03,Share of population living in a dwelling not comfortably cool during summer time by income quintile and degree of urbanisation,Socioeconomics,%,0.0,L,0,17.3,15.0,13.6,-0.13294797687861276,-0.21387283236994226
+ilc.hcmp05,Share of population having moved to other dwelling within the last five year period by tenure status and degree of urbanisation,Socioeconomics,%,4.555808656036447e-05,L,0,10.9,20.2,21.9,0.4246575342465753,0.502283105022831
+SP.DYN.CDRT.IN,"Death rate, crude (per 1,000 people)",Health,,4.555808656036447e-05,L/F,0,9.600000000000001,9.4,11.1375,-0.01795735129068472,0.13804713804713786
+isoc.ci.in.h,Households -  level of internet access,Socioeconomics,% of households,6.83371298405467e-05,L,1,81.22222222222223,85.11111111111111,91.33333333333333,-0.04257907542579072,-0.11070559610705584
+isoc.r.iacc.h,Households with access to the internet at home,Socioeconomics,% of households,6.83371298405467e-05,L,1,81.22222222222223,85.11111111111111,91.33333333333333,-0.04257907542579072,-0.11070559610705584
+ilc.chmd04,Mean number of deprivation items among the children deprived (children aged 1 to 15),Socioeconomics,%,0.00011389521640091117,L,0,5.0,4.5,4.7,-0.1,-0.05999999999999996
+ilc.ats10,"Persons participating in training related to professional activity by sex, age, income group, most frequent activity status and educational attainment level. Only wstatus = POP. Only age = Y_GE16",Socioeconomics,%,0.00015945330296127563,L,1,27.4,26.8,23.9,0.021897810218978027,0.12773722627737227
+SH.PRG.ANEM,Prevalence of anemia among pregnant women (%),Health,,0.00018223234624145787,L,0,22.562500000000004,17.35,15.712499999999999,-0.2310249307479225,-0.3036011080332412
+ilc.mded03,Total housing costs in pps - EU-SILC survey,Socioeconomics,Purchasing Power Standard (PPS),0.0002050113895216401,L,0,332.6666666666667,515.3777777777779,714.3333333333333,0.25577850365531196,0.5342977134857675
+hlth.silc.01,"Self-perceived health by sex, age and labour status. Only wstatus = POP. Only age = Y_GE16. Only levels = VGOOD",Health,%,0.00035955056179775283,F,0,21.38888888888889,32.56666666666666,18.07777777777778,0.3432275673831456,-0.10167178437393379
+SP.DYN.TO65.MA.ZS,"Survival to age 65, male (% of cohort)",Health,,0.00036446469248291574,L,1,84.506181825,85.971281975,85.0614139,-0.01704173901263961,-0.006458343556647963
+lfso.16elvncom,"Early leavers from education and training who started but never completed upper secondary education by sex, age and reason for not completing",Socioeconomics,number in thousands,0.000651685393258427,R,0,3.6,19.5,53.2,0.2988721804511278,0.9323308270676691
+ilc.pnp10,Gender differences in the relative median income ratio (65+) - EU-SILC survey,Socioeconomics,,0.003752808988764045,F,1,0.868888888888889,0.9477777777777777,0.9466666666666667,-0.08323563892145347,-0.08206330597889784
+SE.SEC.TCHR.FE.ZS,"Secondary education, teachers (% female)",Socioeconomics,%,0.004134831460674157,F,1,73.3063247680664,64.83846718924386,62.29185819625855,0.11551332856494945,0.15025260926197678
+HH.HA,"Housing, Housing affordability",Socioeconomics,%,0.004539325842696629,R,1,81.04675366817206,79.09256020211966,79.29855246031337,0.024111927715864023,0.021570280470656563
+WJQ.LHI,"Work and Job Quality, Long hours in paid work",Jobs,%,0.005415730337078652,R,0,4.851097765267762,6.89698431658443,4.557337375081904,0.2966349432457235,-0.04259258491852516
+SAF.H,"Safety, Homicides",Safety,average per 100k population,0.009078651685393258,R,0,0.7500000000000001,0.4875,0.4375,-0.3500000000000001,-0.41666666666666674
+EG.ELC.RNEW.ZS,Renewable electricity output (% of total electricity output),Environment,,0.009550561797752809,F,0,32.019247779864884,77.52540380400832,25.60871874490225,0.5869837987453426,-0.08268939883459449
+SCO.SS,"Social connections, Social support",Socioeconomics,"share of people who answered ""yes"" to the question:  “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?”",0.010202247191011236,R,1,92.48509882191473,91.79564735419726,90.4832738083328,0.007454730291687887,0.021644838347813875
+IW.HW,"Income and Wealth, Household wealth",Socioeconomics,$,0.01053932584269663,R,1,137323.0,105381.0,85860.0,0.23260488046430677,0.3747587803936704
+env.ac.cur,Circular material use rate,Environment,%,0.010696629213483145,R,1,9.766666666666667,10.411111111111111,12.055555555555555,-0.05345622119815664,-0.18986175115207365
+educ.uoe.enra29,"Out-of-school rate in population of upper secondary school age, by sex",Socioeconomics,%,0.01197752808988764,R,0,3.5866666666666664,7.375,10.57,0.358404288867865,0.6606748659728793
+WJQ.LMI,"Work and Job Quality, Labour market insecurity",Jobs,%,0.014247191011235954,R,0,7.621365547180176,1.9849226474761958,1.797477674484254,-0.7395581362436294,-0.7641528065598032
+SH.DYN.1519,"Probability of dying among adolescents ages 15-19 years (per 1,000)",Health,,0.015191011235955057,F,1,1.4375,1.4249999999999998,1.175,0.008695652173913167,0.18260869565217389
+NY.ADJ.AEDU.GN.ZS,Adjusted savings: education expenditure (% of GNI),Socioeconomics,,0.01647191011235955,F,1,4.675807540563492,5.143813540329269,4.484685776638358,-0.09098424662878025,0.03715565551252456
+SP.DYN.CBRT.IN,"Birth rate, crude (per 1,000 people)",Health,,0.018202247191011236,F,0,9.950000000000001,9.6875,9.0875,-0.026381909547738797,-0.08668341708542719
+SE.PRM.ENRL.TC.ZS,"Pupil-teacher ratio, primary",Socioeconomics,,0.01853932584269663,F,1,16.224269999999997,10.525211666666666,12.044311666666665,0.35126747356480953,0.25763614223218256
+WJQ.ER,"Work and Job Quality, Employment rate",Jobs,%,0.0210561797752809,R,1,73.77126564976635,76.00743356652339,80.0740523141029,-0.027926248917506065,-0.07871197325711571
+SE.PRM.TCHR.FE.ZS,"Primary education, teachers (% female)",Socioeconomics,,0.02357303370786517,F,1,97.16316223144531,91.45907919747489,86.6664991378784,0.05870623086950524,0.10803130376267056

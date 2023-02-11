@@ -1,0 +1,10 @@
+,ID,DESCRIPT,COEF
+0,ilc.di11d,Income quintile share ratio S80/S50 for disposable income by sex and age group - EU-SILC survey,-0.084
+1,ilc.mddd17,Severe material deprivation rate by tenure status,-5.221
+2,isoc.r.iacc.h,Households with access to the internet at home,0.013
+3,ilc.mdes01,Inability to keep home adequately warm - EU-SILC survey,-0.12
+4,ilc.mddd13,Severe material deprivation rate by income quintile and household type,5.011
+5,SI.DST.10TH.10,Income share held by highest 10%,-0.053
+6,WJQ.LHI,"Work and Job Quality, Long hours in paid work",0.14
+7,SAF.H,"Safety, Homicides",-0.069
+8,WJQ.LMI,"Work and Job Quality, Labour market insecurity",-0.06

@@ -1,0 +1,30 @@
+Ranking method,ID Indicators,,Description,Ranking  Scores,Slovenia*,   Austria*,Germany*,   Slo - Aut,  Slo - Ger,∆Aut,∆Ger,higher = better,unit of measure
+Relief,lfso.16elvncom,1,Early leavers from secondary education,"0,83","3,60","19,50","53,20","−15,90","−49,60",30%,93%,0,number in thousands
+,WJQ.LHI,2,Long hours in paid work,"0,71","4,85","6,90","4,56","−2,05","0,29",30%,1%,0,%
+,HH.HA,3,Housing affordability,"0,68","81,05","79,09","79,30","1,96","1,75",2%,3%,1,%
+,SAF.H,4,"Safety, Homicides","0,67","0,75","0,49","0,44","0,26","0,31",35%,1%,0,average per 100k population
+,SCO.SS,5,Social support,"0,65","92,49","91,80","90,48","0,69","2,01",1%,4%,1,"share of people who answered ""yes"" to the question:  “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?”"
+,WJQ.LMI,6,Labour market insecurity,"0,64","7,62","1,98","1,80","5,64","5,82",74%,11%,0,%
+,IW.HW,7,Household wealth,"0,64",137,105,86,"31,94","51,46",23%,97%,1,$
+,SH.H20.SMDW.RU.ZS,8,"Usage of safe drinking water services, rural (% of rural population)","0,64",NA,NA,NA,NA,NA,NA,NA,,
+,educ.uoe.enra29,9,Out-of-school rate in secondary education,"0,63","3,59","7,38","10,57","−3,79","−6,98",36%,13%,0,%
+,WJQ.ER,10,Employment rate,"0,62","73,77","76,01","80,07","−2,24","−6,30",3%,12%,1,%
+,SAF.RD,11,Road deaths,"0,61",,,,,,,,0,average per 100k population
+Univariate Regression,ilc.mdes01,1,House heating inability,"58,79","4,37","2,41","4,24","1,96","0,13",45%,%,0,%
+,ilc.mddd13,2,Severe material deprivation by income and household type,"41,64","5,00","3,40","4,23","1,60","0,77",32%,1%,0,%
+,isoc.ci.in.h,3,Level of internet access,"41,55","81,22","85,11","91,33","−3,89","−10,11",4%,19%,1,% of households
+,isoc.r.iacc.h,4,Households with access to the internet at home,"41,55","81,22","85,11","91,33","−3,89","−10,11",4%,19%,1,% of households
+,ilc.mddd11,5,Severe material deprivation by age and sex,"41,49","5,00","3,40","4,23","1,60","0,77",32%,1%,0,%
+,ilc.mddd17,6,Severe material deprivation by tenure status,"41,47","5,00","3,40","4,23","1,60","0,77",32%,1%,0,%
+,SH.DYN.0509,7,"Death probability among children (per 1,000)","40,68","0,36","0,38","0,40","−0,02","−0,04",5%,%,0,
+,ilc.di11d,8,Income quintile share ratio for disposable income,"36,34","1,81","2,01","2,15","−0,20","−0,34",9%,1%,1,ratio
+,ilc.sis4,9,Deprivation items among deprived,"35,42","3,53","3,62","3,54","−0,09","−0,01",2%,%,0,%
+,SH.DYN.1014,10,"Death probability among adolescents (per 1,000)","34,67","0,45","0,48","0,41","−0,03","0,04",6%,%,0,
+Random Forest,SI.DST.10TH.10,1,Income share held by top 10%,"0,27","20,97","23,79","24,48","−2,82","−3,51",12%,7%,0,
+,ilc.mdho07,2,Inability to afford replace worn-out furniture,"0,09","17,37","8,26","13,07","9,11","4,30",52%,8%,0,%
+,SI.DST.03RD.20,3,Income share held by third 20%,"0,07","18,19","17,51","17,04","0,68","1,15",4%,2%,0,
+,SAF.FSA,4,Feeling safe at night,"0,04","86,57","82,30","74,55","4,27","12,02",5%,23%,1,%
+,ilc.mdes08,5,Loan payments,"0,03","3,21","1,60","1,40","1,61","1,81",50%,3%,0,%
+,ilc.di12,7,Disposable income,"0,02","32,37","36,01","40,49","−3,64","−8,12",9%,15%,1,
+,SP.DYN.AMRT.FE,9,"Mortality rate, female (per 1,000 females adults)","0,02","46,32","44,72","50,03","1,60","−3,71",3%,7%,0,
+,SP.DYN.TO65.FE.ZS,10,"Survival to age 65, female (% of cohort)","0,02","92,42","92,41","91,96","0,01","0,46",%,1%,1,

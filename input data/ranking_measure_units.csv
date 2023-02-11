@@ -1,0 +1,27 @@
+﻿ID Indicators;rank;higher = better;unit of measure
+WJQ.LHI;1;0;%
+lfso.16elvncom;2;0;number in thousands
+SCO.SS;3;1;share of people
+HH.HA;4;1;%
+SAF.RD;5;0;average per 100k population
+SAF.H;6;0;average per 100k population
+WJQ.ER;7;1;%
+WJQ.E;8;1;$
+lfso.04avpoisco;9;0;
+lfso.04avpona11;10;0;
+SP.DYN.LE00.IN;1;1;
+SP.DYN.LE00.FE.IN;2;1;
+SH.DYN.NCOM.ZS;3;0;
+SP.DYN.LE00.MA.IN;4;1;
+SH.DYN.NCOM.MA.ZS;5;0;
+SP.DYN.TO65.FE.ZS;6;1;
+SH.DYN.NCOM.FE.ZS;7;0;
+ilc.lvho06;8;0;%
+ilc.lvho06q;9;0;%
+ilc.lvho05a;10;0;%
+NY.ADJ.DCO2.GN.ZS;2;0;
+SH.DYN.0509;4;0;
+SH.DYN.1014;5;0;
+NY.ADJ.DPEM.GN.ZS;6;0;
+SP.DYN.AMRT.MA;9;0;
+SP.DYN.AMRT.FE;10;0;

@@ -1,0 +1,1394 @@
+index,id-number,type,description,source
+EXP.FREE.LIFE,1,Target,Happiness explained by Freedom to make life choices,World Happiness Report
+EXP.GDP.PER.CAPITA,2,Target,Happiness Score explained by GDP per capita,World Happiness Report
+EXP.GEN,3,Target,Happiness explained by Generosity,World Happiness Report
+EXP.HEAL.LIFE,4,Target,Happiness Score explained by Healthy life expectancy,World Happiness Report
+EXP.SOC.SUPP,5,Target,Happiness Score explained by Social support,World Happiness Report
+EXP.TRUST,6,Target,Happiness explained by Perceptions of corruption,World Happiness Report
+HAP.SCORE,7,Target,Happiness Score,World Happiness Report
+crim.gen,8,Safety,Crimes recorded by the police by by offence category,Eurostat
+crim.hom.vage,9,Safety,Intentional homicide victims by age and sex - number and rate for the relevant sex and age groups,Eurostat
+crim.plce,10,Safety,Police officers,Eurostat
+crim.pris.age,11,Safety,Prisoners by age and sex - number and rate for the relevant sex and age groups,Eurostat
+crim.pris.pop,12,Safety,Prison population,Eurostat
+ilc.mddw03,13,Safety,"Crime, violence or vandalism in the area - EU-SILC survey",Eurostat
+MS.MIL.TOTL.TF.ZS,14,Safety,Armed forces personnel (% of total labor force),World Data Bank
+MS.MIL.XPND.GD.ZS,15,Safety,Military expenditure (% of GDP),World Data Bank
+SAF.FSA,16,Safety,"Safety, Feeling safe at night",OECD How's Life
+SAF.H,17,Safety,"Safety, Homicides",OECD How's Life
+SAF.RD,18,Safety,"Safety, Road deaths",OECD How's Life
+VC.IHR.PSRC.FE.P5,19,Safety,"Intentional homicides, female (per 100,000 female)",World Data Bank
+VC.IHR.PSRC.MA.P5,20,Safety,"Intentional homicides, male (per 100,000 male)",World Data Bank
+VC.IHR.PSRC.P5,21,Safety,"Intentional homicides (per 100,000 people)",World Data Bank
+demo.minfedu,22,Health,Infant mortality by mother's educational attainment level (ISCED11f) and father's educational attainment level (ISCED11),Eurostat
+HLT.DFS,23,Health,"Health, Deaths from suicide, alcohol, drugs",OECD How's Life
+HLT.PH,24,Health,"Health, Perceived health",OECD How's Life
+hlth.ehis.al2e,25,Health,"Hazardous alcohol drinkers by sex, age and educational attainment level",Eurostat
+hlth.ehis.pe6e,26,Health,"Walking and cycling at least 30 minutes per day by sex, age and educational attainment level",Eurostat
+hlth.ehis.pn1e,27,Health,"Severity of bodily pain by sex, age and educational attainment level. Only levels = S_VS",Eurostat
+hlth.silc.01,28,Health,"Self-perceived health by sex, age and labour status. Only wstatus = POP. Only age = Y_GE16. Only levels = VGOOD",Eurostat
+hlth.silc.04,29,Health,"People having a long-standing illness or health problem, by sex, age and labour status. Unit is Percentage %. Only wstatus = POP. Only age = Y_GE16",Eurostat
+SH.DTH.0509,30,Health,Number of deaths ages 5-9 years,World Data Bank
+SH.DTH.1014,31,Health,Number of deaths ages 10-14 years,World Data Bank
+SH.DTH.1519,32,Health,Number of deaths ages 15-19 years,World Data Bank
+SH.DTH.2024,33,Health,Number of deaths ages 20-24 years,World Data Bank
+SH.DTH.IMRT,34,Health,Number of infant deaths,World Data Bank
+SH.DTH.MORT,35,Health,Number of under-five deaths,World Data Bank
+SH.DTH.NMRT,36,Health,Number of neonatal deaths,World Data Bank
+SH.DYN.0509,37,Health,"Probability of dying among children ages 5-9 years (per 1,000)",World Data Bank
+SH.DYN.1014,38,Health,"Probability of dying among adolescents ages 10-14 years (per 1,000)",World Data Bank
+SH.DYN.1519,39,Health,"Probability of dying among adolescents ages 15-19 years (per 1,000)",World Data Bank
+SH.DYN.2024,40,Health,"Probability of dying among youth ages 20-24 years (per 1,000)",World Data Bank
+SH.DYN.MORT,41,Health,"Mortality rate, under-5 (per 1,000 live births)",World Data Bank
+SH.DYN.MORT.FE,42,Health,"Mortality rate, under-5, female (per 1,000 live births)",World Data Bank
+SH.DYN.MORT.MA,43,Health,"Mortality rate, under-5, male (per 1,000 live births)",World Data Bank
+SH.DYN.NCOM.FE.ZS,44,Health,"Mortality from CVD, cancer, diabetes or CRD between exact ages 30 and 70, female (%)",World Data Bank
+SH.DYN.NCOM.MA.ZS,45,Health,"Mortality from CVD, cancer, diabetes or CRD between exact ages 30 and 70, male (%)",World Data Bank
+SH.DYN.NCOM.ZS,46,Health,"Mortality from CVD, cancer, diabetes or CRD between exact ages 30 and 70 (%)",World Data Bank
+SH.DYN.NMRT,47,Health,"Mortality rate, neonatal (per 1,000 live births)",World Data Bank
+SH.IMM.HEPB,48,Health,"Immunization, HepB3 (% of one-year-old children)",World Data Bank
+SH.IMM.IDPT,49,Health,"Immunization, DPT (% of children ages 12-23 months)",World Data Bank
+SH.IMM.MEAS,50,Health,"Immunization, measles (% of children ages 12-23 months)",World Data Bank
+SH.MED.BEDS.ZS,51,Health,"Hospital beds (per 1,000 people)",World Data Bank
+SH.MED.NUMW.P3,52,Health,"Nurses and midwives (per 1,000 people)",World Data Bank
+SH.MED.PHYS.ZS,53,Health,"Physicians (per 1,000 people)",World Data Bank
+SH.PRG.ANEM,54,Health,Prevalence of anemia among pregnant women (%),World Data Bank
+SH.TBS.CURE.ZS,55,Health,Tuberculosis treatment success rate (% of new cases),World Data Bank
+SH.TBS.DTEC.ZS,56,Health,"Tuberculosis case detection rate (%, all forms)",World Data Bank
+SH.TBS.INCD,57,Health,"Incidence of tuberculosis (per 100,000 people)",World Data Bank
+SN.ITK.DEFC.ZS,58,Health,Prevalence of undernourishment (% of population),World Data Bank
+SP.DYN.AMRT.FE,59,Health,"Mortality rate, adult, female (per 1,000 female adults)",World Data Bank
+SP.DYN.AMRT.MA,60,Health,"Mortality rate, adult, male (per 1,000 male adults)",World Data Bank
+SP.DYN.CBRT.IN,61,Health,"Birth rate, crude (per 1,000 people)",World Data Bank
+SP.DYN.CDRT.IN,62,Health,"Death rate, crude (per 1,000 people)",World Data Bank
+SP.DYN.IMRT.FE.IN,63,Health,"Mortality rate, infant, female (per 1,000 live births)",World Data Bank
+SP.DYN.IMRT.IN,64,Health,"Mortality rate, infant (per 1,000 live births)",World Data Bank
+SP.DYN.IMRT.MA.IN,65,Health,"Mortality rate, infant, male (per 1,000 live births)",World Data Bank
+SP.DYN.LE00.FE.IN,66,Health,"Life expectancy at birth, female (years)",World Data Bank
+SP.DYN.LE00.IN,67,Health,"Life expectancy at birth, total (years)",World Data Bank
+SP.DYN.LE00.MA.IN,68,Health,"Life expectancy at birth, male (years)",World Data Bank
+SP.DYN.TFRT.IN,69,Health,"Fertility rate, total (births per woman)",World Data Bank
+SP.DYN.TO65.FE.ZS,70,Health,"Survival to age 65, female (% of cohort)",World Data Bank
+SP.DYN.TO65.MA.ZS,71,Health,"Survival to age 65, male (% of cohort)",World Data Bank
+cens.01nadisco,72,Jobs,"Employed persons aged 15 and over by sex, age group and occupation",Eurostat
+ilc.lvhl36,73,Jobs,Labour transitions from temporary to permanent contracts by sex -3-year average,Eurostat
+lfsa.argacob,74,Jobs,"Activity rates by sex, age and country of birth (%). Only age = Y15-64",Eurostat
+lfsa.argaed,75,Jobs,"Activity rates by sex, age and educational attainment level (%). Only age = Y15-64",Eurostat
+lfsa.argaedcob,76,Jobs,"Activity rates by sex, age, educational attainment level and country of birth. Only age = Y15-64",Eurostat
+lfsa.argaedn,77,Jobs,"Activity rates by sex, age, educational attainment level and citizenship. Only age = Y15-64",Eurostat
+lfsa.argan,78,Jobs,"Activity rates by sex, age and citizenship (%). Only age = Y15-64",Eurostat
+lfsa.egad,79,Jobs,"Employment by sex, age and job tenure. Only age = Y15-64. Unit is Percentage %",Eurostat
+lfsa.eppga,80,Jobs,"Part-time employment as percentage of the total employment, by sex and age (%). Only age = Y15-64",Eurostat
+lfsa.eppgacob,81,Jobs,"Part-time employment as percentage of the total employment, by sex, age and country of birth (%). Only age = Y15-64",Eurostat
+lfsa.eppgai,82,Jobs,"Involuntary part-time employment as percentage of the total part-time employment, by sex and age (%). Only age = Y15-64",Eurostat
+lfsa.eppgan,83,Jobs,"Part-time employment as percentage of the total employment, by sex, age and citizenship (%). Only age = Y15-64",Eurostat
+lfsa.ergacob,84,Jobs,"Employment rates by sex, age and country of birth (%). Only age = Y15-64",Eurostat
+lfsa.ergaed,85,Jobs,"Employment rates by sex, age and educational attainment level (%). Only age = Y15-64",Eurostat
+lfsa.ergaedcob,86,Jobs,"Employment rates by sex, age, educational attainment level and country of birth. Only age = Y15-64",Eurostat
+lfsa.ergaedn,87,Jobs,"Employment rates by sex, age, educational attainment level and citizenship. Only age = Y15-64",Eurostat
+lfsa.ergan,88,Jobs,"Employment rates by sex, age and citizenship (%). Only age = Y15-64",Eurostat
+lfsa.etpgacob,89,Jobs,"Temporary employees as percentage of the total number of employees, by sex, age and country of birth (%). Only age = Y15-64",Eurostat
+lfsa.etpgan,90,Jobs,"Temporary employees as percentage of the total number of employees, by sex, age and citizenship (%). Only age = Y15-64",Eurostat
+lfsa.ewpshi,91,Jobs,"Employees working shifts as a percentage of the total of employees, by sex and age (%). Only age = Y15-64",Eurostat
+lfsa.ipga,92,Jobs,"Inactive population as a percentage of the total population, by sex and age (%). Only age = Y15-64",Eurostat
+lfsa.upgacob,93,Jobs,"Long-term unemployment (12 months or more) as a percentage of the total unemployment, by sex, age and country of birth (%). Only age = Y15-64",Eurostat
+lfsa.upgan,94,Jobs,"Long-term unemployment (12 months or more) as a percentage of the total unemployment, by sex, age and citizenship (%). Only age = Y15-64",Eurostat
+lfsa.urgacob,95,Jobs,"Unemployment rates by sex, age and country of birth (%). Only age = Y15-64",Eurostat
+lfsa.urgaed,96,Jobs,"Unemployment rates by sex, age and educational attainment level (%). Only age = Y15-64",Eurostat
+lfsa.urgan,97,Jobs,"Unemployment rates by sex, age and citizenship (%). Only age = Y15-64",Eurostat
+lfsi.dwl.a,98,Jobs,Duration of working life,Eurostat
+lfso.04avovisco,99,Jobs,"Average number of overtime hours of employees, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04avovna11,100,Jobs,"Average number of overtime hours of employees, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04avpoisco,101,Jobs,"Average number of paid overtime hours of employees, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04avpona11,102,Jobs,"Average number of paid overtime hours of employees, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04peovisco,103,Jobs,"Percentage of employees working overtime, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04peovna11,104,Jobs,"Percentage of employees working overtime, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04pepoisco,105,Jobs,"Percentage of employees working paid overtime, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04pepona11,106,Jobs,"Percentage of employees working paid overtime, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04vahrhwus,107,Jobs,"Average usual working hours of employees, by possibility to work variable hours in the reference week, sex and age. Only age = Y15-64",Eurostat
+lfso.04vawkhwus,108,Jobs,"Average usual working hours of employees, by possibility to have variable working hours, sex and age. Only age = Y15-64",Eurostat
+lfso.05changh,109,Jobs,Average usual working hours of employed persons between 15 and 64 years old by wish to change the organisation of their working life and care responsibilities. Only age = Y15-64,Eurostat
+lfso.05nowre1,110,Jobs,"Main reasons (linked with care of other people in need of care) given by employed persons between 15 and 64 years old for not working or not working more, by working time pattern. Only age = Y15-64",Eurostat
+lfso.05nowre2,111,Jobs,"Main reasons (linked with care of other people in need of care) given by employed persons between 15 and 64 years old for not working or not working more, by occupation. Only age = Y15-64",Eurostat
+lfso.05nowree,112,Jobs,Main childcare-related reasons given by employed persons between 15 and 64 years old for not working or not working more. Only age = Y15-64,Eurostat
+lfso.05nowreh,113,Jobs,Average usual working hours of employed persons between 15 and 64 years old by main childcare-related reasons given for not working or not working more. Only age = Y15-64,Eurostat
+lfso.05nowrep,114,Jobs,Main childcare-related reasons given by persons between 15 and 64 years old for not working or not working more. Only age = Y15-64. Only wstatus = POP,Eurostat
+lfso.05regch,115,Jobs,Average usual working hours of employed persons between 15 and 64 years old by regular care of other children or people in need of care. Only age = Y15-64,Eurostat
+lfso.05typece,116,Jobs,Main type of childcare used by employed persons between 15 and 64 years old for own/spouse's children up to 14 while working. Only age = Y15-64,Eurostat
+lfso.05typech,117,Jobs,Average usual working hours of employed persons between 15 and 64 years old by main type of childcare used for own/spouse's children up to 14 while working. Only age = Y15-64,Eurostat
+lfso.06finiagps,118,Jobs,Average age at which employed persons started receiving a retirement pension - by sex and main financial incentive to stay at work,Eurostat
+lfso.06finiisco,119,Jobs,Main financial incentives for employed persons who are entitled to receive an individual retirement pension to stay at work - by sex and occupation (1 000),Eurostat
+lfso.06finiyrsp,120,Jobs,Average number of years spent working - by sex and main financial incentive to stay at work,Eurostat
+migr.emi1ctz,121,Jobs,"Emigration by age group, sex and citizenship. Only agedef = REACH",Eurostat
+migr.imm10ctb,122,Jobs,"Immigration by age group, sex and level of human development of the country of birth. Only agedef = REACH",Eurostat
+SL.EMP.1524.SP.FE.ZS,123,Jobs,"Employment to population ratio, ages 15-24, female (%) (modeled ILO estimate)",World Data Bank
+SL.EMP.1524.SP.MA.ZS,124,Jobs,"Employment to population ratio, ages 15-24, male (%) (modeled ILO estimate)",World Data Bank
+SL.EMP.1524.SP.ZS,125,Jobs,"Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate)",World Data Bank
+SL.EMP.MPYR.FE.ZS,126,Jobs,"Employers, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.MPYR.MA.ZS,127,Jobs,"Employers, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.MPYR.ZS,128,Jobs,"Employers, total (% of total employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.SELF.FE.ZS,129,Jobs,"Self-employed, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.SELF.MA.ZS,130,Jobs,"Self-employed, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.SELF.ZS,131,Jobs,"Self-employed, total (% of total employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.TOTL.SP.FE.ZS,132,Jobs,"Employment to population ratio, 15+, female (%) (modeled ILO estimate)",World Data Bank
+SL.EMP.TOTL.SP.MA.ZS,133,Jobs,"Employment to population ratio, 15+, male (%) (modeled ILO estimate)",World Data Bank
+SL.EMP.TOTL.SP.ZS,134,Jobs,"Employment to population ratio, 15+, total (%) (modeled ILO estimate)",World Data Bank
+SL.EMP.VULN.FE.ZS,135,Jobs,"Vulnerable employment, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.VULN.MA.ZS,136,Jobs,"Vulnerable employment, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.VULN.ZS,137,Jobs,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.WORK.FE.ZS,138,Jobs,"Wage and salaried workers, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.WORK.MA.ZS,139,Jobs,"Wage and salaried workers, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.EMP.WORK.ZS,140,Jobs,"Wage and salaried workers, total (% of total employment) (modeled ILO estimate)",World Data Bank
+WJQ.ER,141,Jobs,"Work and Job Quality, Employment rate",OECD How's Life
+WJQ.LHI,142,Jobs,"Work and Job Quality, Long hours in paid work",OECD How's Life
+WJQ.LMI,143,Jobs,"Work and Job Quality, Labour market insecurity",OECD How's Life
+WJQ.LUR,144,Jobs,"Work and Job Quality, Long-term unemployment rate",OECD How's Life
+cens.01ndnbown,145,Socioeconomics,Occupied conventional dwellings by number of rooms and occupants,Eurostat
+cens.01ndquart.oc,146,Socioeconomics,Occupants by type of housing,Eurostat
+cens.hndwsize,147,Socioeconomics,Households by size (number of persons),Eurostat
+demo.divcz,148,Socioeconomics,Divorces by citizenship of wife and husband,Eurostat
+demo.fabort,149,Socioeconomics,Legally induced abortions by mother's age,Eurostat
+demo.faeduc,150,Socioeconomics,Live births by mother's age and educational attainment level,Eurostat
+demo.faemplc,151,Socioeconomics,Live births by mother's age and activity status,Eurostat
+demo.frate,152,Socioeconomics,Fertility rates by age,Eurostat
+demo.fweight,153,Socioeconomics,Live births by birth weight and duration of gestation,Eurostat
+demo.magec,154,Socioeconomics,Deaths by age and sex,Eurostat
+demo.marcz,155,Socioeconomics,Marriages by citizenship of bride and groom,Eurostat
+demo.marstac,156,Socioeconomics,"Deaths by age, sex and legal marital status",Eurostat
+demo.ndivdur,157,Socioeconomics,Divorces by duration of marriage (reached during the year),Eurostat
+earn.gr.gpgr2wt,158,Socioeconomics,"Gender pay gap in unadjusted form by working time - NACE Rev. 2 activity (B-S except O), structure of earnings survey methodology",Eurostat
+earn.nt.lowwtrp,159,Socioeconomics,Tax rate on low wage earners - Low wage trap,Eurostat
+earn.nt.taxwedge,160,Socioeconomics,Tax rate on low wage earners: Tax wedge on labour costs,Eurostat
+earn.nt.unemtrp,161,Socioeconomics,Tax rate on low wage earners - Unemployment trap,Eurostat
+earn.ses.adeci,162,Socioeconomics,"Annual earnings by quantiles and contractual working time (enterprises with 10 employed persons or more) - NACE Rev. 1.1, C-O excluding L. Unit is Percentage %",Eurostat
+earn.ses.agt28,163,Socioeconomics,"Mean annual earnings by sex, age, occupation. Unit is Percentage %",Eurostat
+earn.ses.agt42,164,Socioeconomics,"Mean annual holidays by sex, age, occupation",Eurostat
+earn.ses.pub1a,165,Socioeconomics,Low-wage earners as a proportion of all employees (excluding apprentices) by age,Eurostat
+earn.ses.pub1i,166,Socioeconomics,Low-wage earners as a proportion of all employees (excluding apprentices) by educational attainment level,Eurostat
+earn.ses.pub1s,167,Socioeconomics,Low-wage earners as a proportion of all employees (excluding apprentices) by sex,Eurostat
+earn.ses.pub1t,168,Socioeconomics,Low-wage earners as a proportion of all employees (excluding apprentices) by employment contract,Eurostat
+earn.ses10.adeci,169,Socioeconomics,"Annual earnings by quantiles and contractual working time (enterprises with 10 employed persons or more) - NACE Rev. 2, B-S excluding O. Unit is Percentage %",Eurostat
+educ.fiexpc,170,Socioeconomics,Expenditure on education in constant prices,Eurostat
+educ.pers1t,171,Socioeconomics,Teachers (ISCED 0-4) and academic staff (ISCED 5-6) by employment status and sex,Eurostat
+educ.thpar,172,Socioeconomics,Participation rates in education by age and sex,Eurostat
+educ.uoe.enra06,173,Socioeconomics,Pupils and students in education aged 30 and over - per 1000 of corresponding age population,Eurostat
+educ.uoe.enra08,174,Socioeconomics,Students in post-compulsory education - as % of the total population of post-compulsory school age,Eurostat
+educ.uoe.enra10,175,Socioeconomics,"Pupils from age 4 to the starting age of compulsory education at primary level, by sex - as % of the population of the corresponding age group",Eurostat
+educ.uoe.enra18,176,Socioeconomics,Pupils from age 5 to the starting age of compulsory education at primary level by sex - % of the population of the corresponding age,Eurostat
+educ.uoe.enra20,177,Socioeconomics,"Pupils aged 3 years old, by sex - as % of the population of the corresponding age group",Eurostat
+educ.uoe.enra25,178,Socioeconomics,Pupils under the age of 3 by sex - as % of the population of the corresponding age,Eurostat
+educ.uoe.enra28,179,Socioeconomics,"Out-of-school rate in population of lower secondary school age, by sex",Eurostat
+educ.uoe.enra29,180,Socioeconomics,"Out-of-school rate in population of upper secondary school age, by sex",Eurostat
+educ.uoe.enrp05,181,Socioeconomics,Pupils enrolled in primary education by sex and age,Eurostat
+educ.uoe.fini06,182,Socioeconomics,"Ratio of annual expenditure per student at the tertiary level and primary level of education, in public educational institutions",Eurostat
+educ.uoe.grad06,183,Socioeconomics,Graduates at doctoral level by sex and age groups - per 1000 of population aged 25-34,Eurostat
+educ.uoe.grad07,184,Socioeconomics,"Graduates at doctoral level, in science, math., computing, engineering, manufacturing, construction, by sex - per 1000 of population aged 25-34",Eurostat
+educ.uoe.perp03,185,Socioeconomics,"Classroom teachers working full-time and part-time in primary, lower-secondary and upper-secondary education - as % of total active population",Eurostat
+EG.ELC.ACCS.RU.ZS,186,Socioeconomics,"Access to electricity, rural (% of rural population)",World Data Bank
+EG.ELC.ACCS.UR.ZS,187,Socioeconomics,"Access to electricity, urban (% of urban population)",World Data Bank
+EG.ELC.ACCS.ZS,188,Socioeconomics,Access to electricity (% of population),World Data Bank
+EN.URB.LCTY.UR.ZS,189,Socioeconomics,Population in the largest city (% of urban population),World Data Bank
+env.wat.pop,190,Socioeconomics,Population connected to public water supply,Eurostat
+HH.HA,191,Socioeconomics,"Housing, Housing affordability",OECD How's Life
+HH.HWI,192,Socioeconomics,"Housing, Households with internet access at home",OECD How's Life
+icw.sr.01,193,Socioeconomics,Median saving rate by age of the reference person - experimental statistics,Eurostat
+icw.sr.03,194,Socioeconomics,Median saving rate by income quintile - experimental statistics,Eurostat
+icw.sr.04,195,Socioeconomics,Median saving rate by educational attainment level of the reference person - experimental statistics,Eurostat
+icw.sr.08,196,Socioeconomics,Aggregate propensity to consume by age of the reference person - experimental statistics,Eurostat
+icw.sr.10,197,Socioeconomics,Aggregate propensity to consume by income quintile - experimental statistics,Eurostat
+icw.sr.11,198,Socioeconomics,Aggregate propensity to consume by educational attainment level of the reference person - experimental statistics,Eurostat
+ilc.ats09,199,Socioeconomics,"Persons participating in training related to hobbies by sex, age, income group, most frequent activity status and educational attainment level. Only wstatus = POP. Only age = Y_GE16",Eurostat
+ilc.ats10,200,Socioeconomics,"Persons participating in training related to professional activity by sex, age, income group, most frequent activity status and educational attainment level. Only wstatus = POP. Only age = Y_GE16",Eurostat
+ilc.chmd03,201,Socioeconomics,Child specific material deprivation rate by educational attainment level of their parents (children aged 1 to 15),Eurostat
+ilc.chmd04,202,Socioeconomics,Mean number of deprivation items among the children deprived (children aged 1 to 15),Eurostat
+ilc.di11,203,Socioeconomics,Income quintile share ratio S80/S20 for disposable income by sex and age group - EU-SILC survey,Eurostat
+ilc.di11d,204,Socioeconomics,Income quintile share ratio S80/S50 for disposable income by sex and age group - EU-SILC survey,Eurostat
+ilc.di11e,205,Socioeconomics,Income quintile share ratio S50/S20 for disposable income by sex and age group - EU-SILC survey,Eurostat
+ilc.di11f,206,Socioeconomics,Income quintile share ratio S40/S100 for disposable income by sex and age group - EU-SILC survey,Eurostat
+ilc.di12,207,Socioeconomics,Gini coefficient of equivalised disposable income - EU-SILC survey,Eurostat
+ilc.di12b,208,Socioeconomics,Gini coefficient of equivalised disposable income before social transfers (pensions included in social transfers),Eurostat
+ilc.di12c,209,Socioeconomics,Gini coefficient of equivalised disposable income before social transfers (pensions excluded from social transfers),Eurostat
+ilc.hcmh01,210,Socioeconomics,Average size of dwelling by income quintile and tenure status,Eurostat
+ilc.hcmh02,211,Socioeconomics,Average size of dwelling by household type and degree of urbanisation,Eurostat
+ilc.hcmp03,212,Socioeconomics,Share of population living in a dwelling not comfortably cool during summer time by income quintile and degree of urbanisation,Eurostat
+ilc.hcmp05,213,Socioeconomics,Share of population having moved to other dwelling within the last five year period by tenure status and degree of urbanisation,Eurostat
+ilc.iw07,214,Socioeconomics,In-work at-risk-of-poverty rate by full-/part-time work - EU-SILC survey,Eurostat
+ilc.li09b,215,Socioeconomics,At-risk-of-poverty rate before social transfers (pensions included in social transfers) by household type - EU-SILC survey,Eurostat
+ilc.li10b,216,Socioeconomics,At-risk-of-poverty rate before social transfers (pensions excluded from social transfers) by household type - EU-SILC survey,Eurostat
+ilc.li45,217,Socioeconomics,At-risk-of-poverty rate after deducting housing costs by age and sex,Eurostat
+ilc.li48,218,Socioeconomics,At-risk-of-poverty rate after deducting housing costs by degree of urbanisation,Eurostat
+ilc.lvhl04,219,Socioeconomics,"Distribution of population aged 18 and over by part-time or full-time employment, income group and sex - EU-SILC survey",Eurostat
+ilc.lvhl13,220,Socioeconomics,Persons living in households with very low work intensity by income quantile and household composition (population aged 0 to 59 years) - EU 2020 strategy,Eurostat
+ilc.lvho03,221,Socioeconomics,Average number of rooms per person by tenure status and dwelling type from 2003 onwards - EU-SILC survey,Eurostat
+ilc.lvho05a,222,Socioeconomics,"Overcrowding rate by age, sex and poverty status - total population - EU-SILC survey",Eurostat
+ilc.lvho05q,223,Socioeconomics,Overcrowding rate by income quintile - total population - EU-SILC survey,Eurostat
+ilc.lvho06,224,Socioeconomics,"Overcrowding rate by age, sex and poverty status - population without single-person households - EU-SILC survey",Eurostat
+ilc.lvho06q,225,Socioeconomics,Overcrowding rate by income quintile - population without single-person households - EU-SILC survey,Eurostat
+ilc.lvho07a,226,Socioeconomics,"Housing cost overburden rate by age, sex and poverty status - EU-SILC survey",Eurostat
+ilc.lvho07c,227,Socioeconomics,Housing cost overburden rate by tenure status - EU-SILC survey,Eurostat
+ilc.lvho08a,228,Socioeconomics,"Median of the housing cost burden distribution by age, sex and poverty status - EU-SILC survey",Eurostat
+ilc.lvho50a,229,Socioeconomics,"Share of people living in under-occupied dwellings by age, sex and poverty status - total population - EU-SILC survey",Eurostat
+ilc.lvho50b,230,Socioeconomics,Share of people living in under-occupied dwellings by household type and income quintile - total population - EU-SILC survey,Eurostat
+ilc.lvho50c,231,Socioeconomics,Share of people living in under-occupied dwellings by tenure status - total population - EU-SILC survey,Eurostat
+ilc.lvph01,232,Socioeconomics,Average household size - EU-SILC survey,Eurostat
+ilc.lvps02,233,Socioeconomics,Distribution of population by household type and income group - EU-SILC survey,Eurostat
+ilc.mddd11,234,Socioeconomics,Severe material deprivation rate by age and sex. Unit is Percentage %,Eurostat
+ilc.mddd13,235,Socioeconomics,Severe material deprivation rate by income quintile and household type,Eurostat
+ilc.mddd17,236,Socioeconomics,Severe material deprivation rate by tenure status,Eurostat
+ilc.mddu01,237,Socioeconomics,Persons who cannot afford a telephone - EU-SILC survey,Eurostat
+ilc.mddu02,238,Socioeconomics,Persons who cannot afford a colour TV - EU-SILC survey,Eurostat
+ilc.mddu03,239,Socioeconomics,Persons who cannot afford a computer - EU-SILC survey,Eurostat
+ilc.mddu04,240,Socioeconomics,Persons who cannot afford a washing machine - EU-SILC survey,Eurostat
+ilc.mddu05,241,Socioeconomics,Persons who cannot afford a personal car - EU-SILC survey,Eurostat
+ilc.mddu06a,242,Socioeconomics,"Persons who cannot afford to replace worn-out clothes by some new (not second-hand) ones by age, sex and income group",Eurostat
+ilc.mddu06b,243,Socioeconomics,Persons who cannot afford to replace worn-out clothes by some new (not second-hand) ones by employment status and income quintile. Only wstatus = POP,Eurostat
+ilc.mddu07a,244,Socioeconomics,"Persons who cannot afford internet connection for personal use at home by age, sex and income group",Eurostat
+ilc.mddu07b,245,Socioeconomics,Persons who cannot afford internet connection for personal use at home by employment status and income quintile. Only wstatus = POP,Eurostat
+ilc.mddw01,246,Socioeconomics,Noise from neighbours or from the street - EU-SILC survey,Eurostat
+ilc.mded03,247,Socioeconomics,Total housing costs in pps - EU-SILC survey,Eurostat
+ilc.mdes01,248,Socioeconomics,Inability to keep home adequately warm - EU-SILC survey,Eurostat
+ilc.mdes02,249,Socioeconomics,Inability to afford paying for one week annual holiday away from home - EU-SILC survey,Eurostat
+ilc.mdes03,250,Socioeconomics,"Inability to afford a meal with meat, chicken, fish (or vegetarian equivalent) every second day - EU-SILC survey",Eurostat
+ilc.mdes04,251,Socioeconomics,Inability to face unexpected financial expenses - EU-SILC survey,Eurostat
+ilc.mdes05,252,Socioeconomics,"Arrears (mortgage or rent, utility bills or hire purchase) from 2003 onwards - EU-SILC survey",Eurostat
+ilc.mdes06,253,Socioeconomics,Arrears on mortgage or rent payments - EU-SILC survey,Eurostat
+ilc.mdes07,254,Socioeconomics,Arrears on utility bills - EU-SILC survey,Eurostat
+ilc.mdes08,255,Socioeconomics,Arrears on hire purchase instalments or other loan payments - EU-SILC survey,Eurostat
+ilc.mdes10a,256,Socioeconomics,"Persons who cannot afford to get-together with friends or family (relatives) for a drink or meal at least once a month by age, sex and income group",Eurostat
+ilc.mdes10b,257,Socioeconomics,Persons who cannot afford to get-together with friends or family (relatives) for a drink or meal at least once a month by employment status and income quintile. Only wstatus = POP,Eurostat
+ilc.mdes11a,258,Socioeconomics,"Persons who cannot afford to regularly participate in a leisure activity by age, sex and income group",Eurostat
+ilc.mdes11b,259,Socioeconomics,Persons who cannot afford to regularly participate in a leisure activity by employment status and income quintile. Only wstatus = POP,Eurostat
+ilc.mdes12a,260,Socioeconomics,"Persons who cannot afford to spend a small amount of money each week on themselves by age, sex and income group",Eurostat
+ilc.mdes12b,261,Socioeconomics,Persons who cannot afford to spend a small amount of money each week on themselves by employment status and income quintile. Only wstatus = POP,Eurostat
+ilc.mdes13a,262,Socioeconomics,"Persons who cannot afford a regular use of public transport by age, sex and income group",Eurostat
+ilc.mdes13b,263,Socioeconomics,Persons who cannot afford a regular use of public transport by employment status and income quintile. Only wstatus = POP,Eurostat
+ilc.mdho01,264,Socioeconomics,"Total population living in a dwelling with a leaking roof, damp walls, floors or foundation, or rot in window frames or floor - EU-SILC survey",Eurostat
+ilc.mdho02,265,Socioeconomics,"Total population having neither a bath, nor a shower in their dwelling - EU-SILC survey",Eurostat
+ilc.mdho03,266,Socioeconomics,Total population not having indoor flushing toilet for the sole use of their household - EU-SILC survey,Eurostat
+ilc.mdho04,267,Socioeconomics,Total population considering their dwelling as too dark - EU-SILC survey,Eurostat
+ilc.mdho05,268,Socioeconomics,"Total population having neither a bath, nor a shower, nor indoor flushing toilet in their household - EU-SILC survey",Eurostat
+ilc.mdho06a,269,Socioeconomics,"Severe housing deprivation rate by age, sex and poverty status - EU-SILC survey",Eurostat
+ilc.mdho06q,270,Socioeconomics,Severe housing deprivation rate by income quintile - EU-SILC survey,Eurostat
+ilc.mdho07,271,Socioeconomics,Persons who cannot afford to replace worn-out furniture by income group and type of household,Eurostat
+ilc.peps01n,272,Socioeconomics,Persons at risk of poverty or social exclusion by age and sex. Unit is Percentage %,Eurostat
+ilc.peps03n,273,Socioeconomics,Persons at risk of poverty or social exclusion by income quantile and household composition,Eurostat
+ilc.peps07n,274,Socioeconomics,Persons at risk of poverty or social exclusion by tenure status,Eurostat
+ilc.pnp10,275,Socioeconomics,Gender differences in the relative median income ratio (65+) - EU-SILC survey,Eurostat
+ilc.pnp11,276,Socioeconomics,Gender differences in the aggregate replacement ratio for pensions (excluding other social benefits) - EU-SILC survey,Eurostat
+ilc.pnp2,277,Socioeconomics,Relative median income ratio (65+) - EU-SILC and ECHP surveys,Eurostat
+ilc.pnp3,278,Socioeconomics,Aggregate replacement ratio for pensions (excluding other social benefits) by sex - EU-SILC survey,Eurostat
+ilc.pns2,279,Socioeconomics,Relative median income ratio (60+) - EU-SILC survey,Eurostat
+ilc.pw06,280,Socioeconomics,"Persons having someone to rely on in case of need by age, sex and educational attainment level. Only age = Y_GE16",Eurostat
+ilc.pw07,281,Socioeconomics,"Persons having someone to rely on in case of need by income quintile, degree of urbanisation and household type",Eurostat
+ilc.scp15,282,Socioeconomics,"Persons who have someone to ask for help by sex, age and educational attainment level. Only age = Y_GE16",Eurostat
+ilc.scp16,283,Socioeconomics,"Persons who have someone to ask for help by income quintile, household type and degree of urbanisation",Eurostat
+ilc.scp17,284,Socioeconomics,"Persons who have someone to discuss personal matters by sex, age and educational attainment level. Only age = Y_GE16",Eurostat
+ilc.scp18,285,Socioeconomics,"Persons who have someone to discuss personal matters by income quintile, household type and degree of urbanisation",Eurostat
+ilc.sip8,286,Socioeconomics,"Material deprivation rate for the 'Economic strain' and 'Durables' dimensions, by number of item of deprivation - EU-SILC survey. Unit is Percentage %",Eurostat
+ilc.sis4,287,Socioeconomics,Mean number of deprivation items among the deprived - Economic strain and durables dimension - EU-SILC survey,Eurostat
+isoc.ci.cm.h,288,Socioeconomics,Households - availability of computers,Eurostat
+isoc.ci.in.h,289,Socioeconomics,Households -  level of internet access,Eurostat
+isoc.r.cux.i,290,Socioeconomics,Individuals who have never used a computer,Eurostat
+isoc.r.iacc.h,291,Socioeconomics,Households with access to the internet at home,Eurostat
+isoc.ski.itsex,292,Socioeconomics,Employed persons with ICT education by sex. Unit is Percentage %,Eurostat
+IT.CEL.SETS.P2,293,Socioeconomics,Mobile cellular subscriptions (per 100 people),World Data Bank
+IW.DME,294,Socioeconomics,"Income and Wealth, Difficulty making ends meet",Eurostat
+IW.HI,295,Socioeconomics,"Income and Wealth, Household income",Eurostat
+IW.HW,296,Socioeconomics,"Income and Wealth, Household wealth",OECD How's Life
+IW.RIP,297,Socioeconomics,"Income and Wealth, Relative income poverty",Eurostat
+lfso.06otbnagps,298,Socioeconomics,Average age at which not employed persons started receiving a retirement pension - by granting of other individual benefits and sex,Eurostat
+lfso.06otbnyrsp,299,Socioeconomics,"Not employed persons, average number of years spent working - by granting of other individual benefits and sex",Eurostat
+lfso.06reasagps,300,Socioeconomics,Average age at which not employed persons started receiving a retirement pension - by sex and main reason for retirement or early retirement,Eurostat
+lfso.06stafagps,301,Socioeconomics,Average age at which not employed persons started receiving a retirement pension - by sex and main labour status just after leaving last job,Eurostat
+lfso.16elvncom,302,Socioeconomics,"Early leavers from education and training who started but never completed upper secondary education by sex, age and reason for not completing",Eurostat
+lfso.16elvnsta,303,Socioeconomics,"Early leavers from education and training who never started upper secondary education by sex, age and reason for not starting",Eurostat
+lfst.r.aredcobu,304,Socioeconomics,"Activity rates by sex, age, educational attainment level, country of birth and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.arednu,305,Socioeconomics,"Activity rates by sex, age, educational attainment level, citizenship and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.egadu,306,Socioeconomics,"Employment by sex, age, job tenure and degree of urbanisation. Only age = Y15-64. Unit is Percentage %",Eurostat
+lfst.r.eredcobu,307,Socioeconomics,"Employment rates by sex, age, educational attainment level, country of birth and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.erednu,308,Socioeconomics,"Employment rates by sex, age, educational attainment level, citizenship and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.ergau,309,Socioeconomics,"Employment rates by sex, age and degree of urbanisation (%). Only age = Y15-64",Eurostat
+lfst.r.lfur2gacu,310,Socioeconomics,"Unemployment rates by sex, age, country of birth and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.lfur2ganu,311,Socioeconomics,"Unemployment rates by sex, age, citizenship and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.urgau,312,Socioeconomics,"Unemployment rates by sex, age and degree of urbanisation (%). Only age = Y15-64",Eurostat
+NE.CON.PRVT.PC.KD,313,Socioeconomics,Households and NPISHs Final consumption expenditure per capita (constant 2015 US$),World Data Bank
+NE.CON.PRVT.PC.KD.ZG,314,Socioeconomics,Households and NPISHs Final consumption expenditure per capita growth (annual %),World Data Bank
+NE.CON.PRVT.ZS,315,Socioeconomics,Households and NPISHs final consumption expenditure (% of GDP),World Data Bank
+nrg.ind.ahbtc,316,Socioeconomics,Heat pumps - ambient heat captured by technology and climate,Eurostat
+nrg.ind.id,317,Socioeconomics,Energy imports dependency,Eurostat
+NY.ADJ.AEDU.GN.ZS,318,Socioeconomics,Adjusted savings: education expenditure (% of GNI),World Data Bank
+NY.GNP.PCAP.PP.KD,319,Socioeconomics,"GNI per capita, PPP (constant 2017 international $)",World Data Bank
+NY.GNS.ICTR.GN.ZS,320,Socioeconomics,Gross savings (% of GNI),World Data Bank
+NY.GNS.ICTR.ZS,321,Socioeconomics,Gross savings (% of GDP),World Data Bank
+SCO.SS,322,Socioeconomics,"Social connections, Social support",OECD How's Life
+SE.ENR.PRIM.FM.ZS,323,Socioeconomics,"School enrollment, primary (gross), gender parity index (GPI)",World Data Bank
+SE.ENR.PRSC.FM.ZS,324,Socioeconomics,"School enrollment, primary and secondary (gross), gender parity index (GPI)",World Data Bank
+SE.ENR.SECO.FM.ZS,325,Socioeconomics,"School enrollment, secondary (gross), gender parity index (GPI)",World Data Bank
+SE.ENR.TERT.FM.ZS,326,Socioeconomics,"School enrollment, tertiary (gross), gender parity index (GPI)",World Data Bank
+SE.PRM.AGES,327,Socioeconomics,Primary school starting age (years),World Data Bank
+SE.PRM.CMPT.FE.ZS,328,Socioeconomics,"Primary completion rate, female (% of relevant age group)",World Data Bank
+SE.PRM.CMPT.MA.ZS,329,Socioeconomics,"Primary completion rate, male (% of relevant age group)",World Data Bank
+SE.PRM.CMPT.ZS,330,Socioeconomics,"Primary completion rate, total (% of relevant age group)",World Data Bank
+SE.PRM.DURS,331,Socioeconomics,"Primary education, duration (years)",World Data Bank
+SE.PRM.ENRL.FE.ZS,332,Socioeconomics,"Primary education, pupils (% female)",World Data Bank
+SE.PRM.ENRL.TC.ZS,333,Socioeconomics,"Pupil-teacher ratio, primary",World Data Bank
+SE.PRM.ENRR,334,Socioeconomics,"School enrollment, primary (% gross)",World Data Bank
+SE.PRM.ENRR.FE,335,Socioeconomics,"School enrollment, primary, female (% gross)",World Data Bank
+SE.PRM.ENRR.MA,336,Socioeconomics,"School enrollment, primary, male (% gross)",World Data Bank
+SE.PRM.GINT.FE.ZS,337,Socioeconomics,"Gross intake ratio in first grade of primary education, female (% of relevant age group)",World Data Bank
+SE.PRM.GINT.MA.ZS,338,Socioeconomics,"Gross intake ratio in first grade of primary education, male (% of relevant age group)",World Data Bank
+SE.PRM.GINT.ZS,339,Socioeconomics,"Gross intake ratio in first grade of primary education, total (% of relevant age group)",World Data Bank
+SE.PRM.NENR,340,Socioeconomics,"School enrollment, primary (% net)",World Data Bank
+SE.PRM.OENR.FE.ZS,341,Socioeconomics,"Over-age students, primary, female (% of female enrollment)",World Data Bank
+SE.PRM.OENR.MA.ZS,342,Socioeconomics,"Over-age students, primary, male (% of male enrollment)",World Data Bank
+SE.PRM.OENR.ZS,343,Socioeconomics,"Over-age students, primary (% of enrollment)",World Data Bank
+SE.PRM.PRIV.ZS,344,Socioeconomics,"School enrollment, primary, private (% of total primary)",World Data Bank
+SE.PRM.REPT.ZS,345,Socioeconomics,"Repeaters, primary, total (% of total enrollment)",World Data Bank
+SE.PRM.TCHR.FE.ZS,346,Socioeconomics,"Primary education, teachers (% female)",World Data Bank
+SE.PRM.TENR,347,Socioeconomics,"Adjusted net enrollment rate, primary (% of primary school age children)",World Data Bank
+SE.PRM.UNER.ZS,348,Socioeconomics,Children out of school (% of primary school age),World Data Bank
+SE.SEC.AGES,349,Socioeconomics,Lower secondary school starting age (years),World Data Bank
+SE.SEC.DURS,350,Socioeconomics,"Secondary education, duration (years)",World Data Bank
+SE.SEC.ENRL.FE.ZS,351,Socioeconomics,"Secondary education, pupils (% female)",World Data Bank
+SE.SEC.ENRL.GC.FE.ZS,352,Socioeconomics,"Secondary education, general pupils (% female)",World Data Bank
+SE.SEC.ENRL.TC.ZS,353,Socioeconomics,"Pupil-teacher ratio, secondary",World Data Bank
+SE.SEC.ENRL.VO.FE.ZS,354,Socioeconomics,"Secondary education, vocational pupils (% female)",World Data Bank
+SE.SEC.ENRR,355,Socioeconomics,"School enrollment, secondary (% gross)",World Data Bank
+SE.SEC.ENRR.FE,356,Socioeconomics,"School enrollment, secondary, female (% gross)",World Data Bank
+SE.SEC.ENRR.MA,357,Socioeconomics,"School enrollment, secondary, male (% gross)",World Data Bank
+SE.SEC.NENR,358,Socioeconomics,"School enrollment, secondary (% net)",World Data Bank
+SE.SEC.PRIV.ZS,359,Socioeconomics,"School enrollment, secondary, private (% of total secondary)",World Data Bank
+SE.SEC.TCHR.FE.ZS,360,Socioeconomics,"Secondary education, teachers (% female)",World Data Bank
+SE.SEC.UNER.LO.ZS,361,Socioeconomics,Adolescents out of school (% of lower secondary school age),World Data Bank
+SE.TER.ENRL.TC.ZS,362,Socioeconomics,"Pupil-teacher ratio, tertiary",World Data Bank
+SE.TER.ENRR,363,Socioeconomics,"School enrollment, tertiary (% gross)",World Data Bank
+SE.TER.ENRR.FE,364,Socioeconomics,"School enrollment, tertiary, female (% gross)",World Data Bank
+SE.TER.ENRR.MA,365,Socioeconomics,"School enrollment, tertiary, male (% gross)",World Data Bank
+SE.TER.TCHR.FE.ZS,366,Socioeconomics,"Tertiary education, academic staff (% female)",World Data Bank
+SH.H2O.BASW.RU.ZS,367,Socioeconomics,"People using at least basic drinking water services, rural (% of rural population)",World Data Bank
+SH.H2O.BASW.UR.ZS,368,Socioeconomics,"People using at least basic drinking water services, urban (% of urban population)",World Data Bank
+SH.H2O.BASW.ZS,369,Socioeconomics,People using at least basic drinking water services (% of population),World Data Bank
+SH.H2O.SMDW.ZS,370,Socioeconomics,People using safely managed drinking water services (% of population),World Data Bank
+SI.DST.02ND.20,371,Socioeconomics,Income share held by second 20%,World Data Bank
+SI.DST.03RD.20,372,Socioeconomics,Income share held by third 20%,World Data Bank
+SI.DST.04TH.20,373,Socioeconomics,Income share held by fourth 20%,World Data Bank
+SI.DST.05TH.20,374,Socioeconomics,Income share held by highest 20%,World Data Bank
+SI.DST.10TH.10,375,Socioeconomics,Income share held by highest 10%,World Data Bank
+SI.DST.50MD,376,Socioeconomics,Proportion of people living below 50 percent of median income (%),OECD How's Life
+SI.DST.FRST.10,377,Socioeconomics,Income share held by lowest 10%,World Data Bank
+SI.DST.FRST.20,378,Socioeconomics,Income share held by lowest 20%,World Data Bank
+SI.POV.DDAY,379,Socioeconomics,Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population),World Data Bank
+SI.POV.GAPS,380,Socioeconomics,Poverty gap at $1.90 a day (2011 PPP) (%),World Data Bank
+SI.POV.GINI,381,Socioeconomics,Gini index (World Bank estimate),World Data Bank
+SI.POV.LMIC,382,Socioeconomics,Poverty headcount ratio at $3.20 a day (2011 PPP) (% of population),OECD How's Life
+SI.POV.LMIC.GP,383,Socioeconomics,Poverty gap at $3.20 a day (2011 PPP) (%),World Data Bank
+SI.POV.UMIC,384,Socioeconomics,Poverty headcount ratio at $5.50 a day (2011 PPP) (% of population),OECD How's Life
+SI.POV.UMIC.GP,385,Socioeconomics,Poverty gap at $5.50 a day (2011 PPP) (%),World Data Bank
+SL.FAM.WORK.FE.ZS,386,Socioeconomics,"Contributing family workers, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.FAM.WORK.MA.ZS,387,Socioeconomics,"Contributing family workers, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.FAM.WORK.ZS,388,Socioeconomics,"Contributing family workers, total (% of total employment) (modeled ILO estimate)",World Data Bank
+spr.pns.ben,389,Socioeconomics,Pensions beneficiaries at 31st December,Eurostat
+sprt.pcs.hbs,390,Socioeconomics,Mean consumption expenditure of private households on sporting goods and services by COICOP consumption purpose,Eurostat
+WJQ.E,391,Socioeconomics,"Work and Job Quality, Earnings",OECD How's Life
+AG.LND.AGRI.ZS,392,Environment,Agricultural land (% of land area),World Data Bank
+AG.LND.ARBL.HA.PC,393,Environment,Arable land (hectares per person),World Data Bank
+AG.LND.ARBL.ZS,394,Environment,Arable land (% of land area),World Data Bank
+AG.LND.CROP.ZS,395,Environment,Permanent cropland (% of land area),World Data Bank
+AG.LND.FRST.ZS,396,Environment,Forest area (% of land area),World Data Bank
+EG.CFT.ACCS.ZS,397,Environment,Access to clean fuels and technologies for cooking (% of population),World Data Bank
+EG.ELC.COAL.ZS,398,Environment,Electricity production from coal sources (% of total),World Data Bank
+EG.ELC.FOSL.ZS,399,Environment,"Electricity production from oil, gas and coal sources (% of total)",World Data Bank
+EG.ELC.HYRO.ZS,400,Environment,Electricity production from hydroelectric sources (% of total),World Data Bank
+EG.ELC.LOSS.ZS,401,Environment,Electric power transmission and distribution losses (% of output),World Data Bank
+EG.ELC.NGAS.ZS,402,Environment,Electricity production from natural gas sources (% of total),World Data Bank
+EG.ELC.NUCL.ZS,403,Environment,Electricity production from nuclear sources (% of total),World Data Bank
+EG.ELC.PETR.ZS,404,Environment,Electricity production from oil sources (% of total),World Data Bank
+EG.ELC.RNEW.ZS,405,Environment,Renewable electricity output (% of total electricity output),World Data Bank
+EG.ELC.RNWX.ZS,406,Environment,"Electricity production from renewable sources, excluding hydroelectric (% of total)",World Data Bank
+EG.FEC.RNEW.ZS,407,Environment,Renewable energy consumption (% of total final energy consumption),World Data Bank
+EG.USE.CRNW.ZS,408,Environment,Combustible renewables and waste (% of total energy),World Data Bank
+EN.ATM.CO2E.EG.ZS,409,Environment,CO2 intensity (kg per kg of oil equivalent energy use),World Data Bank
+EN.ATM.CO2E.GF.ZS,410,Environment,CO2 emissions from gaseous fuel consumption (% of total),World Data Bank
+EN.ATM.CO2E.LF.ZS,411,Environment,CO2 emissions from liquid fuel consumption (% of total),World Data Bank
+EN.ATM.CO2E.PP.GD,412,Environment,CO2 emissions (kg per PPP $ of GDP),World Data Bank
+EN.ATM.CO2E.SF.ZS,413,Environment,CO2 emissions from solid fuel consumption (% of total),World Data Bank
+EN.ATM.GHGO.ZG,414,Environment,Other greenhouse gas emissions (% change from 1990),World Data Bank
+EN.ATM.GHGT.KT.CE,415,Environment,Total greenhouse gas emissions (kt of CO2 equivalent),World Data Bank
+EN.ATM.GHGT.ZG,416,Environment,Total greenhouse gas emissions (% change from 1990),World Data Bank
+EN.ATM.METH.AG.KT.CE,417,Environment,Agricultural methane emissions (thousand metric tons of CO2 equivalent),World Data Bank
+EN.ATM.METH.AG.ZS,418,Environment,Agricultural methane emissions (% of total),World Data Bank
+EN.ATM.METH.EG.KT.CE,419,Environment,Methane emissions in energy sector (thousand metric tons of CO2 equivalent),World Data Bank
+EN.ATM.METH.EG.ZS,420,Environment,Energy related methane emissions (% of total),World Data Bank
+EN.ATM.METH.KT.CE,421,Environment,Methane emissions (kt of CO2 equivalent),World Data Bank
+EN.ATM.METH.ZG,422,Environment,Methane emissions (% change from 1990),World Data Bank
+EN.ATM.NOXE.AG.KT.CE,423,Environment,Agricultural nitrous oxide emissions (thousand metric tons of CO2 equivalent),World Data Bank
+EN.ATM.NOXE.AG.ZS,424,Environment,Agricultural nitrous oxide emissions (% of total),World Data Bank
+EN.ATM.NOXE.EG.KT.CE,425,Environment,Nitrous oxide emissions in energy sector (thousand metric tons of CO2 equivalent),World Data Bank
+EN.ATM.NOXE.EG.ZS,426,Environment,Nitrous oxide emissions in energy sector (% of total),World Data Bank
+EN.ATM.NOXE.KT.CE,427,Environment,Nitrous oxide emissions (thousand metric tons of CO2 equivalent),World Data Bank
+EN.ATM.NOXE.ZG,428,Environment,Nitrous oxide emissions (% change from 1990),World Data Bank
+EN.CO2.BLDG.ZS,429,Environment,CO2 emissions from residential buildings and commercial and public services (% of total fuel combustion),World Data Bank
+EN.CO2.ETOT.ZS,430,Environment,"CO2 emissions from electricity and heat production, total (% of total fuel combustion)",World Data Bank
+EN.CO2.MANF.ZS,431,Environment,CO2 emissions from manufacturing industries and construction (% of total fuel combustion),World Data Bank
+EN.CO2.OTHX.ZS,432,Environment,"CO2 emissions from other sectors, excluding residential buildings and commercial and public services (% of total fuel combustion)",World Data Bank
+EN.CO2.TRAN.ZS,433,Environment,CO2 emissions from transport (% of total fuel combustion),World Data Bank
+EN.POP.DNST,434,Environment,Population density (people per sq. km of land area),World Data Bank
+env.ac.cur,435,Environment,Circular material use rate,Eurostat
+env.ww.con,436,Environment,Population connected to wastewater treatment plants. Unit is Percentage %,Eurostat
+EQ.AP,437,Environment,"Environmental quality, Air pollution",OECD How's Life
+ilc.mddw02,438,Environment,"Pollution, grime or other environmental problems - EU-SILC survey",Eurostat
+nrg.ind.ffgae,439,Environment,Share of fossil fuels in gross available energy,Eurostat
+nrg.ind.ured,440,Environment,Use of renewables for electricity - details,Eurostat
+nrg.ind.urhcd,441,Environment,Use of renewables for heating and cooling - details,Eurostat
+nrg.inf.stcs,442,Environment,Solar thermal collectors' surface,Eurostat
+NY.ADJ.DCO2.GN.ZS,443,Environment,Adjusted savings: carbon dioxide damage (% of GNI),World Data Bank
+NY.ADJ.DFOR.GN.ZS,444,Environment,Adjusted savings: net forest depletion (% of GNI),World Data Bank
+NY.ADJ.DMIN.GN.ZS,445,Environment,Adjusted savings: mineral depletion (% of GNI),World Data Bank
+NY.ADJ.DNGY.GN.ZS,446,Environment,Adjusted savings: energy depletion (% of GNI),World Data Bank
+NY.ADJ.DPEM.GN.ZS,447,Environment,Adjusted savings: particulate emission damage (% of GNI),World Data Bank
+NY.ADJ.DRES.GN.ZS,448,Environment,Adjusted savings: natural resources depletion (% of GNI),World Data Bank
+AG.CON.FERT.ZS,449,,Fertilizer consumption (kilograms per hectare of arable land),World Data Bank
+AG.LND.AGRI.K2,450,,Agricultural land (sq. km),World Data Bank
+AG.LND.ARBL.HA,451,,Arable land (hectares),World Data Bank
+AG.LND.CREL.HA,452,,Land under cereal production (hectares),World Data Bank
+AG.LND.FRST.K2,453,,Forest area (sq. km),World Data Bank
+AG.LND.TOTL.K2,454,,Land area (sq. km),World Data Bank
+AG.PRD.CREL.MT,455,,Cereal production (metric tons),World Data Bank
+AG.PRD.CROP.XD,456,,Crop production index (2014-2016 = 100),World Data Bank
+AG.PRD.FOOD.XD,457,,Food production index (2014-2016 = 100),World Data Bank
+AG.PRD.LVSK.XD,458,,Livestock production index (2014-2016 = 100),World Data Bank
+AG.SRF.TOTL.K2,459,,Surface area (sq. km),World Data Bank
+AG.YLD.CREL.KG,460,,Cereal yield (kg per hectare),World Data Bank
+BG.GSR.NFSV.GD.ZS,461,,Trade in services (% of GDP),World Data Bank
+BM.GSR.CMCP.ZS,462,,"Communications, computer, etc. (% of service imports, BoP)",World Data Bank
+BM.GSR.FCTY.CD,463,,"Primary income payments (BoP, current US$)",World Data Bank
+BM.GSR.GNFS.CD,464,,"Imports of goods and services (BoP, current US$)",World Data Bank
+BM.GSR.INSF.ZS,465,,"Insurance and financial services (% of service imports, BoP)",World Data Bank
+BM.GSR.MRCH.CD,466,,"Goods imports (BoP, current US$)",World Data Bank
+BM.GSR.NFSV.CD,467,,"Service imports (BoP, current US$)",World Data Bank
+BM.GSR.ROYL.CD,468,,"Charges for the use of intellectual property, payments (BoP, current US$)",World Data Bank
+BM.GSR.TOTL.CD,469,,"Imports of goods, services and primary income (BoP, current US$)",World Data Bank
+BM.GSR.TRAN.ZS,470,,"Transport services (% of service imports, BoP)",World Data Bank
+BM.GSR.TRVL.ZS,471,,"Travel services (% of service imports, BoP)",World Data Bank
+BM.KLT.DINV.CD.WD,472,,"Foreign direct investment, net outflows (BoP, current US$)",World Data Bank
+BM.KLT.DINV.WD.GD.ZS,473,,"Foreign direct investment, net outflows (% of GDP)",World Data Bank
+BM.TRF.PRVT.CD,474,,"Secondary income, other sectors, payments (BoP, current US$)",World Data Bank
+BM.TRF.PWKR.CD.DT,475,,"Personal remittances, paid (current US$)",World Data Bank
+BN.CAB.XOKA.CD,476,,"Current account balance (BoP, current US$)",World Data Bank
+BN.CAB.XOKA.GD.ZS,477,,Current account balance (% of GDP),World Data Bank
+BN.FIN.TOTL.CD,478,,"Net financial account (BoP, current US$)",World Data Bank
+BN.GSR.FCTY.CD,479,,"Net primary income (BoP, current US$)",World Data Bank
+BN.GSR.GNFS.CD,480,,"Net trade in goods and services (BoP, current US$)",World Data Bank
+BN.GSR.MRCH.CD,481,,"Net trade in goods (BoP, current US$)",World Data Bank
+BN.KAC.EOMS.CD,482,,"Net errors and omissions (BoP, current US$)",World Data Bank
+BN.KLT.DINV.CD,483,,"Foreign direct investment, net (BoP, current US$)",World Data Bank
+BN.KLT.PTXL.CD,484,,"Portfolio investment, net (BoP, current US$)",World Data Bank
+BN.RES.INCL.CD,485,,"Reserves and related items (BoP, current US$)",World Data Bank
+BN.TRF.CURR.CD,486,,"Net secondary income (BoP, current US$)",World Data Bank
+BN.TRF.KOGT.CD,487,,"Net capital account (BoP, current US$)",World Data Bank
+BX.GSR.CCIS.CD,488,,"ICT service exports (BoP, current US$)",World Data Bank
+BX.GSR.CCIS.ZS,489,,"ICT service exports (% of service exports, BoP)",World Data Bank
+BX.GSR.CMCP.ZS,490,,"Communications, computer, etc. (% of service exports, BoP)",World Data Bank
+BX.GSR.FCTY.CD,491,,"Primary income receipts (BoP, current US$)",World Data Bank
+BX.GSR.GNFS.CD,492,,"Exports of goods and services (BoP, current US$)",World Data Bank
+BX.GSR.INSF.ZS,493,,"Insurance and financial services (% of service exports, BoP)",World Data Bank
+BX.GSR.MRCH.CD,494,,"Goods exports (BoP, current US$)",World Data Bank
+BX.GSR.NFSV.CD,495,,"Service exports (BoP, current US$)",World Data Bank
+BX.GSR.ROYL.CD,496,,"Charges for the use of intellectual property, receipts (BoP, current US$)",World Data Bank
+BX.GSR.TOTL.CD,497,,"Exports of goods, services and primary income (BoP, current US$)",World Data Bank
+BX.GSR.TRAN.ZS,498,,"Transport services (% of service exports, BoP)",World Data Bank
+BX.GSR.TRVL.ZS,499,,"Travel services (% of service exports, BoP)",World Data Bank
+BX.KLT.DINV.CD.WD,500,,"Foreign direct investment, net inflows (BoP, current US$)",World Data Bank
+BX.KLT.DINV.WD.GD.ZS,501,,"Foreign direct investment, net inflows (% of GDP)",World Data Bank
+BX.PEF.TOTL.CD.WD,502,,"Portfolio equity, net inflows (BoP, current US$)",World Data Bank
+BX.TRF.CURR.CD,503,,"Secondary income receipts (BoP, current US$)",World Data Bank
+BX.TRF.PWKR.CD,504,,"Personal transfers, receipts (BoP, current US$)",World Data Bank
+BX.TRF.PWKR.CD.DT,505,,"Personal remittances, received (current US$)",World Data Bank
+BX.TRF.PWKR.DT.GD.ZS,506,,"Personal remittances, received (% of GDP)",World Data Bank
+cens.01naagchi,507,,"Female population aged 15 and over by household composition, age group, age of the youngest child and current activity status. Only wstatus = POP",Eurostat
+cens.01nactz,508,,"Population by sex, citizenship and current activity status. Only wstatus = POP",Eurostat
+cens.01nadnac,509,,"Employed persons aged 15 and over by sex, age group and economic activity (NACE Rev. 1)",Eurostat
+cens.01naisco,510,,"Employed persons aged 15 and over by sex, age group, citizenship and occupation (ISCO-88)",Eurostat
+cens.01nanac,511,,"Employed persons aged 15 and over by sex, age group, citizenship and economic activity (NACE Rev.1)",Eurostat
+cens.01napop,512,,"Population by sex, age and current activity status. Only wstatus = POP",Eurostat
+cens.01nawtime,513,,"Employed persons aged 15 and over by sex, economic activity (NACE Rev. 1) and time usually worked",Eurostat
+cens.01ndbuild,514,,"Dwellings by type of ownership, type of building and occupancy status",Eurostat
+cens.01ndhh,515,,Private housholds by composition and type of housing,Eurostat
+cens.01ndpercons,516,,Owner-occupied dwellings by type and year of construction of the building,Eurostat
+cens.01ndquart.hd,517,,Private households by type of housing,Eurostat
+cens.01ndquart.lq,518,,Living quarters by type of housing,Eurostat
+cens.01neisco,519,,"Population aged 15-74 by sex, age group, educational attainment level and occupation (ISCO 1988)",Eurostat
+cens.01news,520,,"Population aged 15-74 by sex, age group, current activity status and educational attainment level. Only wstatus = POP",Eurostat
+cens.01nhctzcomp,521,,Private households by composition and citizenship,Eurostat
+cens.01nhfst,522,,"Population aged 15 and over, living in private households, by sex, age group, family status and current activity status. Only wstatus = POP",Eurostat
+cens.01nhfstctz,523,,"Population by sex, citizenship, family status and type of housing",Eurostat
+cens.01nhsize,524,,"Population in private households by sex, age group, citizenship and size of household",Eurostat
+cens.01nhtype,525,,"Population by sex, age and household status",Eurostat
+cens.01nscbirth,526,,"Population by sex, age group and country of birth",Eurostat
+cens.01nsctz,527,,"Population by sex, age group and country of citizenship",Eurostat
+cens.11cob.n,528,,Population by country of birth at national level,Eurostat
+cens.11ctz.n,529,,Population by country of citizenship at national level,Eurostat
+cens.hnaisco,530,,Employed population by sex and occupation,Eurostat
+cens.hncas,531,,"Population by sex, age and current activity status. Only wstatus = POP",Eurostat
+cens.hnctz,532,,"Population by sex, age and citizenship",Eurostat
+cens.hndwnr,533,,Occupied conventional dwellings by number of rooms,Eurostat
+cens.hnelev,534,,"Population by sex, age and educational attainment level",Eurostat
+cens.hnmga,535,,Population by sex and age,Eurostat
+CM.MKT.INDX.ZG,536,,S&P Global Equity Indices (annual % change),World Data Bank
+CM.MKT.LCAP.CD,537,,Market capitalization of listed domestic companies (current US$),World Data Bank
+CM.MKT.LCAP.GD.ZS,538,,Market capitalization of listed domestic companies (% of GDP),World Data Bank
+CM.MKT.LDOM.NO,539,,"Listed domestic companies, total",World Data Bank
+CM.MKT.TRAD.CD,540,,"Stocks traded, total value (current US$)",World Data Bank
+CM.MKT.TRAD.GD.ZS,541,,"Stocks traded, total value (% of GDP)",World Data Bank
+CM.MKT.TRNR,542,,"Stocks traded, turnover ratio of domestic shares (%)",World Data Bank
+crim.hist,543,,Crimes recorded by the police (1950-2000),Eurostat
+crim.hom.vrel,544,,Intentional homicide victims by victim-offender relationship and sex - number and rate for the relevant sex group,Eurostat
+crim.pris.ctz,545,,Prisoners by citizenship,Eurostat
+cult.emp.art,546,,"Persons working as creative and performing artists, authors, journalists and linguists",Eurostat
+cult.pcs.hbs,547,,Mean consumption expenditure of private households on cultural goods and services by COICOP consumption purpose,Eurostat
+cult.pcs.qnt,548,,Mean consumption expenditure of private households on cultural goods and services by income quintile,Eurostat
+DC.ODA.TLDC.CD,549,,"Net ODA provided, to the least developed countries (current US$)",World Data Bank
+DC.ODA.TOTL.CD,550,,"Net ODA provided, total (current US$)",World Data Bank
+DC.ODA.TOTL.GN.ZS,551,,"Net ODA provided, total (% of GNI)",World Data Bank
+DC.ODA.TOTL.KD,552,,"Net ODA provided, total (constant 2015 US$)",World Data Bank
+demo.divcb,553,,Divorces by country of birth of wife and husband,Eurostat
+demo.facbc,554,,Live births by mother's age and country of birth,Eurostat
+demo.faczc,555,,Live births by mother's age and citizenship,Eurostat
+demo.fasec,556,,Live births by mother's age and newborn's sex,Eurostat
+demo.fmonth,557,,Live births (total) by month,Eurostat
+demo.fordagec,558,,Live births by mother's age and birth order,Eurostat
+demo.fordager,559,,Live births by mother's year of birth (age reached) and birth order,Eurostat
+demo.macbc,560,,"Deaths by age, sex and country of birth",Eurostat
+demo.maczc,561,,"Deaths by age, sex and citizenship",Eurostat
+demo.maeduc,562,,"Deaths by age, sex and educational attainment level",Eurostat
+demo.mager,563,,Deaths by year of birth (age reached) and sex,Eurostat
+demo.marcb,564,,Marriages by country of birth of bride and groom,Eurostat
+demo.mfoet,565,,Late foetal deaths by mother's age,Eurostat
+demo.mmonth,566,,Deaths (total) by month,Eurostat
+demo.nmsta2,567,,Marriages by previous legal union status of bride and groom,Eurostat
+demo.pjan,568,,Population on 1 January by age and sex,Eurostat
+demo.pjanbroad,569,,Population on 1 January by broad age group and sex,Eurostat
+demo.pjangroup,570,,Population on 1 January by age group and sex,Eurostat
+demo.urespop,571,,Usually resident population on 1 January,Eurostat
+earn.gr.empisco,572,,Number of employees by sex and occupation,Eurostat
+earn.gr.hgpg,573,,Gender pay gap in unadjusted form (1994 - 2006),Eurostat
+earn.ses.agt03,574,,"Number of employees by size of the enterprise, sex, occupation",Eurostat
+earn.ses.agt32,575,,"Mean annual earnings by size of the enterprise, sex,occupation. Unit is Percentage %",Eurostat
+earn.ses.agt46,576,,"Mean annual holidays by size of the enterprise, sex, occupation",Eurostat
+earn.ses.mdeci,577,,"Monthly earnings by quantiles and contractual working time (enterprises with 10 employed persons or more) - NACE Rev. 1.1, C-O excluding L. Unit is Percentage %",Eurostat
+earn.ses10.mdeci,578,,"Monthly earnings by quantiles and contractual working time (enterprises with 10 employed persons or more) - NACE Rev. 2, B-S excluding O. Unit is Percentage %",Eurostat
+earn.ses14.adeci,579,,"Annual earnings by quantiles and contractual working time (enterprises with 10 employed persons or more) - NACE Rev. 2, B-S excluding O. Unit is Percentage %",Eurostat
+earn.ses14.mdeci,580,,"Monthly earnings by quantiles and contractual working time (enterprises with 10 employed persons or more) - NACE Rev. 2, B-S excluding O. Unit is Percentage %",Eurostat
+educ.enrl1ad,581,,"Students by ISCED level, study intensity and sex",Eurostat
+educ.enrl1tl,582,,"Students by ISCED level, age and sex",Eurostat
+educ.uoe.enra19,583,,"Pupils aged 4 years old, by sex - as % of the population of the corresponding age group",Eurostat
+educ.uoe.enra21,584,,Pupils from age 3 to the starting age of compulsory education at primary level by sex - % of the population of the corresponding age,Eurostat
+educ.uoe.enra23,585,,Pupils from age 0 to the starting age of compulsory education at primary level by sex - % of the population of the corresponding age,Eurostat
+EG.EGY.PRIM.PP.KD,586,,Energy intensity level of primary energy (MJ/$2011 PPP GDP),World Data Bank
+EG.ELC.RNWX.KH,587,,"Electricity production from renewable sources, excluding hydroelectric (kWh)",World Data Bank
+EG.GDP.PUSE.KO.PP,588,,GDP per unit of energy use (PPP $ per kg of oil equivalent),World Data Bank
+EG.GDP.PUSE.KO.PP.KD,589,,GDP per unit of energy use (constant 2017 PPP $ per kg of oil equivalent),World Data Bank
+EG.IMP.CONS.ZS,590,,"Energy imports, net (% of energy use)",World Data Bank
+EG.USE.COMM.CL.ZS,591,,Alternative and nuclear energy (% of total energy use),World Data Bank
+EG.USE.COMM.FO.ZS,592,,Fossil fuel energy consumption (% of total),World Data Bank
+EG.USE.COMM.GD.PP.KD,593,,"Energy use (kg of oil equivalent) per $1,000 GDP (constant 2017 PPP)",World Data Bank
+EG.USE.ELEC.KH.PC,594,,Electric power consumption (kWh per capita),World Data Bank
+EG.USE.PCAP.KG.OE,595,,Energy use (kg of oil equivalent per capita),World Data Bank
+EN.ATM.CO2E.GF.KT,596,,CO2 emissions from gaseous fuel consumption (kt),World Data Bank
+EN.ATM.CO2E.KD.GD,597,,CO2 emissions (kg per 2015 US$ of GDP),World Data Bank
+EN.ATM.CO2E.KT,598,,CO2 emissions (kt),World Data Bank
+EN.ATM.CO2E.LF.KT,599,,CO2 emissions from liquid fuel consumption (kt),World Data Bank
+EN.ATM.CO2E.PC,600,,CO2 emissions (metric tons per capita),World Data Bank
+EN.ATM.CO2E.PP.GD.KD,601,,CO2 emissions (kg per 2017 PPP $ of GDP),World Data Bank
+EN.ATM.CO2E.SF.KT,602,,CO2 emissions from solid fuel consumption (kt),World Data Bank
+EN.ATM.GHGO.KT.CE,603,,"Other greenhouse gas emissions, HFC, PFC and SF6 (thousand metric tons of CO2 equivalent)",World Data Bank
+EN.URB.LCTY,604,,Population in largest city,World Data Bank
+EN.URB.MCTY,605,,Population in urban agglomerations of more than 1 million,World Data Bank
+EN.URB.MCTY.TL.ZS,606,,Population in urban agglomerations of more than 1 million (% of total population),World Data Bank
+env.ac.mid,607,,Material import dependency,Eurostat
+env.bio2,608,,"Common farmland bird index (sources: OECD, BirdLife)",Eurostat
+ER.FSH.AQUA.MT,609,,Aquaculture production (metric tons),World Data Bank
+ER.FSH.CAPT.MT,610,,Capture fisheries production (metric tons),World Data Bank
+ER.FSH.PROD.MT,611,,Total fisheries production (metric tons),World Data Bank
+FB.CBK.BRCH.P5,612,,"Commercial bank branches (per 100,000 adults)",World Data Bank
+FD.AST.PRVT.GD.ZS,613,,Domestic credit to private sector by banks (% of GDP),World Data Bank
+FI.RES.TOTL.CD,614,,"Total reserves (includes gold, current US$)",World Data Bank
+FI.RES.TOTL.MO,615,,Total reserves in months of imports,World Data Bank
+FI.RES.XGLD.CD,616,,Total reserves minus gold (current US$),World Data Bank
+FM.AST.DOMS.CN,617,,Net domestic credit (current LCU),World Data Bank
+FM.AST.NFRG.CN,618,,Net foreign assets (current LCU),World Data Bank
+FM.AST.PRVT.GD.ZS,619,,Monetary Sector credit to private sector (% GDP),World Data Bank
+FP.CPI.TOTL,620,,Consumer price index (2010 = 100),World Data Bank
+FP.CPI.TOTL.ZG,621,,"Inflation, consumer prices (annual %)",World Data Bank
+FS.AST.CGOV.GD.ZS,622,,"Claims on central government, etc. (% GDP)",World Data Bank
+FS.AST.PRVT.GD.ZS+A358,623,,Domestic credit to private sector (% of GDP),World Data Bank
+GB.XPD.RSDV.GD.ZS,624,,Research and development expenditure (% of GDP),World Data Bank
+GC.NFN.TOTL.CN,625,,Net investment in nonfinancial assets (current LCU),World Data Bank
+GC.NFN.TOTL.GD.ZS,626,,Net investment in nonfinancial assets (% of GDP),World Data Bank
+GC.NLD.TOTL.CN,627,,Net lending (+) / net borrowing (-) (current LCU),World Data Bank
+GC.NLD.TOTL.GD.ZS,628,,Net lending (+) / net borrowing (-) (% of GDP),World Data Bank
+GC.REV.GOTR.CN,629,,Grants and other revenue (current LCU),World Data Bank
+GC.REV.GOTR.ZS,630,,Grants and other revenue (% of revenue),World Data Bank
+GC.REV.SOCL.CN,631,,Social contributions (current LCU),World Data Bank
+GC.REV.SOCL.ZS,632,,Social contributions (% of revenue),World Data Bank
+GC.REV.XGRT.CN,633,,"Revenue, excluding grants (current LCU)",World Data Bank
+GC.REV.XGRT.GD.ZS,634,,"Revenue, excluding grants (% of GDP)",World Data Bank
+GC.TAX.EXPT.CN,635,,Taxes on exports (current LCU),World Data Bank
+GC.TAX.EXPT.ZS,636,,Taxes on exports (% of tax revenue),World Data Bank
+GC.TAX.GSRV.CN,637,,Taxes on goods and services (current LCU),World Data Bank
+GC.TAX.GSRV.RV.ZS,638,,Taxes on goods and services (% of revenue),World Data Bank
+GC.TAX.GSRV.VA.ZS,639,,Taxes on goods and services (% value added of industry and services),World Data Bank
+GC.TAX.IMPT.CN,640,,Customs and other import duties (current LCU),World Data Bank
+GC.TAX.IMPT.ZS,641,,Customs and other import duties (% of tax revenue),World Data Bank
+GC.TAX.INTT.CN,642,,Taxes on international trade (current LCU),World Data Bank
+GC.TAX.INTT.RV.ZS,643,,Taxes on international trade (% of revenue),World Data Bank
+GC.TAX.OTHR.CN,644,,Other taxes (current LCU),World Data Bank
+GC.TAX.OTHR.RV.ZS,645,,Other taxes (% of revenue),World Data Bank
+GC.TAX.TOTL.CN,646,,Tax revenue (current LCU),World Data Bank
+GC.TAX.TOTL.GD.ZS,647,,Tax revenue (% of GDP),World Data Bank
+GC.TAX.YPKG.CN,648,,"Taxes on income, profits and capital gains (current LCU)",World Data Bank
+GC.TAX.YPKG.RV.ZS,649,,"Taxes on income, profits and capital gains (% of revenue)",World Data Bank
+GC.TAX.YPKG.ZS,650,,"Taxes on income, profits and capital gains (% of total taxes)",World Data Bank
+GC.XPN.COMP.CN,651,,Compensation of employees (current LCU),World Data Bank
+GC.XPN.COMP.ZS,652,,Compensation of employees (% of expense),World Data Bank
+GC.XPN.GSRV.CN,653,,Goods and services expense (current LCU),World Data Bank
+GC.XPN.GSRV.ZS,654,,Goods and services expense (% of expense),World Data Bank
+GC.XPN.INTP.CN,655,,Interest payments (current LCU),World Data Bank
+GC.XPN.INTP.RV.ZS,656,,Interest payments (% of revenue),World Data Bank
+GC.XPN.INTP.ZS,657,,Interest payments (% of expense),World Data Bank
+GC.XPN.OTHR.CN,658,,Other expense (current LCU),World Data Bank
+GC.XPN.OTHR.ZS,659,,Other expense (% of expense),World Data Bank
+GC.XPN.TOTL.CN,660,,Expense (current LCU),World Data Bank
+GC.XPN.TOTL.GD.ZS,661,,Expense (% of GDP),World Data Bank
+GC.XPN.TRFT.CN,662,,Subsidies and other transfers (current LCU),World Data Bank
+GC.XPN.TRFT.ZS,663,,Subsidies and other transfers (% of expense),World Data Bank
+HLT.LEA,664,,"Health, Life expectancy at birth",OECD How's Life
+IC.ISV.DURS,665,,Time to resolve insolvency (years),World Data Bank
+IC.LGL.DURS,666,Politics,Time required to enforce a contract (days),World Data Bank
+IC.REG.COST.PC.FE.ZS,667,,"Cost of business start-up procedures, female (% of GNI per capita)",World Data Bank
+IC.REG.COST.PC.MA.ZS,668,,"Cost of business start-up procedures, male (% of GNI per capita)",World Data Bank
+IC.REG.COST.PC.ZS,669,,Cost of business start-up procedures (% of GNI per capita),World Data Bank
+IC.REG.DURS,670,,Time required to start a business (days),World Data Bank
+IC.REG.DURS.FE,671,,"Time required to start a business, female (days)",World Data Bank
+IC.REG.DURS.MA,672,,"Time required to start a business, male (days)",World Data Bank
+IC.REG.PROC,673,Politics,Start-up procedures to register a business (number),World Data Bank
+IC.REG.PROC.FE,674,,"Start-up procedures to register a business, female (number)",World Data Bank
+IC.REG.PROC.MA,675,,"Start-up procedures to register a business, male (number)",World Data Bank
+icw.sr.02,676,,Median saving rate by household type - experimental statistics,Eurostat
+icw.sr.09,677,,Aggregate propensity to consume by household type - experimental statistics,Eurostat
+icw.sr.13,678,,Median saving rate by degree of urbanisation - experimental statistics,Eurostat
+icw.sr.14,679,,Aggregate propensity to consume by degree of urbanisation - experimental statistics,Eurostat
+icw.sr.15,680,,Median saving rate by activity status of the reference person - experimental statistics,Eurostat
+icw.sr.16,681,,Aggregate propensity to consume by activity status of the reference person - experimental statistics,Eurostat
+ilc.di11a,682,,Income quintile share ratio S80/S20 for gross market income by sex and age group - EU-SILC survey,Eurostat
+ilc.di11b,683,,Income quintile share ratio S80/S20 for net market income by sex and age group - EU-SILC survey,Eurostat
+ilc.di11c,684,,Income quintile share ratio S80/S20 for gross total disposable income by sex and age group - EU-SILC survey,Eurostat
+ilc.li22,685,,At-risk-of-poverty rate anchored at a fixed moment in time (2005) by age and sex - EU-SILC survey,Eurostat
+ilc.li22b,686,,At-risk-of-poverty rate anchored at a fixed moment in time (2008) by age and sex - EU-SILC survey,Eurostat
+ilc.lvhl13n,687,,People living in households with very low work intensity by income quintile and household type (population aged 0 to 64 years),Eurostat
+ilc.lvhl17,688,,Persons living in households with very low work intensity by tenure status (population aged 0 to 59 years) - EU 2020 strategy,Eurostat
+ilc.lvhl17n,689,,People living in households with very low work intensity by tenure status (population aged 0 to 64 years),Eurostat
+ilc.lvho01,690,,"Distribution of population by degree of urbanisation, dwelling type and income group - EU-SILC survey",Eurostat
+ilc.lvho02,691,,"Distribution of population by tenure status, type of household and income group - EU-SILC survey",Eurostat
+ilc.lvho03h,692,,Average number of rooms per person by tenure status and dwelling type until 2001 - ECHP survey,Eurostat
+ilc.lvho04,693,,Average number of rooms per person by type of household and income group from 2003 - EU-SILC survey,Eurostat
+ilc.lvho04d,694,,Average number of rooms per person by degree of urbanization,Eurostat
+ilc.lvho04h,695,,Average number of rooms per person by type of household and income group until 2001 - ECHP survey,Eurostat
+ilc.lvph02,696,,Distribution of households by household type from 2003 onwards - EU-SILC survey,Eurostat
+ilc.lvph02h,697,,Distribution of households by household type until 2001 - ECHP survey,Eurostat
+ilc.lvph04,698,,Distribution of households by household type and income level - EU-SILC survey,Eurostat
+ilc.lvps01,699,,Distribution of population by sex and age - EU-SILC survey,Eurostat
+ilc.mded01,700,,"Share of housing costs in disposable household income, by type of household and income group - EU-SILC survey",Eurostat
+ilc.mded02,701,,"Share of rent related to occupied dwelling in disposable household income, by type of household and income group - EU-SILC survey",Eurostat
+ilc.mdsd02,702,,Material and social deprivation rate by income quintile and household type,Eurostat
+ilc.mdsd03,703,,"Material and social deprivation rate by age, sex and educational attainment level. Only age = Y_GE16",Eurostat
+ilc.mdsd06,704,,Material and social deprivation rate by tenure status,Eurostat
+ilc.mdsd07,705,,Material and social deprivation rate by age and sex,Eurostat
+ilc.mdsd09,706,,Material and social deprivation rate by degree of urbanisation,Eurostat
+ilc.mdsd11,707,,Severe material and social deprivation rate by age and sex. Unit is Percentage %,Eurostat
+ilc.mdsd13,708,,Severe material and social deprivation by income quantile and household composition,Eurostat
+ilc.peps01,709,,Persons at risk of poverty or social exclusion by age and sex - EU 2020 strategy. Unit is Percentage %,Eurostat
+ilc.peps03,710,,Persons at risk of poverty or social exclusion by income quantile and household composition - EU 2020 strategy,Eurostat
+ilc.peps07,711,,Persons at risk of poverty or social exclusion by tenure status - EU 2020 strategy,Eurostat
+IP.JRN.ARTC.SC,712,,Scientific and technical journal articles,World Data Bank
+IP.PAT.NRES,713,,"Patent applications, nonresidents",World Data Bank
+IP.PAT.RESD,714,,"Patent applications, residents",World Data Bank
+IP.TMK.NRES,715,,"Trademark applications, direct nonresident",World Data Bank
+IP.TMK.RESD,716,,"Trademark applications, direct resident",World Data Bank
+IP.TMK.TOTL,717,,"Trademark applications, total",World Data Bank
+IQ.SPI.PIL1,718,,Statistical performance indicators (SPI): Pillar 1 data use score (scale 0-100),Eurostat
+IS.AIR.DPRT,719,,"Air transport, registered carrier departures worldwide",World Data Bank
+IS.AIR.GOOD.MT.K1,720,,"Air transport, freight (million ton-km)",World Data Bank
+IS.AIR.PSGR,721,,"Air transport, passengers carried",World Data Bank
+IS.RRS.GOOD.MT.K6,722,,"Railways, goods transported (million ton-km)",World Data Bank
+IS.RRS.PASG.KM,723,,"Railways, passengers carried (million passenger-km)",World Data Bank
+IS.RRS.TOTL.KM,724,,Rail lines (total route-km),World Data Bank
+IT.CEL.SETS,725,,Mobile cellular subscriptions,World Data Bank
+IT.MLT.MAIN,726,,Fixed telephone subscriptions,World Data Bank
+IT.MLT.MAIN.P2,727,,Fixed telephone subscriptions (per 100 people),World Data Bank
+IT.NET.BBND,728,,Fixed broadband subscriptions,World Data Bank
+IT.NET.BBND.P2,729,,Fixed broadband subscriptions (per 100 people),World Data Bank
+IT.NET.USER.ZS,730,,Individuals using the Internet (% of population),World Data Bank
+lfsa.agaed,731,,"Active population by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.agan,732,,"Active population by sex, age and citizenship (1 000). Only age = Y15-64",Eurostat
+lfsa.e2ged,733,,"Employed persons having a second job by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.e2gis,734,,"Employed persons having a second job by sex, age and occupation in the first job (1 000). Only age = Y15-64",Eurostat
+lfsa.eegaed,735,,"Employees by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.eegais,736,,"Employees by sex, age and occupation (1 000). Only age = Y15-64",Eurostat
+lfsa.eegan2,737,,"Employees by sex, age and economic activity (from 2008 onwards, NACE Rev. 2) - 1 000. Only age = Y15-64",Eurostat
+lfsa.eegana,738,,"Employees by sex, age and economic activity (1983-2008, NACE Rev. 1.1) (1 000). Only age = Y15-64",Eurostat
+lfsa.egaed,739,,"Employment by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.egan,740,,"Employment by sex, age and citizenship (1 000). Only age = Y15-64",Eurostat
+lfsa.egan2,741,,"Employment by sex, age and economic activity (from 2008 onwards, NACE Rev. 2) - 1 000. Only age = Y15-64",Eurostat
+lfsa.egan22d,742,,"Employment by sex, age and detailed economic activity (from 2008 onwards, NACE Rev. 2 two digit level) - 1 000. Only age = Y15-64",Eurostat
+lfsa.egana,743,,"Employment by sex, age and economic activity (1983-2008, NACE Rev. 1.1) (1 000). Only age = Y15-64",Eurostat
+lfsa.epgaed,744,,"Full-time and part-time employment by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.epgais,745,,"Full-time and part-time employment by sex, age and occupation (1 000). Only age = Y15-64",Eurostat
+lfsa.epgan2,746,,"Full-time and part-time employment by sex and economic activity (from 2008 onwards, NACE Rev. 2) - 1 000",Eurostat
+lfsa.epgan6,747,,"Full-time and part-time employment by sex, age and economic activity - NACE A6 (1983-2008, NACE Rev. 1.1) (1 000). Only age = Y15-64",Eurostat
+lfsa.epgana,748,,"Full-time and part-time employment by sex and economic activity (1983-2008, NACE Rev. 1.1) (1 000)",Eurostat
+lfsa.epgn62,749,,"Full-time and part-time employment by sex, age and economic activity - NACE A10 (from 2008 onwards, NACE Rev. 2) - 1 000. Only age = Y15-64",Eurostat
+lfsa.esega,750,,Employment by age and European socio-economic group. Only age = Y15-64,Eurostat
+lfsa.esegatyp,751,,"Employment at atypical working time as a percentage of the total employment, by age and European socio-economic group. Only age = Y15-64",Eurostat
+lfsa.eseged,752,,"Employment by educational attainment level, age and European socio-economic group. Only age = Y15-64",Eurostat
+lfsa.esegg,753,,"Employment by sex, age and European socio-economic group. Only age = Y15-64",Eurostat
+lfsa.esegn2,754,,"Employment by NACE Rev. 2 activity, age and European socio-economic group. Only age = Y15-64",Eurostat
+lfsa.esegp,755,,"Employment by working time, age and European socio-economic group. Only age = Y15-64",Eurostat
+lfsa.esegt,756,,"Employees by type of employment contract, age and European socio-economic group. Only age = Y15-64",Eurostat
+lfsa.etgadc,757,,"Temporary employees by sex, age and duration of the work contract (1 000). Only age = Y15-64",Eurostat
+lfsa.etgaed,758,,"Temporary employees by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.etgais,759,,"Temporary employees by sex, age and occupation (1 000). Only age = Y15-64",Eurostat
+lfsa.etgan2,760,,"Temporary employees by sex, age and economic activity (from 2008 onwards, NACE Rev. 2) - 1 000. Only age = Y15-64",Eurostat
+lfsa.etgana,761,,"Temporary employees by sex, age and economic activity (1983-2008, NACE Rev. 1.1) - 1 000. Only age = Y15-64",Eurostat
+lfsa.igaed,762,,"Inactive population by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.igan,763,,"Inactive population by sex, age and citizenship (1 000). Only age = Y15-64",Eurostat
+lfsa.igaww,764,,"Inactive population not seeking employment by sex, age and willingness to work (1 000). Only age = Y15-64",Eurostat
+lfsa.pgacws,765,,"Population by sex, age, country of birth and labour status. Only wstatus = POP. Only age = Y15-64",Eurostat
+lfsa.pgaed,766,,"Population by sex, age and educational attainment level (1 000). Only age = Y15-64",Eurostat
+lfsa.pgaied,767,,"Population by sex, age and participation in education and training (last 4 weeks) (1 000). Only age = Y15-64",Eurostat
+lfsa.pganws,768,,"Population by sex, age, citizenship and labour status (1 000). Only age = Y15-64. Only wstatus = POP",Eurostat
+lfsa.pgauws,769,,"Annual population by sex, age, degree of urbanisation and labour status (1 000). Only age = Y15-64. Only wstatus = POP",Eurostat
+lfsa.qoe.4a6r1,770,,"Temporary employment agency workers by sex, age and NACE Rev. 1.1 activity. Only age = Y15-64",Eurostat
+lfsa.qoe.4a6r2,771,,"Temporary employment agency workers by sex, age and NACE Rev. 2 activity. Only age = Y15-64",Eurostat
+lfsa.qoe.4ax1r1,772,,"Precarious employment by sex, age and NACE Rev. 1.1 activity. Only age = Y15-64",Eurostat
+lfsa.qoe.4ax1r2,773,,"Precarious employment by sex, age and NACE Rev. 2 activity. Only age = Y15-64",Eurostat
+lfsa.ugad,774,,"Unemployment by sex, age and duration of unemployment (1 000). Only age = Y15-64",Eurostat
+lfsa.ugan,775,,"Unemployment by sex, age and citizenship (1 000). Only age = Y15-64",Eurostat
+lfsa.ugates,776,,"Unemployment by sex, age and type of employment sought (1 000). Only age = Y15-64",Eurostat
+lfsa.ugpis,777,,"Previous occupations of the unemployed, by sex (1 000)",Eurostat
+lfso.04anwkisna,778,,"Number of employees having annualised working hours by sex, age, occupation and economic activity. Only age = Y15-64",Eurostat
+lfso.04oncwisna,779,,"Number of employees working on call by sex, age, occupation and economic activity. Only age = Y15-64",Eurostat
+lfso.04ownmisco,780,,"Number of self-employed persons who can control their own work methods and schedule, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04shipisco,781,,"Shift work patterns used by employees, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04shipna11,782,,"Shift work patterns used by employees, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04sincna11,783,,"Number of self-employed persons who work for one single client or customer, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04vahrisco,784,,"Number of employees with the possibility to work variable hours in the reference week, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04vawkisco,785,,"Number of employees with variable working hours, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04vawkna11,786,,"Number of employees with variable working hours, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04wk1pisco,787,,"Number of employees finding it convenient for personal life to do shift work or on-call work, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04wk1pna11,788,,"Number of employees finding it convenient for personal life to do shift work or on-call work, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04wk2pisco,789,,"Number of employees finding it convenient for personal life to work in the evening, or at night, or during weekends, by sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04wk2pna11,790,,"Number of employees finding it convenient for personal life to work in the evening, or at night, or during weekends, by sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.04wktpisco,791,,"Number of part-time employees, by working time pattern compared with 'full-timers', sex, age and occupation. Only age = Y15-64",Eurostat
+lfso.04wktpna11,792,,"Number of part-time employees by working time pattern compared with 'full-timers', sex, age and economic activity. Only age = Y15-64",Eurostat
+lfso.05change,793,,Number of employed persons between 15 and 64 years old wishing to change the organisation of their working life and care responsibilities. Only age = Y15-64,Eurostat
+lfso.05changp,794,,Number of persons between 15 and 64 years old wishing to change the organisation of their working life and care responsibilities. Only age = Y15-64. Only wstatus = POP,Eurostat
+lfso.05posoe1,795,,"Number of employed persons between 15 and 64 years old who can take whole days off for family reasons, by economic activity. Only age = Y15-64",Eurostat
+lfso.05posoe2,796,,"Number of employed persons between 15 and 64 years old who can take whole days off for family reasons, by occupation. Only age = Y15-64",Eurostat
+lfso.05posse1,797,,"Number of employed persons between 15 and 64 years old who can vary start/end of working day for family reasons, by economic activity. Only age = Y15-64",Eurostat
+lfso.05posse2,798,,"Number of employed persons between 15 and 64 years old who can vary start/end of working day for family reasons, by occupation. Only age = Y15-64",Eurostat
+lfso.05reduc1,799,,"Number of employed persons between 15 and 64 years old having to make working time arrangements over the last 12 months to care for children, by working time pattern. Only age = Y15-64",Eurostat
+lfso.05reduc2,800,,"Number of employed persons between 15 and 64 years old having to make working time arrangements over the last 12 months to care for children, by occupation. Only age = Y15-64",Eurostat
+lfso.05regce,801,,Number of employed persons between 15 and 64 years old regularly taking care of other children or people in need of care. Only age = Y15-64,Eurostat
+lfso.05regcp,802,,Number of persons between 15 and 64 years old regularly taking care of other children up to 14 or people older than 15 in need of care. Only age = Y15-64. Only wstatus = POP,Eurostat
+lfso.05timee1,803,,"Number of employed persons between 15 and 64 years old taking time off over the last 12 months for family sickness or emergencies, by educational attainment level. Only age = Y15-64",Eurostat
+lfso.05timee2,804,,"Number of employed persons between 15 and 64 years old taking time off over the last 12 months for family sickness or emergencies, by economic activity. Only age = Y15-64",Eurostat
+lfso.05timee3,805,,"Number of employed persons between 15 and 64 years old taking time off over the last 12 months for family sickness or emergencies, by occupation. Only age = Y15-64",Eurostat
+lfso.06flexisco,806,,Number of employed persons who would stay longer at work (or not) if more flexible working time arrangements were available - by sex and occupation (1 000),Eurostat
+lfso.06flexispr,807,,Number of not employed persons who would have stayed longer at work (or not) if more flexible working time arrangements had been available - by sex and occupation (previous job) (1 000),Eurostat
+lfso.06hlsaisco,808,,Number of employed persons who would stay longer at work (or not) if their workplace was healthier and/or safer - by sex and occupation (1 000),Eurostat
+lfso.06hlsaispr,809,,Number of not employed persons who would have stayed longer at work (or not) if their workplace had been healthier and/or safer - by sex and occupation (previous job) (1 000),Eurostat
+lfso.06opskisco,810,,Number of employed persons who would stay longer at work (or not) if they could update their skills - by sex and occupation (1 000),Eurostat
+lfso.06opskispr,811,,Number of not employed persons who would have stayed longer at work (or not) if they had had more opportunities to update their skills - by sex and occupation (previous job) (1 000),Eurostat
+lfso.06plagftpt,812,,"Number of employed persons - by planned age for stopping work, sex and full time/part time work (1 000)",Eurostat
+lfso.06reasstaf,813,,Main reasons for retirement or early retirement - by sex and main labour status just after leaving last job (1 000),Eurostat
+lfso.06yrspisco,814,Jobs,"Employed persons, average number of years spent working of employed persons - by sex and occupation",Eurostat
+lfso.06yrspispr,815,Jobs,"Not employed persons, average number of years spent working - by sex and occupation (previous job)",Eurostat
+lfso.06yrspna11,816,Jobs,"Employed persons, average number of years spent working, by sex and economic activity (NACE Rev. 1.1)",Eurostat
+lfso.06yrspnapr,817,Jobs,"Not employed persons, average number of years spent working, by sex and economic activity (previous job, NACE Rev. 1.1)",Eurostat
+lfso.08cobsmf,818,,"Population by country of birth, country of birth of mother and father, sex and age (1 000). Only age = Y15-64",Eurostat
+lfso.08cobsp,819,,"Population by country of birth, country of birth of parents, sex, age and labour status (1 000). Only age = Y15-64. Only wstatus = POP",Eurostat
+lfso.08cobsped,820,,"Population by country of birth, country of birth of parents, sex, age, educational attainment level and labour status (1 000). Only age = Y15-64. Only wstatus = POP",Eurostat
+lfso.12reduchrs,821,Jobs,Persons who reduced their working hours in a move towards retirement (%). Only wstatus = POP,Eurostat
+lfso.12worklong,822,Jobs,Economically inactive persons who receive a pension who would have wished to stay longer in employment (%),Eurostat
+lfso.14b1dr,823,Jobs,"First generation of immigrants by sex, citizenship, duration and reason for migration",Eurostat
+lfso.14beduc,824,,"Educational attainment level (ISCED11) distribution by sex, age, migration status and educational attainment level of parents (ISCED11F). Only age = Y15-64",Eurostat
+lfso.14hhcompcob,825,,"Households by migration status, country of birth of parents and household composition",Eurostat
+lfso.14hhwkcob,826,,"Households by country of birth of parents, working status and years of residence",Eurostat
+lfso.14hhwkmg,827,,"Households by migration status, working status and years of residence",Eurostat
+lfso.14l1empr,828,Jobs,"Employment rate of first generation of immigrants by sex, age, years of residence and reason for migration. Only age = Y15-64",Eurostat
+lfso.14lactr,829,Jobs,"Activity rate by sex, age, migration status, citizenship and educational attainment level. Only age = Y15-64",Eurostat
+lfso.14leecm,830,,"Methods to find current job by migration status, educational attainment level and type of contract",Eurostat
+lfso.14leeow,831,,"Employees by migration status, educational attainment level, occupation and working time",Eurostat
+lfso.14lel,832,,"Labour status distribution of the population by sex, age, migration status and educational attainment level. Only wstatus = POP. Only age = Y15-64",Eurostat
+lfso.14lempr,833,Jobs,"Employment rate by sex, age, migration status, citizenship and educational attainment level. Only age = Y15-64",Eurostat
+lfso.14loq,834,Jobs,"Self-declared over-qualified employees as percentage of the total employees by sex, age, migration status and educational attainment level. Only age = Y15-64",Eurostat
+lfso.14luner,835,,"Unemployment rate by sex, age, migration status, citizenship and educational attainment level. Only age = Y15-64",Eurostat
+lfso.14pciti,836,,"Population by sex, age, migration status and citizenship. Only age = Y15-64",Eurostat
+lfso.14pcob,837,,"Population by sex, age, migration status and country of birth. Only age = Y15-64",Eurostat
+lfso.14pcobp,838,,"Population by sex, age, migration status, country of birth and country of birth of parents. Only age = Y15-64",Eurostat
+lfso.14purb,839,,"Population by sex, age, migration status and degree of urbanisation. Only age = Y15-64",Eurostat
+lfso.17psobst,840,,Employees and family workers who wish to be self-employed by main reason for not being self-employed and sex,Eurostat
+lfso.17seclnt,841,,Self-employed persons by number and importance of clients in the last 12 months and sex,Eurostat
+lfso.17senees,842,,"Self-employed persons without employees by main reason for not having employees, sex and country of birth",Eurostat
+lfso.17seworg,843,,"Self-employed persons having at least one client in the last 12 months by control over working time, and sex",Eurostat
+lfst.hhantych,844,Jobs,"Average number of persons per household by household composition, number of children and age of youngest child",Eurostat
+lfst.hhanwhtc,845,Jobs,"Average number of persons per household by household composition, number of children and working status within households",Eurostat
+lfst.hhnhtych,846,,"Number of households by household composition, number of children and age of youngest child (1 000)",Eurostat
+lfst.hhnhwhtc,847,,"Number of households by household composition, number of children and working status within households (1 000)",Eurostat
+lfst.hhwhacc,848,,"Number of adults by working status within households, number of children and age of youngest child (1 000)",Eurostat
+lfst.hhwhchit,849,Jobs,Average number of children per household by working status within households and household composition,Eurostat
+lfst.hhwhnpt,850,,Number of persons by working status within households and household composition (1 000),Eurostat
+lfst.r.lfu2gacu,851,,"Unemployment by sex, age, country of birth and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.lfu2ganu,852,,"Unemployment by sex, age, citizenship and degree of urbanisation. Only age = Y15-64",Eurostat
+lfst.r.pgauwsc,853,,"Population by sex, age, country of birth, labour status and degree of urbanisation. Only wstatus = POP. Only age = Y15-64",Eurostat
+lfst.r.pgauwsn,854,,"Population by sex, age, citizenship, labour status and degree of urbanisation. Only wstatus = POP. Only age = Y15-64",Eurostat
+migr.acq,855,,"Acquisition of citizenship by age group, sex and former citizenship. Only agedef = REACH",Eurostat
+migr.acq1ctz,856,,"Acquisition of citizenship by age group, sex and level of human development of former citizenship. Only agedef = REACH",Eurostat
+migr.asyctz,857,,Asylum applicants by citizenship till 2007 - annual data (rounded),Eurostat
+migr.asydcfina,858,,"Final decisions in appeal or review on applications by citizenship, age and sex - annual data (rounded)",Eurostat
+migr.asydcfsta,859,,"First instance decisions on applications by citizenship, age and sex - annual aggregated data (rounded)",Eurostat
+migr.asydctzy,860,,Decisions on asylum applications by citizenship till 2007 - annual data (rounded),Eurostat
+migr.asyresa,861,,"Resettled persons by age, sex and citizenship - annual data (rounded)",Eurostat
+migr.asyunaa,862,,"Asylum applicants considered to be unaccompanied minors by citizenship, age and sex - annual data (rounded)",Eurostat
+migr.asywitfina,863,,Decisions withdrawing status granted as final decision in appeal or review by type of status withdrawn - annual data (rounded),Eurostat
+migr.asywitfsta,864,,"Decisions withdrawing status granted at first instance decision by type of status withdrawn, citizenship and reason - annual aggregated data (rounded)",Eurostat
+migr.asywitha,865,,"Asylum applications withdrawn by citizenship, age, sex and type of withdrawal - annual aggregated data (rounded)",Eurostat
+migr.dubdi,866,,"Decisions on incoming 'Dublin' requests by submitting country (PARTNER), type of decision, type of request, legal provision, sex and type of applicant",Eurostat
+migr.dubdo,867,,"Decisions on outgoing 'Dublin' requests by receiving country (PARTNER), type of decision, type of request, legal provision, sex and type of applicant",Eurostat
+migr.dubri,868,,"Incoming 'Dublin' requests by submitting country (PARTNER), type of request, legal provision, sex and type of applicant",Eurostat
+migr.dubro,869,,"Outgoing 'Dublin' requests by receiving country (PARTNER), type of request, legal provision, sex and type of applicant",Eurostat
+migr.dubrpeni,870,,"Pending 'Dublin' incoming requests by submitting country (PARTNER), type of request, sex and type of applicant",Eurostat
+migr.dubrpeno,871,,"Pending 'Dublin' outgoing requests by receiving country (PARTNER), type of request, sex and type of applicant",Eurostat
+migr.dubti,872,,"Incoming 'Dublin' transfers by submitting country (PARTNER), legal provision, duration of transfer, sex and type of applicant",Eurostat
+migr.dubto,873,,"Outgoing 'Dublin' transfers by receiving country (PARTNER), legal provision, duration of transfer, sex and type of applicant",Eurostat
+migr.dubtpeni,874,,"Pending incoming 'Dublin' transfers by submitting country (PARTNER), sex and type of applicant",Eurostat
+migr.dubtpeno,875,,"Pending outgoing 'Dublin' transfers by receiving country (PARTNER), sex and type of applicant",Eurostat
+migr.eiord,876,,Third country nationals ordered to leave - annual data (rounded),Eurostat
+migr.eipre,877,,Third country nationals found to be illegally present - annual data (rounded),Eurostat
+migr.eirt.agr,878,,Third-country nationals who have left the territory to a third country by type of agreement procedure and citizenship,Eurostat
+migr.eirt.ass,879,,Third-country nationals who have left the territory by type of assistance received and citizenship,Eurostat
+migr.eirt.des,880,,Third-country nationals who have left the territory to a third country by destination country and citizenship,Eurostat
+migr.eirt.vol,881,,Third-country nationals who have left the territory by type of return and citizenship,Eurostat
+migr.eirtn,882,,Third country nationals returned following an order to leave - annual data (rounded),Eurostat
+migr.emi2,883,,Emigration by age and sex. Only agedef = REACH,Eurostat
+migr.emi3nxt,884,,"Emigration by age group, sex and country of next usual residence. Only agedef = REACH",Eurostat
+migr.emi4ctb,885,,"Emigration by age group, sex and country of birth. Only agedef = REACH",Eurostat
+migr.emi5nxt,886,,Emigration by broad group of country of next usual residence,Eurostat
+migr.imm11prv,887,,"Immigration by age group, sex and level of human development of the country of previous residence. Only agedef = REACH",Eurostat
+migr.imm12prv,888,,Immigration by broad group of country of previous residence,Eurostat
+migr.imm1ctz,889,,"Immigration by age group, sex and citizenship. Only agedef = REACH",Eurostat
+migr.imm2ctz,890,,"Immigration by age, sex and broad group of citizenship. Only agedef = REACH",Eurostat
+migr.imm3ctb,891,,"Immigration by age group, sex and country of birth. Only agedef = REACH",Eurostat
+migr.imm4ctb,892,,"Immigration by age, sex and broad group of country of birth. Only agedef = REACH",Eurostat
+migr.imm5prv,893,,"Immigration by age group, sex and country of previous residence. Only agedef = REACH",Eurostat
+migr.imm6ctz,894,,"Immigration by sex, citizenship and broad group of country of birth",Eurostat
+migr.imm7ctb,895,,"Immigration by sex, country of birth and broad group of citizenship",Eurostat
+migr.imm8,896,,Immigration by age and sex. Only agedef = REACH,Eurostat
+migr.imm9ctz,897,,"Immigration by age group, sex and level of human development of the country of citizenship. Only agedef = REACH",Eurostat
+migr.pop1ctz,898,,"Population on 1 January by age group, sex and citizenship",Eurostat
+migr.pop2ctz,899,,"Population on 1 January by age, sex and broad group of citizenship",Eurostat
+migr.pop3ctb,900,,"Population on 1 January by age group, sex and country of birth",Eurostat
+migr.pop4ctb,901,,"Population on 1 January by age, sex and broad group of country of birth",Eurostat
+migr.pop5ctz,902,,"Population on 1 January by sex, citizenship and broad group of country of birth",Eurostat
+migr.pop6ctb,903,,"Population on 1 January by sex, country of birth and broad group of citizenship",Eurostat
+migr.pop7ctz,904,,"Population on 1 January by age group, sex and level of human development of the country of citizenship",Eurostat
+migr.pop8ctb,905,,"Population on 1 January by age group, sex and level of human development of the country of birth",Eurostat
+migr.reschange,906,,Change of immigration status permits by reason and citizenship,Eurostat
+migr.resfas,907,,"First permits by reason, age, sex and citizenship",Eurostat
+migr.resfirst,908,,"First permits by reason, length of validity and citizenship",Eurostat
+migr.reslas,909,,"Long-term residents by age, sex and citizenship on 31 December of each year",Eurostat
+migr.reslong,910,,Long-term residents by citizenship on 31 December of each year,Eurostat
+migr.resltr,911,,Long-term residence permits issued during the year,Eurostat
+migr.resshare,912,,Long-term residents among all non-EU citizens holding residence permits by citizenship on 31 December (%),Eurostat
+migr.ressing,913,,"Single Permits issued by type of decision, length of validity",Eurostat
+migr.resvalid,914,,"All valid permits by reason, length of validity and citizenship on 31 December of each year",Eurostat
+migr.resvas,915,,"All valid permits by age, sex and citizenship on 31 December of each year",Eurostat
+MS.MIL.MPRT.KD,916,,Arms imports (SIPRI trend indicator values),World Data Bank
+MS.MIL.TOTL.P1,917,,"Armed forces personnel, total",World Data Bank
+MS.MIL.XPND.CD,918,,Military expenditure (current USD),World Data Bank
+MS.MIL.XPND.CN,919,,Military expenditure (current LCU),World Data Bank
+MS.MIL.XPND.ZS,920,,Military expenditure (% of general government expenditure),World Data Bank
+MS.MIL.XPRT.KD,921,,Arms exports (SIPRI trend indicator values),World Data Bank
+NE.CON.GOVT.CD,922,,General government final consumption expenditure (current US$),World Data Bank
+NE.CON.GOVT.CN,923,,General government final consumption expenditure (current LCU),World Data Bank
+NE.CON.GOVT.KD,924,,General government final consumption expenditure (constant 2015 US$),World Data Bank
+NE.CON.GOVT.KD.ZG,925,,General government final consumption expenditure (annual % growth),World Data Bank
+NE.CON.GOVT.KN,926,,General government final consumption expenditure (constant LCU),World Data Bank
+NE.CON.GOVT.ZS,927,,General government final consumption expenditure (% of GDP),World Data Bank
+NE.CON.PRVT.CD,928,,Households and NPISHs Final consumption expenditure (current US$),World Data Bank
+NE.CON.PRVT.CN,929,,Households and NPISHs Final consumption expenditure (current LCU),World Data Bank
+NE.CON.PRVT.CN.AD,930,,Households and NPISHs final consumption expenditure: linked series (current LCU),World Data Bank
+NE.CON.PRVT.KD,931,,Households and NPISHs Final consumption expenditure (constant 2015 US$),World Data Bank
+NE.CON.PRVT.KD.ZG,932,,Households and NPISHs Final consumption expenditure (annual % growth),World Data Bank
+NE.CON.PRVT.KN,933,,Households and NPISHs Final consumption expenditure (constant LCU),World Data Bank
+NE.CON.PRVT.PP.CD,934,,"Households and NPISHs Final consumption expenditure, PPP (current international $)",World Data Bank
+NE.CON.PRVT.PP.KD,935,,"Households and NPISHs Final consumption expenditure, PPP (constant 2017 international $)",World Data Bank
+NE.CON.TOTL.CD,936,,Final consumption expenditure (current US$),World Data Bank
+NE.CON.TOTL.CN,937,,Final consumption expenditure (current LCU),World Data Bank
+NE.CON.TOTL.KD,938,,Final consumption expenditure (constant 2015 US$),World Data Bank
+NE.CON.TOTL.KD.ZG,939,,Final consumption expenditure (annual % growth),World Data Bank
+NE.CON.TOTL.KN,940,,Final consumption expenditure (constant LCU),World Data Bank
+NE.CON.TOTL.ZS,941,,Final consumption expenditure (% of GDP),World Data Bank
+NE.DAB.DEFL.ZS,942,,Gross national expenditure deflator (base year varies by country),World Data Bank
+NE.DAB.TOTL.CD,943,,Gross national expenditure (current US$),World Data Bank
+NE.DAB.TOTL.CN,944,,Gross national expenditure (current LCU),World Data Bank
+NE.DAB.TOTL.KD,945,,Gross national expenditure (constant 2015 US$),World Data Bank
+NE.DAB.TOTL.KN,946,,Gross national expenditure (constant LCU),World Data Bank
+NE.DAB.TOTL.ZS,947,,Gross national expenditure (% of GDP),World Data Bank
+NE.EXP.GNFS.CD,948,,Exports of goods and services (current US$),World Data Bank
+NE.EXP.GNFS.CN,949,,Exports of goods and services (current LCU),World Data Bank
+NE.EXP.GNFS.KD,950,,Exports of goods and services (constant 2015 US$),World Data Bank
+NE.EXP.GNFS.KD.ZG,951,,Exports of goods and services (annual % growth),World Data Bank
+NE.EXP.GNFS.KN,952,,Exports of goods and services (constant LCU),World Data Bank
+NE.EXP.GNFS.ZS,953,,Exports of goods and services (% of GDP),World Data Bank
+NE.GDI.FTOT.CD,954,,Gross fixed capital formation (current US$),World Data Bank
+NE.GDI.FTOT.CN,955,,Gross fixed capital formation (current LCU),World Data Bank
+NE.GDI.FTOT.KD,956,,Gross fixed capital formation (constant 2015 US$),World Data Bank
+NE.GDI.FTOT.KD.ZG,957,,Gross fixed capital formation (annual % growth),World Data Bank
+NE.GDI.FTOT.KN,958,,Gross fixed capital formation (constant LCU),World Data Bank
+NE.GDI.FTOT.ZS,959,,Gross fixed capital formation (% of GDP),World Data Bank
+NE.GDI.STKB.CD,960,,Changes in inventories (current US$),World Data Bank
+NE.GDI.STKB.CN,961,,Changes in inventories (current LCU),World Data Bank
+NE.GDI.TOTL.CD,962,,Gross capital formation (current US$),World Data Bank
+NE.GDI.TOTL.CN,963,,Gross capital formation (current LCU),World Data Bank
+NE.GDI.TOTL.KD,964,,Gross capital formation (constant 2015 US$),World Data Bank
+NE.GDI.TOTL.KD.ZG,965,,Gross capital formation (annual % growth),World Data Bank
+NE.GDI.TOTL.KN,966,,Gross capital formation (constant LCU),World Data Bank
+NE.GDI.TOTL.ZS,967,,Gross capital formation (% of GDP),World Data Bank
+NE.IMP.GNFS.CD,968,,Imports of goods and services (current US$),World Data Bank
+NE.IMP.GNFS.CN,969,,Imports of goods and services (current LCU),World Data Bank
+NE.IMP.GNFS.KD,970,,Imports of goods and services (constant 2015 US$),World Data Bank
+NE.IMP.GNFS.KD.ZG,971,,Imports of goods and services (annual % growth),World Data Bank
+NE.IMP.GNFS.KN,972,,Imports of goods and services (constant LCU),World Data Bank
+NE.IMP.GNFS.ZS,973,,Imports of goods and services (% of GDP),World Data Bank
+NE.RSB.GNFS.CD,974,,External balance on goods and services (current US$),World Data Bank
+NE.RSB.GNFS.CN,975,,External balance on goods and services (current LCU),World Data Bank
+NE.RSB.GNFS.KN,976,,External balance on goods and services (constant LCU),World Data Bank
+NE.RSB.GNFS.ZS,977,,External balance on goods and services (% of GDP),World Data Bank
+NE.TRD.GNFS.ZS,978,,Trade (% of GDP),World Data Bank
+NV.AGR.EMPL.KD,979,,"Agriculture, forestry, and fishing, value added per worker (constant 2015 US$)",World Data Bank
+NV.AGR.TOTL.CD,980,,"Agriculture, forestry, and fishing, value added (current US$)",World Data Bank
+NV.AGR.TOTL.CN,981,,"Agriculture, forestry, and fishing, value added (current LCU)",World Data Bank
+NV.AGR.TOTL.KD,982,,"Agriculture, forestry, and fishing, value added (constant 2015 US$)",World Data Bank
+NV.AGR.TOTL.KD.ZG,983,,"Agriculture, forestry, and fishing, value added (annual % growth)",World Data Bank
+NV.AGR.TOTL.KN,984,,"Agriculture, forestry, and fishing, value added (constant LCU)",World Data Bank
+NV.AGR.TOTL.ZS,985,,"Agriculture, forestry, and fishing, value added (% of GDP)",World Data Bank
+NV.IND.EMPL.KD,986,,"Industry (including construction), value added per worker (constant 2015 US$)",World Data Bank
+NV.IND.MANF.CD,987,,"Manufacturing, value added (current US$)",World Data Bank
+NV.IND.MANF.CN,988,,"Manufacturing, value added (current LCU)",World Data Bank
+NV.IND.MANF.KD,989,,"Manufacturing, value added (constant 2015 US$)",World Data Bank
+NV.IND.MANF.KD.ZG,990,,"Manufacturing, value added (annual % growth)",World Data Bank
+NV.IND.MANF.KN,991,,"Manufacturing, value added (constant LCU)",World Data Bank
+NV.IND.MANF.ZS,992,,"Manufacturing, value added (% of GDP)",World Data Bank
+NV.IND.TOTL.CD,993,,"Industry (including construction), value added (current US$)",World Data Bank
+NV.IND.TOTL.CN,994,,"Industry (including construction), value added (current LCU)",World Data Bank
+NV.IND.TOTL.KD,995,,"Industry (including construction), value added (constant 2015 US$)",World Data Bank
+NV.IND.TOTL.KD.ZG,996,,"Industry (including construction), value added (annual % growth)",World Data Bank
+NV.IND.TOTL.KN,997,,"Industry (including construction), value added (constant LCU)",World Data Bank
+NV.IND.TOTL.ZS,998,,"Industry (including construction), value added (% of GDP)",World Data Bank
+NV.MNF.CHEM.ZS.UN,999,,Chemicals (% of value added in manufacturing),World Data Bank
+NV.MNF.FBTO.ZS.UN,1000,,"Food, beverages and tobacco (% of value added in manufacturing)",World Data Bank
+NV.MNF.MTRN.ZS.UN,1001,,Machinery and transport equipment (% of value added in manufacturing),World Data Bank
+NV.MNF.OTHR.ZS.UN,1002,,Other manufacturing (% of value added in manufacturing),World Data Bank
+NV.MNF.TECH.ZS.UN,1003,,Medium and high-tech manufacturing value added (% manufacturing value added),World Data Bank
+NV.MNF.TXTL.ZS.UN,1004,,Textiles and clothing (% of value added in manufacturing),World Data Bank
+NV.SRV.EMPL.KD,1005,,"Services, value added per worker (constant 2015 US$)",World Data Bank
+NV.SRV.TOTL.CD,1006,,"Services, value added (current US$)",World Data Bank
+NV.SRV.TOTL.CN,1007,,"Services, value added (current LCU)",World Data Bank
+NV.SRV.TOTL.KD,1008,,"Services, value added (constant 2015 US$)",World Data Bank
+NV.SRV.TOTL.KD.ZG,1009,,"Services, value added (annual % growth)",World Data Bank
+NV.SRV.TOTL.KN,1010,,"Services, value added (constant LCU)",World Data Bank
+NV.SRV.TOTL.ZS,1011,,"Services, value added (% of GDP)",World Data Bank
+NY.ADJ.AEDU.CD,1012,,Adjusted savings: education expenditure (current US$),World Data Bank
+NY.ADJ.DCO2.CD,1013,,Adjusted savings: carbon dioxide damage (current US$),World Data Bank
+NY.ADJ.DFOR.CD,1014,,Adjusted savings: net forest depletion (current US$),World Data Bank
+NY.ADJ.DKAP.CD,1015,,Adjusted savings: consumption of fixed capital (current US$),World Data Bank
+NY.ADJ.DKAP.GN.ZS,1016,,Adjusted savings: consumption of fixed capital (% of GNI),World Data Bank
+NY.ADJ.DMIN.CD,1017,,Adjusted savings: mineral depletion (current US$),World Data Bank
+NY.ADJ.DNGY.CD,1018,,Adjusted savings: energy depletion (current US$),World Data Bank
+NY.ADJ.DPEM.CD,1019,,Adjusted savings: particulate emission damage (current US$),World Data Bank
+NY.ADJ.ICTR.GN.ZS,1020,,Adjusted savings: gross savings (% of GNI),World Data Bank
+NY.ADJ.NNAT.CD,1021,,Adjusted savings: net national savings (current US$),World Data Bank
+NY.ADJ.NNAT.GN.ZS,1022,,Adjusted savings: net national savings (% of GNI),World Data Bank
+NY.ADJ.NNTY.CD,1023,,Adjusted net national income (current US$),World Data Bank
+NY.ADJ.NNTY.KD,1024,,Adjusted net national income (constant 2015 US$),World Data Bank
+NY.ADJ.NNTY.KD.ZG,1025,,Adjusted net national income (annual % growth),World Data Bank
+NY.ADJ.NNTY.PC.CD,1026,,Adjusted net national income per capita (current US$),World Data Bank
+NY.ADJ.NNTY.PC.KD,1027,,Adjusted net national income per capita (constant 2015 US$),World Data Bank
+NY.ADJ.NNTY.PC.KD.ZG,1028,,Adjusted net national income per capita (annual % growth),World Data Bank
+NY.ADJ.SVNG.CD,1029,,"Adjusted net savings, including particulate emission damage (current US$)",World Data Bank
+NY.ADJ.SVNG.GN.ZS,1030,,"Adjusted net savings, including particulate emission damage (% of GNI)",World Data Bank
+NY.ADJ.SVNX.CD,1031,,"Adjusted net savings, excluding particulate emission damage (current US$)",World Data Bank
+NY.ADJ.SVNX.GN.ZS,1032,,"Adjusted net savings, excluding particulate emission damage (% of GNI)",World Data Bank
+NY.EXP.CAPM.KN,1033,,Exports as a capacity to import (constant LCU),World Data Bank
+NY.GDP.COAL.RT.ZS,1034,,Coal rents (% of GDP),World Data Bank
+NY.GDP.DEFL.KD.ZG,1035,,"Inflation, GDP deflator (annual %)",World Data Bank
+NY.GDP.DEFL.KD.ZG.AD,1036,,"Inflation, GDP deflator: linked series (annual %)",World Data Bank
+NY.GDP.DEFL.ZS,1037,,GDP deflator (base year varies by country),World Data Bank
+NY.GDP.DEFL.ZS.AD,1038,,GDP deflator: linked series (base year varies by country),World Data Bank
+NY.GDP.DISC.CN,1039,,Discrepancy in expenditure estimate of GDP (current LCU),World Data Bank
+NY.GDP.DISC.KN,1040,,Discrepancy in expenditure estimate of GDP (constant LCU),World Data Bank
+NY.GDP.FCST.CD,1041,,Gross value added at basic prices (GVA) (current US$),World Data Bank
+NY.GDP.FCST.CN,1042,,Gross value added at basic prices (GVA) (current LCU),World Data Bank
+NY.GDP.FCST.KD,1043,,Gross value added at basic prices (GVA) (constant 2015 US$),World Data Bank
+NY.GDP.FCST.KN,1044,,Gross value added at basic prices (GVA) (constant LCU),World Data Bank
+NY.GDP.FRST.RT.ZS,1045,,Forest rents (% of GDP),World Data Bank
+NY.GDP.MINR.RT.ZS,1046,,Mineral rents (% of GDP),World Data Bank
+NY.GDP.MKTP.CD,1047,,GDP (current US$),World Data Bank
+NY.GDP.MKTP.CN,1048,,GDP (current LCU),World Data Bank
+NY.GDP.MKTP.CN.AD,1049,,GDP: linked series (current LCU),World Data Bank
+NY.GDP.MKTP.KD,1050,,GDP (constant 2015 US$),World Data Bank
+NY.GDP.MKTP.KD.ZG,1051,,GDP growth (annual %),World Data Bank
+NY.GDP.MKTP.KN,1052,,GDP (constant LCU),World Data Bank
+NY.GDP.MKTP.PP.CD,1053,,"GDP, PPP (current international $)",World Data Bank
+NY.GDP.MKTP.PP.KD,1054,,"GDP, PPP (constant 2017 international $)",World Data Bank
+NY.GDP.NGAS.RT.ZS,1055,,Natural gas rents (% of GDP),World Data Bank
+NY.GDP.PCAP.CD,1056,,GDP per capita (current US$),World Data Bank
+NY.GDP.PCAP.CN,1057,,GDP per capita (current LCU),World Data Bank
+NY.GDP.PCAP.KD,1058,,GDP per capita (constant 2015 US$),World Data Bank
+NY.GDP.PCAP.KD.ZG,1059,,GDP per capita growth (annual %),World Data Bank
+NY.GDP.PCAP.KN,1060,,GDP per capita (constant LCU),World Data Bank
+NY.GDP.PCAP.PP.CD,1061,,"GDP per capita, PPP (current international $)",World Data Bank
+NY.GDP.PCAP.PP.KD,1062,,"GDP per capita, PPP (constant 2017 international $)",World Data Bank
+NY.GDP.PETR.RT.ZS,1063,,Oil rents (% of GDP),World Data Bank
+NY.GDP.TOTL.RT.ZS,1064,,Total natural resources rents (% of GDP),World Data Bank
+NY.GDS.TOTL.CD,1065,,Gross domestic savings (current US$),World Data Bank
+NY.GDS.TOTL.CN,1066,,Gross domestic savings (current LCU),World Data Bank
+NY.GDS.TOTL.ZS,1067,,Gross domestic savings (% of GDP),World Data Bank
+NY.GDY.TOTL.KN,1068,,Gross domestic income (constant LCU),World Data Bank
+NY.GNP.ATLS.CD,1069,,"GNI, Atlas method (current US$)",World Data Bank
+NY.GNP.MKTP.CD,1070,,GNI (current US$),World Data Bank
+NY.GNP.MKTP.CN,1071,,GNI (current LCU),World Data Bank
+NY.GNP.MKTP.CN.AD,1072,,GNI: linked series (current LCU),World Data Bank
+NY.GNP.MKTP.KD,1073,,GNI (constant 2015 US$),World Data Bank
+NY.GNP.MKTP.KD.ZG,1074,,GNI growth (annual %),World Data Bank
+NY.GNP.MKTP.KN,1075,,GNI (constant LCU),World Data Bank
+NY.GNP.MKTP.PP.CD,1076,,"GNI, PPP (current international $)",World Data Bank
+NY.GNP.MKTP.PP.KD,1077,,"GNI, PPP (constant 2017 international $)",World Data Bank
+NY.GNP.PCAP.CD,1078,,"GNI per capita, Atlas method (current US$)",World Data Bank
+NY.GNP.PCAP.CN,1079,,GNI per capita (current LCU),World Data Bank
+NY.GNP.PCAP.KD,1080,,GNI per capita (constant 2015 US$),World Data Bank
+NY.GNP.PCAP.KD.ZG,1081,,GNI per capita growth (annual %),World Data Bank
+NY.GNP.PCAP.KN,1082,,GNI per capita (constant LCU),World Data Bank
+NY.GNP.PCAP.PP.CD,1083,,"GNI per capita, PPP (current international $)",World Data Bank
+NY.GNS.ICTR.CD,1084,,Gross savings (current US$),World Data Bank
+NY.GNS.ICTR.CN,1085,,Gross savings (current LCU),World Data Bank
+NY.GSR.NFCY.CD,1086,,Net primary income (Net income from abroad) (current US$),World Data Bank
+NY.GSR.NFCY.CN,1087,,Net primary income (Net income from abroad) (current LCU),World Data Bank
+NY.TAX.NIND.CD,1088,,Taxes less subsidies on products (current US$),World Data Bank
+NY.TAX.NIND.CN,1089,,Taxes less subsidies on products (current LCU),World Data Bank
+NY.TAX.NIND.KN,1090,,Taxes less subsidies on products (constant LCU),World Data Bank
+NY.TRF.NCTR.CD,1091,,Net secondary income (Net current transfers from abroad) (current US$),World Data Bank
+NY.TRF.NCTR.CN,1092,,Net secondary income (Net current transfers from abroad) (current LCU),World Data Bank
+NY.TRF.NCTR.KN,1093,,Net secondary income (Net current transfers from abroad) (constant LCU),World Data Bank
+NY.TTF.GNFS.KN,1094,,Terms of trade adjustment (constant LCU),World Data Bank
+PA.NUS.ATLS,1095,,DEC alternative conversion factor (LCU per US$),World Data Bank
+PA.NUS.FCRF,1096,,"Official exchange rate (LCU per US$, period average)",World Data Bank
+PA.NUS.PPP,1097,,"PPP conversion factor, GDP (LCU per international $)",World Data Bank
+PA.NUS.PPPC.RF,1098,,Price level ratio of PPP conversion factor (GDP) to market exchange rate,World Data Bank
+PA.NUS.PRVT.PP,1099,,"PPP conversion factor, private consumption (LCU per international $)",World Data Bank
+PX.REX.REER,1100,,Real effective exchange rate index (2010 = 100),World Data Bank
+SE.COM.DURS,1101,,"Compulsory education, duration (years)",World Data Bank
+SE.PRE.ENRL.TC.ZS,1102,,"Pupil-teacher ratio, preprimary",World Data Bank
+SE.PRE.ENRR,1103,,"School enrollment, preprimary (% gross)",World Data Bank
+SE.PRE.ENRR.FE,1104,,"School enrollment, preprimary, female (% gross)",World Data Bank
+SE.PRE.ENRR.MA,1105,,"School enrollment, preprimary, male (% gross)",World Data Bank
+SE.PRM.ENRL,1106,,"Primary education, pupils",World Data Bank
+SE.PRM.TCHR,1107,,"Primary education, teachers",World Data Bank
+SE.PRM.UNER,1108,,"Children out of school, primary",World Data Bank
+SE.SEC.ENRL,1109,,"Secondary education, pupils",World Data Bank
+SE.SEC.ENRL.GC,1110,,"Secondary education, general pupils",World Data Bank
+SE.SEC.ENRL.VO,1111,,"Secondary education, vocational pupils",World Data Bank
+SE.SEC.TCHR,1112,,"Secondary education, teachers",World Data Bank
+SE.SEC.TCHR.FE,1113,,"Secondary education, teachers, female",World Data Bank
+SE.XPD.TERT.ZS,1114,,Expenditure on tertiary education (% of government expenditure on education),World Data Bank
+SE.XPD.TOTL.GB.ZS,1115,,"Government expenditure on education, total (% of government expenditure)",World Data Bank
+SE.XPD.TOTL.GD.ZS,1116,,"Government expenditure on education, total (% of GDP)",World Data Bank
+SG.GEN.PARL.ZS,1117,Politics,Proportion of seats held by women in national parliaments (%),World Data Bank
+SG.LAW.INDX,1118,Politics,Women Business and the Law Index Score (scale 1-100),World Data Bank
+SH.ANM.ALLW.ZS,1119,,Prevalence of anemia among women of reproductive age (% of women ages 15-49),World Data Bank
+SH.ANM.CHLD.ZS,1120,,Prevalence of anemia among children (% of children ages 6-59 months),World Data Bank
+SH.ANM.NPRG.ZS,1121,,Prevalence of anemia among non-pregnant women (% of women ages 15-49),World Data Bank
+SH.MMR.DTHS,1122,,Number of maternal deaths,World Data Bank
+SH.MMR.RISK,1123,,Lifetime risk of maternal death (1 in: rate varies by country),World Data Bank
+SH.MMR.RISK.ZS,1124,,Lifetime risk of maternal death (%),World Data Bank
+SH.STA.BASS.RU.ZS,1125,,"People using at least basic sanitation services, rural (% of rural population)",World Data Bank
+SH.STA.BASS.UR.ZS,1126,,"People using at least basic sanitation services, urban (% of urban population)",World Data Bank
+SH.STA.BASS.ZS,1127,,People using at least basic sanitation services (% of population),World Data Bank
+SH.STA.BRTC.ZS,1128,,Births attended by skilled health staff (% of total),World Data Bank
+SH.STA.BRTW.ZS,1129,,Low-birthweight babies (% of births),World Data Bank
+SH.STA.MMRT,1130,,"Maternal mortality ratio (modeled estimate, per 100,000 live births)",World Data Bank
+SH.STA.MMRT.NE,1131,,"Maternal mortality ratio (national estimate, per 100,000 live births)",World Data Bank
+SH.STA.ODFC.RU.ZS,1132,,"People practicing open defecation, rural (% of rural population)",World Data Bank
+SH.STA.ODFC.UR.ZS,1133,,"People practicing open defecation, urban (% of urban population)",World Data Bank
+SH.STA.ODFC.ZS,1134,,People practicing open defecation (% of population),World Data Bank
+SH.STA.POIS.P5,1135,,"Mortality rate attributed to unintentional poisoning (per 100,000 population)",World Data Bank
+SH.STA.POIS.P5.FE,1136,,"Mortality rate attributed to unintentional poisoning, female (per 100,000 female population)",World Data Bank
+SH.STA.POIS.P5.MA,1137,,"Mortality rate attributed to unintentional poisoning, male (per 100,000 male population)",World Data Bank
+SH.STA.SMSS.ZS,1138,,People using safely managed sanitation services (% of population),World Data Bank
+SH.STA.SUIC.FE.P5,1139,,"Suicide mortality rate, female (per 100,000 female population)",World Data Bank
+SH.STA.SUIC.MA.P5,1140,,"Suicide mortality rate, male (per 100,000 male population)",World Data Bank
+SH.STA.SUIC.P5,1141,,"Suicide mortality rate (per 100,000 population)",World Data Bank
+SH.STA.TRAF.P5,1142,,"Mortality caused by road traffic injury (per 100,000 population)",World Data Bank
+SH.XPD.CHEX.GD.ZS,1143,,Current health expenditure (% of GDP),World Data Bank
+SH.XPD.CHEX.PC.CD,1144,,Current health expenditure per capita (current US$),World Data Bank
+SH.XPD.CHEX.PP.CD,1145,,"Current health expenditure per capita, PPP (current international $)",World Data Bank
+SH.XPD.EHEX.CH.ZS,1146,,External health expenditure (% of current health expenditure),World Data Bank
+SH.XPD.EHEX.PC.CD,1147,,External health expenditure per capita (current US$),World Data Bank
+SH.XPD.EHEX.PP.CD,1148,,"External health expenditure per capita, PPP (current international $)",World Data Bank
+SH.XPD.GHED.CH.ZS,1149,,Domestic general government health expenditure (% of current health expenditure),World Data Bank
+SH.XPD.GHED.GD.ZS,1150,,Domestic general government health expenditure (% of GDP),World Data Bank
+SH.XPD.GHED.GE.ZS,1151,,Domestic general government health expenditure (% of general government expenditure),World Data Bank
+SH.XPD.GHED.PC.CD,1152,,Domestic general government health expenditure per capita (current US$),World Data Bank
+SH.XPD.GHED.PP.CD,1153,,"Domestic general government health expenditure per capita, PPP (current international $)",World Data Bank
+SH.XPD.OOPC.CH.ZS,1154,,Out-of-pocket expenditure (% of current health expenditure),World Data Bank
+SH.XPD.OOPC.PC.CD,1155,,Out-of-pocket expenditure per capita (current US$),World Data Bank
+SH.XPD.OOPC.PP.CD,1156,,"Out-of-pocket expenditure per capita, PPP (current international $)",World Data Bank
+SH.XPD.PVTD.CH.ZS,1157,,Domestic private health expenditure (% of current health expenditure),World Data Bank
+SH.XPD.PVTD.PC.CD,1158,,Domestic private health expenditure per capita (current US$),World Data Bank
+SH.XPD.PVTD.PP.CD,1159,,"Domestic private health expenditure per capita, PPP (current international $)",World Data Bank
+SL.AGR.EMPL.FE.ZS,1160,,"Employment in agriculture, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.AGR.EMPL.MA.ZS,1161,,"Employment in agriculture, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.AGR.EMPL.ZS,1162,,Employment in agriculture (% of total employment) (modeled ILO estimate),World Data Bank
+SL.EMP.1524.SP.FE.NE.ZS,1163,,"Employment to population ratio, ages 15-24, female (%) (national estimate)",World Data Bank
+SL.EMP.1524.SP.MA.NE.ZS,1164,,"Employment to population ratio, ages 15-24, male (%) (national estimate)",World Data Bank
+SL.EMP.1524.SP.NE.ZS,1165,,"Employment to population ratio, ages 15-24, total (%) (national estimate)",World Data Bank
+SL.EMP.TOTL.SP.FE.NE.ZS,1166,,"Employment to population ratio, 15+, female (%) (national estimate)",World Data Bank
+SL.EMP.TOTL.SP.MA.NE.ZS,1167,,"Employment to population ratio, 15+, male (%) (national estimate)",World Data Bank
+SL.EMP.TOTL.SP.NE.ZS,1168,,"Employment to population ratio, 15+, total (%) (national estimate)",World Data Bank
+SL.GDP.PCAP.EM.KD,1169,,GDP per person employed (constant 2017 PPP $),World Data Bank
+SL.IND.EMPL.FE.ZS,1170,,"Employment in industry, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.IND.EMPL.MA.ZS,1171,,"Employment in industry, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.IND.EMPL.ZS,1172,,Employment in industry (% of total employment) (modeled ILO estimate),World Data Bank
+SL.SRV.EMPL.FE.ZS,1173,,"Employment in services, female (% of female employment) (modeled ILO estimate)",World Data Bank
+SL.SRV.EMPL.MA.ZS,1174,,"Employment in services, male (% of male employment) (modeled ILO estimate)",World Data Bank
+SL.SRV.EMPL.ZS,1175,,Employment in services (% of total employment) (modeled ILO estimate),World Data Bank
+SL.TLF.ACTI.1524.FE.NE.ZS,1176,,"Labor force participation rate for ages 15-24, female (%) (national estimate)",World Data Bank
+SL.TLF.ACTI.1524.FE.ZS,1177,,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",World Data Bank
+SL.TLF.ACTI.1524.MA.NE.ZS,1178,,"Labor force participation rate for ages 15-24, male (%) (national estimate)",World Data Bank
+SL.TLF.ACTI.1524.MA.ZS,1179,,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",World Data Bank
+SL.TLF.ACTI.1524.NE.ZS,1180,,"Labor force participation rate for ages 15-24, total (%) (national estimate)",World Data Bank
+SL.TLF.ACTI.1524.ZS,1181,,"Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)",World Data Bank
+SL.TLF.ACTI.FE.ZS,1182,,"Labor force participation rate, female (% of female population ages 15-64) (modeled ILO estimate)",World Data Bank
+SL.TLF.ACTI.MA.ZS,1183,,"Labor force participation rate, male (% of male population ages 15-64) (modeled ILO estimate)",World Data Bank
+SL.TLF.ACTI.ZS,1184,,"Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)",World Data Bank
+SL.TLF.ADVN.FE.ZS,1185,,"Labor force with advanced education, female (% of female working-age population with advanced education)",World Data Bank
+SL.TLF.ADVN.MA.ZS,1186,,"Labor force with advanced education, male (% of male working-age population with advanced education)",World Data Bank
+SL.TLF.ADVN.ZS,1187,,Labor force with advanced education (% of total working-age population with advanced education),World Data Bank
+SL.TLF.BASC.FE.ZS,1188,,"Labor force with basic education, female (% of female working-age population with basic education)",World Data Bank
+SL.TLF.BASC.MA.ZS,1189,,"Labor force with basic education, male (% of male working-age population with basic education)",World Data Bank
+SL.TLF.BASC.ZS,1190,,Labor force with basic education (% of total working-age population with basic education),World Data Bank
+SL.TLF.CACT.FE.NE.ZS,1191,,"Labor force participation rate, female (% of female population ages 15+) (national estimate)",World Data Bank
+SL.TLF.CACT.FE.ZS,1192,,"Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate)",World Data Bank
+SL.TLF.CACT.FM.NE.ZS,1193,,Ratio of female to male labor force participation rate (%) (national estimate),World Data Bank
+SL.TLF.CACT.FM.ZS,1194,,Ratio of female to male labor force participation rate (%) (modeled ILO estimate),World Data Bank
+SL.TLF.CACT.MA.NE.ZS,1195,,"Labor force participation rate, male (% of male population ages 15+) (national estimate)",World Data Bank
+SL.TLF.CACT.MA.ZS,1196,,"Labor force participation rate, male (% of male population ages 15+) (modeled ILO estimate)",World Data Bank
+SL.TLF.CACT.NE.ZS,1197,,"Labor force participation rate, total (% of total population ages 15+) (national estimate)",World Data Bank
+SL.TLF.CACT.ZS,1198,,"Labor force participation rate, total (% of total population ages 15+) (modeled ILO estimate)",World Data Bank
+SL.TLF.INTM.FE.ZS,1199,,"Labor force with intermediate education, female (% of female working-age population with intermediate education)",World Data Bank
+SL.TLF.INTM.MA.ZS,1200,,"Labor force with intermediate education, male (% of male working-age population with intermediate education)",World Data Bank
+SL.TLF.INTM.ZS,1201,,Labor force with intermediate education (% of total working-age population with intermediate education),World Data Bank
+SL.TLF.PART.FE.ZS,1202,,"Part time employment, female (% of total female employment)",World Data Bank
+SL.TLF.PART.MA.ZS,1203,,"Part time employment, male (% of total male employment)",World Data Bank
+SL.TLF.PART.ZS,1204,,"Part time employment, total (% of total employment)",World Data Bank
+SL.TLF.TOTL.FE.ZS,1205,,"Labor force, female (% of total labor force)",World Data Bank
+SL.TLF.TOTL.IN,1206,,"Labor force, total",World Data Bank
+SL.UEM.1524.FE.NE.ZS,1207,,"Unemployment, youth female (% of female labor force ages 15-24) (national estimate)",World Data Bank
+SL.UEM.1524.FE.ZS,1208,,"Unemployment, youth female (% of female labor force ages 15-24) (modeled ILO estimate)",World Data Bank
+SL.UEM.1524.MA.NE.ZS,1209,,"Unemployment, youth male (% of male labor force ages 15-24) (national estimate)",World Data Bank
+SL.UEM.1524.MA.ZS,1210,,"Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate)",World Data Bank
+SL.UEM.1524.NE.ZS,1211,,"Unemployment, youth total (% of total labor force ages 15-24) (national estimate)",World Data Bank
+SL.UEM.1524.ZS,1212,,"Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate)",World Data Bank
+SL.UEM.ADVN.FE.ZS,1213,,"Unemployment with advanced education, female (% of female labor force with advanced education)",World Data Bank
+SL.UEM.ADVN.MA.ZS,1214,,"Unemployment with advanced education, male (% of male labor force with advanced education)",World Data Bank
+SL.UEM.ADVN.ZS,1215,,Unemployment with advanced education (% of total labor force with advanced education),World Data Bank
+SL.UEM.BASC.FE.ZS,1216,,"Unemployment with basic education, female (% of female labor force with basic education)",World Data Bank
+SL.UEM.BASC.MA.ZS,1217,,"Unemployment with basic education, male (% of male labor force with basic education)",World Data Bank
+SL.UEM.BASC.ZS,1218,,Unemployment with basic education (% of total labor force with basic education),World Data Bank
+SL.UEM.INTM.FE.ZS,1219,,"Unemployment with intermediate education, female (% of female labor force with intermediate education)",World Data Bank
+SL.UEM.INTM.MA.ZS,1220,,"Unemployment with intermediate education, male (% of male labor force with intermediate education)",World Data Bank
+SL.UEM.INTM.ZS,1221,,Unemployment with intermediate education (% of total labor force with intermediate education),World Data Bank
+SL.UEM.NEET.FE.ZS,1222,,"Share of youth not in education, employment or training, female (% of female youth population)",World Data Bank
+SL.UEM.NEET.MA.ZS,1223,,"Share of youth not in education, employment or training, male (% of male youth population)",World Data Bank
+SL.UEM.NEET.ZS,1224,,"Share of youth not in education, employment or training, total (% of youth population)",World Data Bank
+SL.UEM.TOTL.FE.NE.ZS,1225,,"Unemployment, female (% of female labor force) (national estimate)",World Data Bank
+SL.UEM.TOTL.FE.ZS,1226,,"Unemployment, female (% of female labor force) (modeled ILO estimate)",World Data Bank
+SL.UEM.TOTL.MA.NE.ZS,1227,,"Unemployment, male (% of male labor force) (national estimate)",World Data Bank
+SL.UEM.TOTL.MA.ZS,1228,,"Unemployment, male (% of male labor force) (modeled ILO estimate)",World Data Bank
+SL.UEM.TOTL.NE.ZS,1229,,"Unemployment, total (% of total labor force) (national estimate)",World Data Bank
+SL.UEM.TOTL.ZS,1230,,"Unemployment, total (% of total labor force) (modeled ILO estimate)",World Data Bank
+SM.POP.REFG,1231,,Refugee population by country or territory of asylum,World Data Bank
+SM.POP.REFG.OR,1232,,Refugee population by country or territory of origin,World Data Bank
+SP.ADO.TFRT,1233,,"Adolescent fertility rate (births per 1,000 women ages 15-19)",World Data Bank
+SP.POP.0004.FE.5Y,1234,,"Population ages 00-04, female (% of female population)",World Data Bank
+SP.POP.0004.MA.5Y,1235,,"Population ages 00-04, male (% of male population)",World Data Bank
+SP.POP.0014.FE.IN,1236,,"Population ages 0-14, female",World Data Bank
+SP.POP.0014.FE.ZS,1237,,"Population ages 0-14, female (% of female population)",World Data Bank
+SP.POP.0014.MA.IN,1238,,"Population ages 0-14, male",World Data Bank
+SP.POP.0014.MA.ZS,1239,,"Population ages 0-14, male (% of male population)",World Data Bank
+SP.POP.0014.TO,1240,,"Population ages 0-14, total",World Data Bank
+SP.POP.0014.TO.ZS,1241,,Population ages 0-14 (% of total population),World Data Bank
+SP.POP.0509.FE.5Y,1242,,"Population ages 05-09, female (% of female population)",World Data Bank
+SP.POP.0509.MA.5Y,1243,,"Population ages 05-09, male (% of male population)",World Data Bank
+SP.POP.1014.FE.5Y,1244,,"Population ages 10-14, female (% of female population)",World Data Bank
+SP.POP.1014.MA.5Y,1245,,"Population ages 10-14, male (% of male population)",World Data Bank
+SP.POP.1519.FE.5Y,1246,,"Population ages 15-19, female (% of female population)",World Data Bank
+SP.POP.1519.MA.5Y,1247,,"Population ages 15-19, male (% of male population)",World Data Bank
+SP.POP.1564.FE.IN,1248,,"Population ages 15-64, female",World Data Bank
+SP.POP.1564.FE.ZS,1249,,"Population ages 15-64, female (% of female population)",World Data Bank
+SP.POP.1564.MA.IN,1250,,"Population ages 15-64, male",World Data Bank
+SP.POP.1564.MA.ZS,1251,,"Population ages 15-64, male (% of male population)",World Data Bank
+SP.POP.1564.TO,1252,,"Population ages 15-64, total",World Data Bank
+SP.POP.1564.TO.ZS,1253,,Population ages 15-64 (% of total population),World Data Bank
+SP.POP.2024.FE.5Y,1254,,"Population ages 20-24, female (% of female population)",World Data Bank
+SP.POP.2024.MA.5Y,1255,,"Population ages 20-24, male (% of male population)",World Data Bank
+SP.POP.2529.FE.5Y,1256,,"Population ages 25-29, female (% of female population)",World Data Bank
+SP.POP.2529.MA.5Y,1257,,"Population ages 25-29, male (% of male population)",World Data Bank
+SP.POP.3034.FE.5Y,1258,,"Population ages 30-34, female (% of female population)",World Data Bank
+SP.POP.3034.MA.5Y,1259,,"Population ages 30-34, male (% of male population)",World Data Bank
+SP.POP.3539.FE.5Y,1260,,"Population ages 35-39, female (% of female population)",World Data Bank
+SP.POP.3539.MA.5Y,1261,,"Population ages 35-39, male (% of male population)",World Data Bank
+SP.POP.4044.FE.5Y,1262,,"Population ages 40-44, female (% of female population)",World Data Bank
+SP.POP.4044.MA.5Y,1263,,"Population ages 40-44, male (% of male population)",World Data Bank
+SP.POP.4549.FE.5Y,1264,,"Population ages 45-49, female (% of female population)",World Data Bank
+SP.POP.4549.MA.5Y,1265,,"Population ages 45-49, male (% of male population)",World Data Bank
+SP.POP.5054.FE.5Y,1266,,"Population ages 50-54, female (% of female population)",World Data Bank
+SP.POP.5054.MA.5Y,1267,,"Population ages 50-54, male (% of male population)",World Data Bank
+SP.POP.5559.FE.5Y,1268,,"Population ages 55-59, female (% of female population)",World Data Bank
+SP.POP.5559.MA.5Y,1269,,"Population ages 55-59, male (% of male population)",World Data Bank
+SP.POP.6064.FE.5Y,1270,,"Population ages 60-64, female (% of female population)",World Data Bank
+SP.POP.6064.MA.5Y,1271,,"Population ages 60-64, male (% of male population)",World Data Bank
+SP.POP.6569.FE.5Y,1272,,"Population ages 65-69, female (% of female population)",World Data Bank
+SP.POP.6569.MA.5Y,1273,,"Population ages 65-69, male (% of male population)",World Data Bank
+SP.POP.65UP.FE.IN,1274,,"Population ages 65 and above, female",World Data Bank
+SP.POP.65UP.FE.ZS,1275,,"Population ages 65 and above, female (% of female population)",World Data Bank
+SP.POP.65UP.MA.IN,1276,,"Population ages 65 and above, male",World Data Bank
+SP.POP.65UP.MA.ZS,1277,,"Population ages 65 and above, male (% of male population)",World Data Bank
+SP.POP.65UP.TO,1278,,"Population ages 65 and above, total",World Data Bank
+SP.POP.65UP.TO.ZS,1279,,Population ages 65 and above (% of total population),World Data Bank
+SP.POP.7074.FE.5Y,1280,,"Population ages 70-74, female (% of female population)",World Data Bank
+SP.POP.7074.MA.5Y,1281,,"Population ages 70-74, male (% of male population)",World Data Bank
+SP.POP.7579.FE.5Y,1282,,"Population ages 75-79, female (% of female population)",World Data Bank
+SP.POP.7579.MA.5Y,1283,,"Population ages 75-79, male (% of male population)",World Data Bank
+SP.POP.80UP.FE.5Y,1284,,"Population ages 80 and above, female (% of female population)",World Data Bank
+SP.POP.80UP.MA.5Y,1285,,"Population ages 80 and above, male (% of male population)",World Data Bank
+SP.POP.BRTH.MF,1286,,Sex ratio at birth (male births per female births),World Data Bank
+SP.POP.DPND,1287,,Age dependency ratio (% of working-age population),World Data Bank
+SP.POP.DPND.OL,1288,,"Age dependency ratio, old (% of working-age population)",World Data Bank
+SP.POP.DPND.YG,1289,,"Age dependency ratio, young (% of working-age population)",World Data Bank
+SP.POP.GROW,1290,,Population growth (annual %),World Data Bank
+SP.POP.SCIE.RD.P6,1291,,Researchers in R&D (per million people),World Data Bank
+SP.POP.TOTL,1292,,"Population, total",World Data Bank
+SP.POP.TOTL.FE.IN,1293,,"Population, female",World Data Bank
+SP.POP.TOTL.FE.ZS,1294,,"Population, female (% of total population)",World Data Bank
+SP.POP.TOTL.MA.IN,1295,,"Population, male",World Data Bank
+SP.POP.TOTL.MA.ZS,1296,,"Population, male (% of total population)",World Data Bank
+SP.RUR.TOTL,1297,,Rural population,World Data Bank
+SP.RUR.TOTL.ZG,1298,,Rural population growth (annual %),World Data Bank
+SP.RUR.TOTL.ZS,1299,,Rural population (% of total population),World Data Bank
+SP.URB.GROW,1300,,Urban population growth (annual %),World Data Bank
+SP.URB.TOTL,1301,,Urban population,World Data Bank
+SP.URB.TOTL.IN.ZS,1302,,Urban population (% of total population),World Data Bank
+ST.INT.ARVL,1303,,"International tourism, number of arrivals",World Data Bank
+ST.INT.DPRT,1304,,"International tourism, number of departures",World Data Bank
+ST.INT.RCPT.CD,1305,,"International tourism, receipts (current US$)",World Data Bank
+ST.INT.RCPT.XP.ZS,1306,,"International tourism, receipts (% of total exports)",World Data Bank
+ST.INT.TRNR.CD,1307,,"International tourism, receipts for passenger transport items (current US$)",World Data Bank
+ST.INT.TRNX.CD,1308,,"International tourism, expenditures for passenger transport items (current US$)",World Data Bank
+ST.INT.TVLR.CD,1309,,"International tourism, receipts for travel items (current US$)",World Data Bank
+ST.INT.TVLX.CD,1310,,"International tourism, expenditures for travel items (current US$)",World Data Bank
+ST.INT.XPND.CD,1311,,"International tourism, expenditures (current US$)",World Data Bank
+ST.INT.XPND.MP.ZS,1312,,"International tourism, expenditures (% of total imports)",World Data Bank
+SWB.NAB,1313,,"Subjective Well-being, Negative affect balance",OECD How's Life
+TG.VAL.TOTL.GD.ZS,1314,,Merchandise trade (% of GDP),World Data Bank
+TM.QTY.MRCH.XD.WD,1315,,Import volume index (2000 = 100),World Data Bank
+TM.TAX.MANF.BC.ZS,1316,,"Binding coverage, manufactured products (%)",World Data Bank
+TM.TAX.MANF.BR.ZS,1317,,"Bound rate, simple mean, manufactured products (%)",World Data Bank
+TM.TAX.MANF.IP.ZS,1318,,"Share of tariff lines with international peaks, manufactured products (%)",World Data Bank
+TM.TAX.MANF.SM.AR.ZS,1319,,"Tariff rate, applied, simple mean, manufactured products (%)",World Data Bank
+TM.TAX.MANF.SM.FN.ZS,1320,,"Tariff rate, most favored nation, simple mean, manufactured products (%)",World Data Bank
+TM.TAX.MANF.SR.ZS,1321,,"Share of tariff lines with specific rates, manufactured products (%)",World Data Bank
+TM.TAX.MANF.WM.AR.ZS,1322,,"Tariff rate, applied, weighted mean, manufactured products (%)",World Data Bank
+TM.TAX.MANF.WM.FN.ZS,1323,,"Tariff rate, most favored nation, weighted mean, manufactured products (%)",World Data Bank
+TM.TAX.MRCH.BC.ZS,1324,,"Binding coverage, all products (%)",World Data Bank
+TM.TAX.MRCH.BR.ZS,1325,,"Bound rate, simple mean, all products (%)",World Data Bank
+TM.TAX.MRCH.IP.ZS,1326,,"Share of tariff lines with international peaks, all products (%)",World Data Bank
+TM.TAX.MRCH.SM.AR.ZS,1327,,"Tariff rate, applied, simple mean, all products (%)",World Data Bank
+TM.TAX.MRCH.SM.FN.ZS,1328,,"Tariff rate, most favored nation, simple mean, all products (%)",World Data Bank
+TM.TAX.MRCH.SR.ZS,1329,,"Share of tariff lines with specific rates, all products (%)",World Data Bank
+TM.TAX.MRCH.WM.AR.ZS,1330,,"Tariff rate, applied, weighted mean, all products (%)",World Data Bank
+TM.TAX.MRCH.WM.FN.ZS,1331,,"Tariff rate, most favored nation, weighted mean, all products (%)",World Data Bank
+TM.TAX.TCOM.BC.ZS,1332,,"Binding coverage, primary products (%)",World Data Bank
+TM.TAX.TCOM.BR.ZS,1333,,"Bound rate, simple mean, primary products (%)",World Data Bank
+TM.TAX.TCOM.IP.ZS,1334,,"Share of tariff lines with international peaks, primary products (%)",World Data Bank
+TM.TAX.TCOM.SM.AR.ZS,1335,,"Tariff rate, applied, simple mean, primary products (%)",World Data Bank
+TM.TAX.TCOM.SM.FN.ZS,1336,,"Tariff rate, most favored nation, simple mean, primary products (%)",World Data Bank
+TM.TAX.TCOM.SR.ZS,1337,,"Share of tariff lines with specific rates, primary products (%)",World Data Bank
+TM.TAX.TCOM.WM.AR.ZS,1338,,"Tariff rate, applied, weighted mean, primary products (%)",World Data Bank
+TM.TAX.TCOM.WM.FN.ZS,1339,,"Tariff rate, most favored nation, weighted mean, primary products (%)",World Data Bank
+TM.UVI.MRCH.XD.WD,1340,,Import unit value index (2000 = 100),World Data Bank
+TM.VAL.AGRI.ZS.UN,1341,,Agricultural raw materials imports (% of merchandise imports),World Data Bank
+TM.VAL.FOOD.ZS.UN,1342,,Food imports (% of merchandise imports),World Data Bank
+TM.VAL.FUEL.ZS.UN,1343,,Fuel imports (% of merchandise imports),World Data Bank
+TM.VAL.ICTG.ZS.UN,1344,,ICT goods imports (% total goods imports),World Data Bank
+TM.VAL.INSF.ZS.WT,1345,,Insurance and financial services (% of commercial service imports),World Data Bank
+TM.VAL.MANF.ZS.UN,1346,,Manufactures imports (% of merchandise imports),World Data Bank
+TM.VAL.MMTL.ZS.UN,1347,,Ores and metals imports (% of merchandise imports),World Data Bank
+TM.VAL.MRCH.AL.ZS,1348,,Merchandise imports from economies in the Arab World (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.CD.WT,1349,,Merchandise imports (current US$),World Data Bank
+TM.VAL.MRCH.HI.ZS,1350,,Merchandise imports from high-income economies (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.OR.ZS,1351,,Merchandise imports from low- and middle-income economies outside region (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.R1.ZS,1352,,Merchandise imports from low- and middle-income economies in East Asia & Pacific (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.R2.ZS,1353,,Merchandise imports from low- and middle-income economies in Europe & Central Asia (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.R3.ZS,1354,,Merchandise imports from low- and middle-income economies in Latin America & the Caribbean (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.R4.ZS,1355,,Merchandise imports from low- and middle-income economies in Middle East & North Africa (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.R5.ZS,1356,,Merchandise imports from low- and middle-income economies in South Asia (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.R6.ZS,1357,,Merchandise imports from low- and middle-income economies in Sub-Saharan Africa (% of total merchandise imports),World Data Bank
+TM.VAL.MRCH.RS.ZS,1358,,"Merchandise imports by the reporting economy, residual (% of total merchandise imports)",World Data Bank
+TM.VAL.MRCH.WL.CD,1359,,Merchandise imports by the reporting economy (current US$),World Data Bank
+TM.VAL.MRCH.XD.WD,1360,,Import value index (2000 = 100),World Data Bank
+TM.VAL.OTHR.ZS.WT,1361,,"Computer, communications and other services (% of commercial service imports)",World Data Bank
+TM.VAL.SERV.CD.WT,1362,,Commercial service imports (current US$),World Data Bank
+TM.VAL.TRAN.ZS.WT,1363,,Transport services (% of commercial service imports),World Data Bank
+TM.VAL.TRVL.ZS.WT,1364,,Travel services (% of commercial service imports),World Data Bank
+TT.PRI.MRCH.XD.WD,1365,,Net barter terms of trade index (2000 = 100),World Data Bank
+TX.MNF.TECH.ZS.UN,1366,,Medium and high-tech exports (% manufactured exports),World Data Bank
+TX.QTY.MRCH.XD.WD,1367,,Export volume index (2000 = 100),World Data Bank
+TX.UVI.MRCH.XD.WD,1368,,Export unit value index (2000 = 100),World Data Bank
+TX.VAL.AGRI.ZS.UN,1369,,Agricultural raw materials exports (% of merchandise exports),World Data Bank
+TX.VAL.FOOD.ZS.UN,1370,,Food exports (% of merchandise exports),World Data Bank
+TX.VAL.FUEL.ZS.UN,1371,,Fuel exports (% of merchandise exports),World Data Bank
+TX.VAL.ICTG.ZS.UN,1372,,ICT goods exports (% of total goods exports),World Data Bank
+TX.VAL.INSF.ZS.WT,1373,,Insurance and financial services (% of commercial service exports),World Data Bank
+TX.VAL.MANF.ZS.UN,1374,,Manufactures exports (% of merchandise exports),World Data Bank
+TX.VAL.MMTL.ZS.UN,1375,,Ores and metals exports (% of merchandise exports),World Data Bank
+TX.VAL.MRCH.AL.ZS,1376,,Merchandise exports to economies in the Arab World (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.CD.WT,1377,,Merchandise exports (current US$),World Data Bank
+TX.VAL.MRCH.HI.ZS,1378,,Merchandise exports to high-income economies (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.OR.ZS,1379,,Merchandise exports to low- and middle-income economies outside region (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.R1.ZS,1380,,Merchandise exports to low- and middle-income economies in East Asia & Pacific (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.R2.ZS,1381,,Merchandise exports to low- and middle-income economies in Europe & Central Asia (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.R3.ZS,1382,,Merchandise exports to low- and middle-income economies in Latin America & the Caribbean (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.R4.ZS,1383,,Merchandise exports to low- and middle-income economies in Middle East & North Africa (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.R5.ZS,1384,,Merchandise exports to low- and middle-income economies in South Asia (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.R6.ZS,1385,,Merchandise exports to low- and middle-income economies in Sub-Saharan Africa (% of total merchandise exports),World Data Bank
+TX.VAL.MRCH.RS.ZS,1386,,"Merchandise exports by the reporting economy, residual (% of total merchandise exports)",World Data Bank
+TX.VAL.MRCH.WL.CD,1387,,Merchandise exports by the reporting economy (current US$),World Data Bank
+TX.VAL.MRCH.XD.WD,1388,,Export value index (2000 = 100),World Data Bank
+TX.VAL.OTHR.ZS.WT,1389,,"Computer, communications and other services (% of commercial service exports)",World Data Bank
+TX.VAL.SERV.CD.WT,1390,,Commercial service exports (current US$),World Data Bank
+TX.VAL.TRAN.ZS.WT,1391,,Transport services (% of commercial service exports),World Data Bank
+TX.VAL.TRVL.ZS.WT,1392,,Travel services (% of commercial service exports),World Data Bank
+WJQ.YNI,1393,,"Work and Job Quality, Youth not in employment, education or training",OECD How's Life

@@ -1,0 +1,12 @@
+,ID,DESCRIPT,COEF
+0,ilc.hcmp03,Share of population living in a dwelling not comfortably cool during summer time by income quintile and degree of urbanisation,-0.026
+1,isoc.ci.in.h,Households -  level of internet access,-0.086
+2,ilc.chmd04,Mean number of deprivation items among the children deprived (children aged 1 to 15),0.06
+3,SH.PRG.ANEM,Prevalence of anemia among pregnant women (%),0.001
+4,hlth.silc.01,"Self-perceived health by sex, age and labour status. Only wstatus = POP. Only age = Y_GE16. Only levels = VGOOD",-0.056
+5,SP.DYN.TO65.MA.ZS,"Survival to age 65, male (% of cohort)",0.034
+6,lfso.16elvncom,"Early leavers from education and training who started but never completed upper secondary education by sex, age and reason for not completing",0.002
+7,EG.ELC.RNEW.ZS,Renewable electricity output (% of total electricity output),-0.05
+8,env.ac.cur,Circular material use rate,-0.03
+9,WJQ.LMI,"Work and Job Quality, Labour market insecurity",-0.028
+10,SE.PRM.ENRL.TC.ZS,"Pupil-teacher ratio, primary",-0.005
