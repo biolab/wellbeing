@@ -1,0 +1,12 @@
+,ID,DESCRIPT,COEF
+0,ilc.lvho06,"Overcrowding rate by age, sex and poverty status - population without single-person households - EU-SILC survey",-0.004
+1,SH.DYN.NCOM.ZS,"Mortality from CVD, cancer, diabetes or CRD between exact ages 30 and 70 (%)",-0.136
+2,lfso.16elvncom,"Early leavers from education and training who started but never completed upper secondary education by sex, age and reason for not completing",-0.012
+3,SCO.SS,"Social connections, Social support",0.05
+4,SAF.RD,"Safety, Road deaths",0.026
+5,SAF.H,"Safety, Homicides",0.01
+6,NY.ADJ.DCO2.GN.ZS,Adjusted savings: carbon dioxide damage (% of GNI),-0.053
+7,lfso.04avpoisco,"Average number of paid overtime hours of employees, by sex, age and occupation. Only age = Y15-64",-0.013
+8,lfso.04avpona11,"Average number of paid overtime hours of employees, by sex, age and economic activity. Only age = Y15-64",-0.013
+9,SP.DYN.AMRT.MA,"Mortality rate, adult, male (per 1,000 male adults)",-0.04
+10,SP.DYN.AMRT.FE,"Mortality rate, adult, female (per 1,000 female adults)",0.028
