@@ -1,11 +1,12 @@
+import sys
 import pandas as pd
-import numpy as np
 
 from Orange.data import Table
 from Orange.classification import SimpleTreeLearner
 from Orange.preprocess import Impute, Model
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 FILEMAP = {
     r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\input data\A008.W.pkl': [
@@ -51,6 +52,15 @@ def create_df(filepath):
     x.columns = names                                       # set the names of columns as attributes names
     return x, y
 
+
+def multicollinearity_test(data, var_names):
+    df = data[var_names]
+    vif = pd.DataFrame()
+    vif['variables'] = df.columns
+    vif['VIF'] = [variance_inflation_factor(df.values, i) for i in range(df.shape[1])]
+    print(vif)
+    return vif
+
 def standardization(data):
     scaler = StandardScaler()
     standardized_data = scaler.fit_transform(data)
@@ -93,6 +103,7 @@ def create_csv(var_names, coefs, filepath):
 for filepath, var_names in FILEMAP.items():
     data, y = create_df(filepath)
     data = standardization(data)
+    multicollinearity_test(data, var_names)
     print(f'\n\nresults for filepath: {filepath}: \n\n')
     coefs = multiple_regression(data, y, var_names)
     create_csv(var_names, coefs, filepath)
