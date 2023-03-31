@@ -2,7 +2,7 @@
 
 ## Brief Description
 
-The following code allows user to perform feature subset selection, calculate the prediction accuracy of the obtained subset and correspoding 
+The following code supports user to perform feature subset selection, calculate the prediction accuracy of the obtained subset and correspoding 
 statistical significance of each factor, combine everything in the data table and calculate regression coefficients.
 
 ## Datasets 
