@@ -99,7 +99,7 @@ def create_df():
 
     print(df)
 
-    ime_fajla = filepath.split('\\')[-1][:-4] # extract name of input file from filepath, remove '.pkl' from the end.
+    output_name = filepath.split('\\')[-1][:-4] # extract name of input file from filepath, remove '.pkl' from the end.
     df.to_csv(output_name)
 
     return data, df

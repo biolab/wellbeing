@@ -15,7 +15,8 @@ def create_data_table():
         df = pd.DataFrame([mini_dict])                  # if df is created in this way, mini_dict.keys will be the df column names, and mini_dict.values will be the first (and only) row.
         data_table = pd.concat([data_table, df])        # concat both data frames. because they both have column names defined, they will concatenate correctly.
     data_table.index = range(len(file_names))           # set index for each row in the range of length of files
+    data_table.to_csv('demo_data.csv')
     print(data_table)
-    return data_table
+
 
 create_data_table()

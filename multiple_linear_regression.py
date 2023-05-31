@@ -10,17 +10,16 @@ from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 FILEMAP = {
     r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\input data\A008.W.pkl': [
-        'ilc.hcmp03', 'isoc.ci.in.h', 'ilc.chmd04', 'SH.PRG.ANEM', 'hlth.silc.01',
-        'SP.DYN.TO65.MA.ZS', 'lfso.16elvncom', 'EG.ELC.RNEW.ZS', 'env.ac.cur', 'WJQ.LMI',
-        'SE.PRM.ENRL.TC.ZS'
+        'ilc.chmd04', 'SH.PRG.ANEM', 'ilc.mded03', 'hlth.silc.01',
+        'SP.DYN.TO65.MA.ZS', 'WJQ.LHI', 'EG.ELC.RNEW.ZS', 'SCO.SS', 'WJQ.ER'
     ],
     r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\input data\A170.W.pkl': [
-    'ilc.di11d', 'ilc.mddd17', 'isoc.r.iacc.h', 'ilc.mdes01', 'ilc.mddd13', 'SI.DST.10TH.10',
-    'WJQ.LHI', 'SAF.H', 'WJQ.LMI'
+    'ilc.mddd11', 'ilc.mdes01', 'SI.DST.10TH.10', 'WJQ.LHI', 'SAF.H',
+    'SAF.FSA', 'SCO.SS', 'WJQ.LMI', 'WJQ.ER'
     ],
     r'C:\\Users\irisc\Documents\FRI\\blaginja\FRI-blaginja\input data\SWB.LS.pkl': [
-    'isoc.ci.in.h', 'ilc.mddd13', 'WJQ.E', 'ilc.mdes02', 'ilc.mdho07', 'isoc.ci.cm.h',
-    'SH.PRG.ANEM', 'ilc.mded03', 'NY.GNP.PCAP.PP.KD', 'educ.uoe.enra29', 'icw.sr.03'
+    'ilc.mddd13', 'SCO.SS', 'ilc.mdes02', 'ilc.mdho07', 'SH.PRG.ANEM', 'ilc.mded03',
+    'NY.GNP.PCAP.PP.KD', 'hlth.silc.01', 'educ.uoe.enra29'
     ],
     r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\input data\ranking_survey_intersection.pkl': [
     'SP.DYN.LE00.IN', 'ilc.lvho05a', 'WJQ.LHI', 'HH.HA', 'WJQ.ER', 'WJQ.E'
@@ -28,7 +27,11 @@ FILEMAP = {
     r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\input data\ranking_survey_difference.pkl': [
     'ilc.lvho06', 'SH.DYN.NCOM.ZS', 'lfso.16elvncom', 'SCO.SS', 'SAF.RD', 'SAF.H', 'NY.ADJ.DCO2.GN.ZS',
     'lfso.04avpoisco', 'lfso.04avpona11', 'SP.DYN.AMRT.MA', 'SP.DYN.AMRT.FE'
-    ]
+    ],
+    r'C:\Users\irisc\Documents\FRI\blaginja\FRI-blaginja\input data\ranking_survey.pkl': [
+    'SP.DYN.LE00.IN', 'SH.DYN.NCOM.ZS', 'ilc.lvho05a', 'WJQ.LHI',
+    'SCO.SS', 'HH.HA', 'WJQ.ER', 'WJQ.E'
+    ],
 }
 
 def impute_missing_values(data):
